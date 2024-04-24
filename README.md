@@ -1,5 +1,5 @@
 ## CarShop
-- 1. Peter, Raul, Andrei M., Stefan - Bestellung
-- 2. ⁠Klara, Bence, Mark - Kunden
-- 3. ⁠Miruna, Alexandra, Tea - Auto
-- 4. ⁠Cristiana, Andrei N., Alex - Mitarbeiter
+- Peter, Raul, Andrei M., Stefan - Bestellung
+- ⁠Klara, Bence, Mark - Kunden
+- ⁠Miruna, Alexandra, Tea - Auto
+- ⁠Cristiana, Andrei N., Alex - Mitarbeiter
