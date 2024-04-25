@@ -1,5 +1,5 @@
-#ifndef CAR_SHARING_CUSTOMER_DOMAIN_H
-#define CAR_SHARING_CUSTOMER_DOMAIN_H
+#ifndef CAR_SHARING_CUSTOMER_H
+#define CAR_SHARING_CUSTOMER_H
 #include <string>
 
 struct Address{
@@ -66,4 +66,4 @@ public:
 };
 
 
-#endif //CAR_SHARING_CUSTOMER_DOMAIN_H
+#endif //CAR_SHARING_CUSTOMER_H

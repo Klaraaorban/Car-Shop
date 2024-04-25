@@ -1,4 +1,4 @@
-#include "customerDomain.h"
+#include "Customer.h"
 
 customer::customer(CustomerName customerName, E_mail customerMail, Address customerAddress,
                    std::string customerPhoneNr, std::string customerNote, bool GdprDeleted) {
