@@ -1,8 +1,8 @@
-#include "employee.h"
+#include "Employee.h"
 using namespace std;
-Employee::Employee(string lastName, string firstName, string email, string position,
-                   string birthDate, string abbreviation, int salary, string remarks)
-        : lastName(lastName), firstName(firstName), email(email), position(position),
+Employee::Employee( const string &password, string lastName, string firstName, string email,
+                   string position, string birthDate, string abbreviation, int salary, string remarks)
+        : User(email, password), lastName(lastName), firstName(firstName), email(email), position(position),
           birthDate(birthDate), abbreviation(abbreviation), salary(salary), remarks(remarks) {}
 
 
@@ -26,9 +26,6 @@ string Employee::getPosition() const {
     return position ;
 }
 
-string Employee::getEmail() const {
-    return email;
-}
 
 int Employee::getSalary() const {
     return salary;

@@ -1,9 +1,13 @@
 #ifndef CARSHARING_EMPLOYEE_H
 #define CARSHARING_EMPLOYEE_H
-using namespace std;
-#include <string>
+#pragma once
 
-class Employee {
+#include <string>
+#include <chrono>
+#include "User.h"
+
+using namespace std;
+class Employee: public  User {
 private:
     string lastName;
     string firstName;
@@ -15,11 +19,10 @@ private:
     string remarks;
 
 public:
-    Employee(string lastName,string firstName, string email,string position,
-             string birthDate, string abbreviation, int salary, string remarks);
+    Employee(const string &password, string lastName, string firstName, string email,
+             string position, string birthDate, string abbreviation, int salary, string remarks);
     string getLastName() const;
     string getFirstName() const;
-    string getEmail() const;
     string getPosition() const;
     string getBirthDate() const;
     string getAbbreviation() const;
