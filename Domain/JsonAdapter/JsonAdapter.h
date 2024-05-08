@@ -29,7 +29,7 @@ void JsonAdapter<T>::writeToJson(T instance) {
 
 //todo check this for everytype
         if( std::is_same<T,Employee>::value){
-            ofstream i("/home/andreiasnico/oop/CarShop/JsonDB/Employee.json");
+            ofstream i("../JsonDB/Employee.json");
             i<< JsonEmployee::ModelToJson(instance);
 
         }
