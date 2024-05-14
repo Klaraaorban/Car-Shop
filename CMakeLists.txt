@@ -4,5 +4,11 @@ project(car_sharing)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(car_sharing main.cpp
-        customer_model.h
-        customer_model.cpp)
+        Customer.h
+        Customer.cpp
+        Car.h
+        Car.cpp
+        Employee.h
+        Employee.cpp
+        Order.h
+        Order.cpp)
