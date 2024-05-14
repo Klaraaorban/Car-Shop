@@ -18,4 +18,11 @@ add_executable(car_sharing main.cpp
         Domain/JsonAdapter/JsonAdapter.cpp
         Domain/JsonAdapter/JsonEmployee.h
         Domain/JsonAdapter/JsonEmployee.cpp
+        EmployeeService/employeeService.cpp
+        EmployeeService/employeeService.h
+        EmployeeController/employeeController.cpp
+        EmployeeController/employeeController.h
+        CustomerService/customer_service.h
+        CustomerService/customer_service.cpp
+        CustomerService/customer_service.cpp
 )
