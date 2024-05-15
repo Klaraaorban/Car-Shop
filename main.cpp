@@ -1,8 +1,9 @@
 #include <iostream>
-#include "json/json.hpp"
 #include "Domain/Employee.h"
 #include "Domain/JsonAdapter/JsonAdapter.h"
 #include "EmployeeService/employeeService.h"
+#include "json/single_include/nlohmann/json.hpp"
+
 using json = nlohmann::json;
 
 int main() {

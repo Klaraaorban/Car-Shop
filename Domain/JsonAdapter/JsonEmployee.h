@@ -4,8 +4,9 @@
 #pragma once
 #ifndef CARSHOP_JSONEMPLOYEE_H
 #define CARSHOP_JSONEMPLOYEE_H
-#include "../../json/single_include/nlohmann/json.hpp"
 #include "../Employee.h"
+#include "../../json/single_include/nlohmann/json.hpp"
+
 using json = nlohmann::json;
 class JsonEmployee {
 Employee static JsonToModel();

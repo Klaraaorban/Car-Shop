@@ -1,4 +1,7 @@
 #include "EmployeeService.h"
+#include "../json/single_include/nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 EmployeeService::EmployeeService(const string &dbFilePath) : dbFilePath(dbFilePath) {
     loadFromJson();
