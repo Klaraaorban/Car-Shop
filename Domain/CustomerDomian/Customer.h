@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CAR_SHARING_CUSTOMER_H
 #define CAR_SHARING_CUSTOMER_H
 #include <string>
