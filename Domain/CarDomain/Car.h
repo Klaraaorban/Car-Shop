@@ -29,7 +29,9 @@ public:
     void inline set_gearbox(string new_gearbox){gearbox = new_gearbox;}
     void inline set_color(string new_color){color = new_color;}
     void inline set_remark(string new_remark){remark = new_remark;}
+    void inline set_active(bool status){active = status;}
 
+    int inline get_id(){return car_id;}
     string inline get_lincensePlate(){return lincensePlate;}
     string inline get_model(){return model;}
     string inline get_brand(){return brand;}
@@ -40,10 +42,5 @@ public:
     string inline get_gearbox(){return gearbox;}
     string inline get_color(){return color;}
     string inline get_remark(){return remark;}
-
-    void add();
-    void del(int car_id);
-    void update(int car_id);
-    void inline deactivate(int car_id){active = false;}
-    bool valid(int car_id);
+    bool inline get_active(){return active;}
 };

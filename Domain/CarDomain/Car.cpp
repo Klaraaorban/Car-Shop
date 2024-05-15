@@ -14,4 +14,5 @@ Car::Car(int car_id, string lincensePlate, string model, string brand, int regis
     this->gearbox = gearbox;
     this->color = color;
     this->remark = remark;
+    this->active = true;
 }
