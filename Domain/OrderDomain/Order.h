@@ -7,6 +7,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../CarDomain/Car.h"
+#include "../CustomerDomian/Customer.h"
+#include "../EmployeeDomain/Employee.h"
 // TO DO include 3 classes
 
 using namespace std;
@@ -22,17 +25,17 @@ private:
 
     // TO DO, 3 objects
     // obiect de tip Auto
-    Auto _car_Order;
+    Car _car_Order;
     // obiect de tip Kunde
-    Kunde _customer_Order;
+    customer _customer_Order;
     // obiect de tip Arbeiter
-    Arbeiter _worker_Order;
+    Employee _worker_Order;
 
 public:
 
     Bestellung_Domain(int idOrder, const string &dateOrder, const string &statusOrder, const string &beginOrder,
-                      const string &endOrder, float billOrder, const string &observationsOrder, const Auto &carOrder,
-                      const Kunde &customerOrder, const Arbeiter &workerOrder);
+                      const string &endOrder, float billOrder, const string &observationsOrder, const Car &carOrder,
+                      const customer &customerOrder, const Employee &workerOrder);
 
     int getIdOrder() const;
 

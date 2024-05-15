@@ -2,7 +2,7 @@
 // Created by raulm on 4/24/2024.
 //
 
-#include "Bestellung_Domain.h"
+#include "Order.h"
 
 int Bestellung_Domain::getIdOrder() const {
     return _id_Order;
@@ -62,6 +62,6 @@ void Bestellung_Domain::setObservationsOrder(const string &observationsOrder) {
 
 Bestellung_Domain::Bestellung_Domain(int idOrder, const string &dateOrder, const string &statusOrder,
                                      const string &beginOrder, const string &endOrder, float billOrder,
-                                     const string &observationsOrder, const Auto &carOrder, const Kunde &customerOrder,
-                                     const Arbeiter &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
+                                     const string &observationsOrder, const Car &carOrder, const customer &customerOrder,
+                                     const Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
                                      _bill_Order(billOrder),_observations_Order(observationsOrder),_car_Order(carOrder),_customer_Order(customerOrder),_worker_Order(workerOrder) {}

@@ -1,3 +1,0 @@
-C:/Users/raulm/Documents/Semester 2/CarShop/cmake-build-debug/CMakeFiles/CarShop.dir
-C:/Users/raulm/Documents/Semester 2/CarShop/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/raulm/Documents/Semester 2/CarShop/cmake-build-debug/CMakeFiles/rebuild_cache.dir
