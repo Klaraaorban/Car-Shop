@@ -9,4 +9,4 @@ Added 2 gitsubmodules for Gtest and nlohmann Json
 
 how to init if you need them:  
 git submodule init 
-git update 
+git submodule update 
