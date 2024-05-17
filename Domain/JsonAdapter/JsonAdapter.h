@@ -18,7 +18,7 @@ using json = nlohmann::json;
 template <class T> class JsonAdapter{
 public:
     static void writeToJson(T instance);
-
+    static void writeToJsonOrder(T instance);
 
 public:
 
@@ -34,13 +34,17 @@ void JsonAdapter<T>::writeToJson(T instance) {
             i<< JsonEmployee::ModelToJson(instance);
 
         }
-        else if( std::is_same<T,Employee>::value){
-            ofstream i("../JsonDB/Employee.json");
-            i<< JsonEmployee::ModelToJson(instance);
-
-         }
 
 }
+template<class T>
+void JsonAdapter<T>::writeToJsonOrder(T instance)
+{
+    json j;
 
+    if (std::is_same<T, Order>::value) {
+        ofstream i("../JsonDB/Order.json");
+        i << JsonOrder::ModelToJson(instance);
+    }
+}
 
 #endif //CARSHOP_JSONADAPTER_H
