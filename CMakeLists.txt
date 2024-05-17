@@ -23,4 +23,5 @@ add_executable(car_sharing main.cpp
         EmployeeController/employeeController.cpp
         EmployeeController/employeeController.h
         Domain/JsonAdapter/JsonOrder.cpp
+        Domain/OrderDomain/Order.cpp
 )

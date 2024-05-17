@@ -9,8 +9,8 @@
 
 using json = nlohmann::json;
 class JsonOrder {
-    Bestellung_Domain static JsonToModel();
+    Order static JsonToModel();
 public:
-    json static ModelToJson(Bestellung_Domain order);
+    json static ModelToJson(const Order& order);
 };
 #endif //CARSHOP_JSONORDER_H

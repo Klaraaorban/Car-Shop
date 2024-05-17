@@ -4,7 +4,7 @@
 
 #include "JsonOrder.h"
 
-json JsonOrder::ModelToJson(Bestellung_Domain order) {
+json JsonOrder::ModelToJson(const Order& order) {
     json j;
     j["_id_Order"] = order.getIdOrder();
     j["_date_Order"] = order.getDateOrder();

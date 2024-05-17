@@ -10,6 +10,7 @@
 #include <fstream>
 
 #include "JsonEmployee.h"
+#include "JsonOrder.h"
 
 using json = nlohmann::json;
 
@@ -33,6 +34,11 @@ void JsonAdapter<T>::writeToJson(T instance) {
             i<< JsonEmployee::ModelToJson(instance);
 
         }
+        else if( std::is_same<T,Employee>::value){
+            ofstream i("../JsonDB/Employee.json");
+            i<< JsonEmployee::ModelToJson(instance);
+
+         }
 
 }
 
