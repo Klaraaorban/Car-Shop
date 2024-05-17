@@ -30,6 +30,18 @@ private:
     customer _customer_Order;
     // obiect de tip Arbeiter
     Employee _worker_Order;
+public:
+    const Car &getCarOrder() const;
+
+    void setCarOrder(const Car &carOrder);
+
+    const customer &getCustomerOrder() const;
+
+    void setCustomerOrder(const customer &customerOrder);
+
+    const Employee &getWorkerOrder() const;
+
+    void setWorkerOrder(const Employee &workerOrder);
 
 public:
 

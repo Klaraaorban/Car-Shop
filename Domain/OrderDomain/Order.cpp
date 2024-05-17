@@ -65,3 +65,27 @@ Order::Order(int idOrder, const string &dateOrder, const string &statusOrder,
                                      const string &observationsOrder, const Car &carOrder, const customer &customerOrder,
                                      const Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
                                      _bill_Order(billOrder),_observations_Order(observationsOrder),_car_Order(carOrder),_customer_Order(customerOrder),_worker_Order(workerOrder) {}
+
+const Car &Order::getCarOrder() const {
+    return _car_Order;
+}
+
+void Order::setCarOrder(const Car &carOrder) {
+    _car_Order = carOrder;
+}
+
+const customer &Order::getCustomerOrder() const {
+    return _customer_Order;
+}
+
+void Order::setCustomerOrder(const customer &customerOrder) {
+    _customer_Order = customerOrder;
+}
+
+const Employee &Order::getWorkerOrder() const {
+    return _worker_Order;
+}
+
+void Order::setWorkerOrder(const Employee &workerOrder) {
+    _worker_Order = workerOrder;
+}
