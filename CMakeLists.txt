@@ -24,4 +24,6 @@ add_executable(car_sharing main.cpp
         EmployeeController/employeeController.h
         CustomerService/customer_service.h
         CustomerService/customer_service.cpp
+        CustomerController/customer_controller.h
+        CustomerController/customer_controller.cpp
 )
