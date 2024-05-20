@@ -101,4 +101,13 @@ vector<Car> CarService::getAllCars() const {
     return cars;
 }
 
+Car CarService::findCarByLicensePlate(const string& licensePlate1) {
+    for (Car car : cars) {
+        if (car.get_lincensePlate() == licensePlate1) {
+            return car;
+        }
+    }
+    throw runtime_error("Car not found");
+}
+
 

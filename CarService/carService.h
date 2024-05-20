@@ -25,6 +25,7 @@ public:
     void activate(const int &car_id);
     void deactivate(const int &car_id);
     vector<Car> getAllCars() const;
+    Car findCarByLicensePlate(const string& licensePlate1);
 };
 
 #endif //CARSHOP_CARSERVICE_H
