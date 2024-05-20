@@ -114,5 +114,68 @@ std::vector<customer> customerController::ListAllCostumersSortedByLastName() {
     });
 
     return allCustomers;
+}
 
+void customerController::ModifyCustomer(E_mail old_email, CustomerName customerName, E_mail customerMail,
+                                        Address costumerAddress, std::string customerPhoneNr, std::string customerNote,
+                                        bool GdprDeleted) {
+    customer modifiedCustomer(customerName,customerMail,costumerAddress,customerPhoneNr,customerNote,GdprDeleted);
+    customerService.update_customer(old_email.mailAddress,modifiedCustomer);
+}
+
+void customerController::CustomerAnonymisation(E_mail &email) {
+
+    int id = -1;
+
+    for(auto i : customerService.getAllCustomers())
+        if(i.getCustomerMail().mailAddress == email.mailAddress)
+            id = i.getCustomerID();
+
+    CustomerName anonymName;
+    anonymName.lastName = "Customer - " + std::to_string(id);
+    anonymName.firstName = "Unknown";
+
+    E_mail anonymEmail;
+    anonymEmail.mailAddress = "Null";
+    anonymEmail.mailPassword = "Null";
+
+    Address anonymAdress;
+    anonymAdress.city = "Null";
+    anonymAdress.country = "Null";
+    anonymAdress.street = "Null";
+    anonymAdress.streetNumber= 0;
+
+    for(auto &i : customerService.getAllCustomers()){
+        if(i.getCustomerMail().mailAddress == email.mailAddress){
+            i.setCustomerName(anonymName);
+            i.setCustomerNote("Null");
+            i.setCustomerMail(anonymEmail);
+            i.setCustomerAddress(anonymAdress);
+            i.setCustomerPhoneNr("Null");
+            i.setGdprDeleted(true);
+        }
+    }
+}
+
+bool customerController::IsEmailStructureCorrect(const E_mail& email) {
+    int oki = 0;
+
+    for(int i = 0; i < email.mailAddress.length();i++){
+        if (email.mailAddress[i] == '@' || (email.mailAddress[i] == '.' && isalpha(email.mailAddress[i+1])))
+            oki++;
+    }
+    if(oki == 2)
+        return true;
+    return false;
+
+}
+
+bool customerController::IsEmailUnique(const E_mail& email) {
+    bool unique = true;
+
+    for(auto i : customerService.getAllCustomers())
+        if(i.getCustomerMail().mailAddress == email.mailAddress)
+            unique = false;
+
+    return unique;
 }

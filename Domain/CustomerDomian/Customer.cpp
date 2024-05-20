@@ -1,5 +1,7 @@
 #include "Customer.h"
 
+int customer::customerID = 0; //initialization with 0
+
 customer::customer(CustomerName customerName, E_mail customerMail, Address customerAddress,
                    std::string customerPhoneNr, std::string customerNote, bool GdprDeleted) {
     this->customerName = customerName;
@@ -8,6 +10,7 @@ customer::customer(CustomerName customerName, E_mail customerMail, Address custo
     this->customerPhoneNr = customerPhoneNr;
     this->customerNote = customerNote;
     this->GdprDeleted = GdprDeleted;
+    this->customerID = ++customerID;
 }
 
 int customer::getCustomerID() const {

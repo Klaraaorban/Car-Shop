@@ -11,9 +11,9 @@ class customerController {
 private:
     customer_service &customerService;
 
-    bool IsEmailUnique;
-    bool IsEmailStructureCorrect();
-    bool PhoneNumberFormatCorrect(std::string PhoneNR);
+    bool IsEmailUnique(const E_mail& email);  //finished
+    bool IsEmailStructureCorrect(const E_mail& email); //finished
+    bool PhoneNumberFormatCorrect(std::string PhoneNR); //finished
 
 
 
@@ -23,9 +23,10 @@ public:
     void CustomerAdd(CustomerName customerName,E_mail customerMail,Address costumerAddress,
                      std::string customerPhoneNr,std::string customerNote,bool GdprDeleted); //finished
     void CustomerDelete(E_mail email); //finished
-    void ModifyCustomer();
+    void ModifyCustomer(E_mail old_email,CustomerName customerName,E_mail customerMail,Address costumerAddress,
+                        std::string customerPhoneNr,std::string customerNote,bool GdprDeleted);  //finished
 
-    void CustomerAnonymisation();
+    void CustomerAnonymisation(E_mail &email);  // finished
     void CustomerByAuto();
     std::vector<customer> ListAllCostumersSortedByFirstName();       // the cout will be in the UI  //finished
     std::vector<customer> ListAllCostumersSortedByLastName();       // the cout will be in the UI  //finished
@@ -35,7 +36,7 @@ public:
     customer FindCustomerByName(CustomerName name);  // finished (without exceptions)
     void ChangeCustomerEmailPassword(E_mail email,std::string newPassword);   // partially finished
     void ChangeCustomerNote(E_mail email, std::string newNote);       // partially finished
-    void SeeFavotites();
+    void SeeFavorites();
     void AddToFavorite();
 
 };

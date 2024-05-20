@@ -22,7 +22,7 @@ struct CustomerName{
 class customer {
 
 private:
-    int customerID;
+    static int customerID;
     CustomerName customerName;
     E_mail customerMail;
     Address customerAddress;
