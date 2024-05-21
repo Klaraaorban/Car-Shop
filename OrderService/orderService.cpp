@@ -3,6 +3,8 @@
 //
 
 #include "orderService.h"
+#include "../json/single_include/nlohmann/json.hpp"
+using json = nlohmann::json;
 void orderService::loadFromJson() {
     ifstream inFile(dbFilePath);
     if (inFile.is_open()) {
