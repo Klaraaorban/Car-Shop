@@ -13,7 +13,7 @@
 // TO DO include 3 classes
 
 using namespace std;
-class Bestellung_Domain {
+class Order {
 private:
     int _id_Order;
     string _date_Order;
@@ -30,12 +30,24 @@ private:
     customer _customer_Order;
     // obiect de tip Arbeiter
     Employee _worker_Order;
+public:
+    const Car &getCarOrder() const;
+
+    void setCarOrder(const Car &carOrder);
+
+    const customer &getCustomerOrder() const;
+
+    void setCustomerOrder(const customer &customerOrder);
+
+    const Employee &getWorkerOrder() const;
+
+    void setWorkerOrder(const Employee &workerOrder);
 
 public:
 
-    Bestellung_Domain(int idOrder, const string &dateOrder, const string &statusOrder, const string &beginOrder,
-                      const string &endOrder, float billOrder, const string &observationsOrder, const Car &carOrder,
-                      const customer &customerOrder, const Employee &workerOrder);
+    Order(int idOrder, const string &dateOrder, const string &statusOrder, const string &beginOrder,
+          const string &endOrder, float billOrder, const string &observationsOrder, const Car &carOrder,
+          const customer &customerOrder, const Employee &workerOrder);
 
     int getIdOrder() const;
 
@@ -67,7 +79,7 @@ public:
 
 // private functions
 private:
-    Bestellung_Domain modify_Order();
+    Order modify_Order();
 
 };
 
