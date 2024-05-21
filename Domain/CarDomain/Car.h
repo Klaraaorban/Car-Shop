@@ -6,7 +6,7 @@ class Car{
 private:
     int car_id;
     bool active;
-    string lincensePlate;
+    string licensePlate;
     string model;
     string brand;
     int registrationYear;
@@ -18,8 +18,8 @@ private:
     string remark;
 
 public:
-    Car(int car_id, string lincensePlate, string model, string brand, int registrationYear, int mileage, int dailyPrice, string fuelType, string gearbox, string color, string remark);
-    void inline set_licensePlate(string new_licensePlate){lincensePlate = new_licensePlate;}
+    Car(int car_id, string licensePlate, string model, string brand, int registrationYear, int mileage, int dailyPrice, string fuelType, string gearbox, string color, string remark);
+    void inline set_licensePlate(string new_licensePlate){licensePlate = new_licensePlate;}
     void inline set_model(string new_model){ model = new_model;}
     void inline set_brand(string new_brand){brand = new_brand;}
     void inline set_registrationYear(int new_registrationYear){registrationYear = new_registrationYear;}
@@ -29,8 +29,10 @@ public:
     void inline set_gearbox(string new_gearbox){gearbox = new_gearbox;}
     void inline set_color(string new_color){color = new_color;}
     void inline set_remark(string new_remark){remark = new_remark;}
+    void inline set_active(bool status){active = status;}
 
-    string inline get_lincensePlate(){return lincensePlate;}
+    int inline get_id(){return car_id;}
+    string inline get_lincensePlate(){return licensePlate;}
     string inline get_model(){return model;}
     string inline get_brand(){return brand;}
     int inline get_registrationYear(){return registrationYear;}
@@ -40,10 +42,5 @@ public:
     string inline get_gearbox(){return gearbox;}
     string inline get_color(){return color;}
     string inline get_remark(){return remark;}
-
-    void add();
-    void del(int car_id);
-    void update(int car_id);
-    void inline deactivate(int car_id){active = false;}
-    bool valid(int car_id);
+    bool inline get_active(){return active;}
 };
