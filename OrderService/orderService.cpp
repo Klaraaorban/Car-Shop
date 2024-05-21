@@ -11,10 +11,10 @@ void orderService::loadFromJson() {
         json j;
         inFile >> j;
         for (const auto &item : j) {
-            Employee emp(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
+            Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
                          item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], item["_customer_Order"],
                          item["_worker_Order"]);
-            employees.push_back(emp)
+            orders.push_back(ord);
 
         }
         inFile.close();
