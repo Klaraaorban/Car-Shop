@@ -27,7 +27,11 @@ public:
                         std::string customerPhoneNr,std::string customerNote,bool GdprDeleted);  //finished
 
     void CustomerAnonymisation(E_mail &email);  // finished
+
+
     void CustomerByAuto();
+
+
     std::vector<customer> ListAllCostumersSortedByFirstName();       // the cout will be in the UI  //finished
     std::vector<customer> ListAllCostumersSortedByLastName();       // the cout will be in the UI  //finished
 
