@@ -51,7 +51,8 @@ void orderService::saveToJson() const {
                             {"_end_Order", order.getEndOrder()},
                             {"_bill_Order", order.getBillOrder()},
                             {"_observations_Order", order.getObservationsOrder()},
-                            {"_car_Order", order.getCarOrder()},
+                            {"_car_Order", order.getCarOrder().get_id()},
+                            {"_customer_Order", order.getCustomerOrder().getCustomerID()},
                             {"_worker_Order", order.getWorkerOrder()}
 
                     });
