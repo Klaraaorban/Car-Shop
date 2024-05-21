@@ -35,3 +35,25 @@ void orderService::saveToJson() const {
         outFile.close();
     }
 }
+
+void orderService::addOrder(const Order &order) {
+    orders.push_back(order);
+    saveToJson();
+}
+
+
+void orderService::deleteOrder(const int &order_id) {
+    for (auto it = orders.begin(); it != orders.end(); ++it) {
+        if (it->getIdOrder() == order_id) {
+            orders.erase(it);
+            saveToJson();
+            return;
+        }
+    }
+    throw runtime_error("Car not found");
+}
+
+vector<Order> orderService::getAllrders() const {
+    return orders;
+}
+
