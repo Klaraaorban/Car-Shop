@@ -1,7 +1,7 @@
 //
 // Created by User on 5/17/2024.
 //
-using json = nlohmann::json;
+
 #include "orderService.h"
 #include "../json/single_include/nlohmann/json.hpp"
 using json = nlohmann::json;
@@ -50,7 +50,9 @@ void orderService::saveToJson() const {
                             {"_begin_Order", order.getBeginOrder()},
                             {"_end_Order", order.getEndOrder()},
                             {"_bill_Order", order.getBillOrder()},
-                            {"_observations_Order", order.getObservationsOrder()}
+                            {"_observations_Order", order.getObservationsOrder()},
+                            {"_car_Order", order.getCarOrder()},
+                            {"_worker_Order", order.getWorkerOrder()}
 
                     });
     }
