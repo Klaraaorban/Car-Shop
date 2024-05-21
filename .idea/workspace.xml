@@ -21,7 +21,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="get id from the car and customer objects in saveToJson" />
+    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="put back the functions addorder, deleteorder and getallorders">
+      <change beforePath="$PROJECT_DIR$/OrderService/orderService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/orderService.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderService/orderService.h" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/orderService.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716283075135</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="put back the functions addorder, deleteorder and getallorders">
+      <option name="closed" value="true" />
+      <created>1716283521225</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716283521225</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +206,7 @@
     <MESSAGE value="addOrder deleteOrder and getAllrders functions" />
     <MESSAGE value="added _car_Order and _worker_Order to saveToJson" />
     <MESSAGE value="get id from the car and customer objects in saveToJson" />
-    <option name="LAST_COMMIT_MESSAGE" value="get id from the car and customer objects in saveToJson" />
+    <MESSAGE value="put back the functions addorder, deleteorder and getallorders" />
+    <option name="LAST_COMMIT_MESSAGE" value="put back the functions addorder, deleteorder and getallorders" />
   </component>
 </project>

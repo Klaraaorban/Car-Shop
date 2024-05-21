@@ -24,13 +24,13 @@ public:
         void saveToJson() const;
 
     public:
-        //OrderService(const string &dbFilePath);
+        orderService(const string &dbFilePath);
         void addOrder(const Order &order);
-        void updateOrder();
+        void updateOrder(const int &order_id, const Order &updatedOrder);
         void deleteOrder(const int &order_id);
         void activate(const int &order_id);
         void deactivate(const int &order_id);
-        vector<Order> getAllrders() const;
+        vector<Order> getAllOrders() const;
 
     };
 

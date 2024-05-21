@@ -5,6 +5,11 @@ using json = nlohmann::json;
 #include "orderService.h"
 #include "../json/single_include/nlohmann/json.hpp"
 using json = nlohmann::json;
+
+orderService::orderService(const string &dbFilePath):dbFilePath(dbFilePath) {
+    loadFromJson();
+}
+
 void orderService::loadFromJson() {
     ifstream inFile(dbFilePath);
     if (inFile.is_open()) {
@@ -75,8 +80,23 @@ void orderService::deleteOrder(const int &order_id) {
             return;
         }
     }
-    throw runtime_error("Car not found");
+    throw runtime_error("Order not found");
 }
-vector<Order> orderService::getAllrders() const {
+
+void orderService::updateOrder(const int &order_id, const Order &updatedOrder) {
+    for (auto &emp : orders) {
+        if (emp.getIdOrder() == order_id) {
+            emp = updatedOrder;
+            saveToJson();
+            return;
+        }
+    }
+    throw runtime_error("Order not found");
+}
+
+
+vector<Order> orderService::getAllOrders() const {
     return orders;
 }
+
+
