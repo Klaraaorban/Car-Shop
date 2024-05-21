@@ -11,6 +11,6 @@ using json = nlohmann::json;
 class JsonOrder {
     Order static JsonToModel();
 public:
-    json static ModelToJson(const Order& order);
+    json static ModelToJson(Order& order);
 };
 #endif //CARSHOP_JSONORDER_H

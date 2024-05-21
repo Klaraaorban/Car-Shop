@@ -4,7 +4,7 @@
 
 #include "Order.h"
 
-int Order::getIdOrder() const {
+int Order::getIdOrder(){
     return _id_Order;
 }
 
@@ -12,39 +12,39 @@ void Order::setIdOrder(int idOrder) {
     _id_Order = idOrder;
 }
 
-const string &Order::getDateOrder() const {
+string &Order::getDateOrder() {
     return _date_Order;
 }
 
-void Order::setDateOrder(const string &dateOrder) {
+void Order::setDateOrder(string &dateOrder) {
     _date_Order = dateOrder;
 }
 
-const string &Order::getStatusOrder() const {
+string &Order::getStatusOrder(){
     return _status_Order;
 }
 
-void Order::setStatusOrder(const string &statusOrder) {
+void Order::setStatusOrder(string &statusOrder) {
     _status_Order = statusOrder;
 }
 
-const string &Order::getBeginOrder() const {
+string &Order::getBeginOrder(){
     return _begin_Order;
 }
 
-void Order::setBeginOrder(const string &beginOrder) {
+void Order::setBeginOrder(string &beginOrder) {
     _begin_Order = beginOrder;
 }
 
-const string &Order::getEndOrder() const {
+string &Order::getEndOrder(){
     return _end_Order;
 }
 
-void Order::setEndOrder(const string &endOrder) {
+void Order::setEndOrder(string &endOrder) {
     _end_Order = endOrder;
 }
 
-float Order::getBillOrder() const {
+float Order::getBillOrder(){
     return _bill_Order;
 }
 
@@ -52,21 +52,21 @@ void Order::setBillOrder(float billOrder) {
     _bill_Order = billOrder;
 }
 
-const string &Order::getObservationsOrder() const {
+string &Order::getObservationsOrder(){
     return _observations_Order;
 }
 
-void Order::setObservationsOrder(const string &observationsOrder) {
+void Order::setObservationsOrder(string &observationsOrder) {
     _observations_Order = observationsOrder;
 }
 
-Order::Order(int idOrder, const string &dateOrder, const string &statusOrder,
-                                     const string &beginOrder, const string &endOrder, float billOrder,
-                                     const string &observationsOrder, const Car &carOrder, const customer &customerOrder,
-                                     const Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
+Order::Order(int idOrder, string &dateOrder, string &statusOrder,
+                                      string &beginOrder, string &endOrder, float billOrder,
+                                      string &observationsOrder, Car &carOrder, customer &customerOrder,
+                                      Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
                                      _bill_Order(billOrder),_observations_Order(observationsOrder),_car_Order(carOrder),_customer_Order(customerOrder),_worker_Order(workerOrder) {}
 
-const Car &Order::getCarOrder() const {
+Car &Order::getCarOrder() {
     return _car_Order;
 }
 
@@ -74,18 +74,18 @@ void Order::setCarOrder(const Car &carOrder) {
     _car_Order = carOrder;
 }
 
-const customer &Order::getCustomerOrder() const {
+customer &Order::getCustomerOrder(){
     return _customer_Order;
 }
 
-void Order::setCustomerOrder(const customer &customerOrder) {
+void Order::setCustomerOrder(customer &customerOrder) {
     _customer_Order = customerOrder;
 }
 
-const Employee &Order::getWorkerOrder() const {
+Employee &Order::getWorkerOrder(){
     return _worker_Order;
 }
 
-void Order::setWorkerOrder(const Employee &workerOrder) {
+void Order::setWorkerOrder(Employee &workerOrder) {
     _worker_Order = workerOrder;
 }
