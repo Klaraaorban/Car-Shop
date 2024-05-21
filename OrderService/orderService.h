@@ -10,7 +10,12 @@
 using namespace std;
 
 class orderService {
-
+public:
+    void addOrder();
+    void getOrderById();
+    void updateOrder();
+    void deleteOrder();
+    void listAllOrders();
     private:
         vector<Order> orders;
         string dbFilePath;

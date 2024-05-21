@@ -6,6 +6,9 @@
 #define CARSHOP_ORDERCONTROLLER_H
 
 #include "../OrderService/orderService.h"
+#include "../Car/Car.h"
+#include "../Customer/customer.h"
+#include "../Employee/Employee.h"
 
 class orderController {
 private:
