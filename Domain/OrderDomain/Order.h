@@ -31,51 +31,51 @@ private:
     // obiect de tip Arbeiter
     Employee _worker_Order;
 public:
-    const Car &getCarOrder() const;
+     Car &getCarOrder();
 
     void setCarOrder(const Car &carOrder);
 
-    const customer &getCustomerOrder() const;
+    customer &getCustomerOrder();
 
-    void setCustomerOrder(const customer &customerOrder);
+    void setCustomerOrder(customer &customerOrder);
 
-    const Employee &getWorkerOrder() const;
+    Employee &getWorkerOrder();
 
-    void setWorkerOrder(const Employee &workerOrder);
+    void setWorkerOrder( Employee &workerOrder);
 
 public:
 
-    Order(int idOrder, const string &dateOrder, const string &statusOrder, const string &beginOrder,
-          const string &endOrder, float billOrder, const string &observationsOrder, const Car &carOrder,
-          const customer &customerOrder, const Employee &workerOrder);
+    Order(int idOrder, string &dateOrder,  string &statusOrder,  string &beginOrder,
+          string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+          customer &customerOrder, Employee &workerOrder);
 
-    int getIdOrder() const;
+    int getIdOrder();
 
     void setIdOrder(int idOrder);
 
-    const string &getDateOrder() const;
+    string &getDateOrder();
 
-    void setDateOrder(const string &dateOrder);
+    void setDateOrder(string &dateOrder);
 
-    const string &getStatusOrder() const;
+    string &getStatusOrder();
 
-    void setStatusOrder(const string &statusOrder);
+    void setStatusOrder(string &statusOrder);
 
-    const string &getBeginOrder() const;
+    string &getBeginOrder();
 
-    void setBeginOrder(const string &beginOrder);
+    void setBeginOrder(string &beginOrder);
 
-    const string &getEndOrder() const;
+    string &getEndOrder();
 
-    void setEndOrder(const string &endOrder);
+    void setEndOrder(string &endOrder);
 
-    float getBillOrder() const;
+    float getBillOrder();
 
     void setBillOrder(float billOrder);
 
-    const string &getObservationsOrder() const;
+    string &getObservationsOrder();
 
-    void setObservationsOrder(const string &observationsOrder);
+    void setObservationsOrder( string &observationsOrder);
 
 // private functions
 private:
