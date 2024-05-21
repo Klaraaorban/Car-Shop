@@ -15,6 +15,7 @@ void customer_service::loadJson() {
             CustomerName newStruct;
             newStruct.firstName = token.substr(0,token.find(" "));
             newStruct.lastName = token.substr(1,token.find(" "));
+
             auto m = i["customerMail"];
             auto tok_m = m.dump();
             E_mail newMail;
@@ -28,9 +29,16 @@ void customer_service::loadJson() {
             newAddress.city = tok_a.substr(1,tok_a.find(" "));
             newAddress.street = tok_a.substr(2,tok_a.find(" "));
             newAddress.streetNumber = stoi(tok_a.substr(3,tok_a.find(" ")));
+
+            // vector<int> favorites;
+            // for (const auto& fav : i["favorites"]) {
+            //     favorites.push_back(fav);
+            // }
+
             customer cus(
                     newStruct, newMail,
-                    newAddress, i["customerPhoneNr"], i["customerNote"], 1);
+                    newAddress, i["customerPhoneNr"], i["customerNote"], 1/*,*/
+                    /*favorites*/);
             customers.push_back(cus);
         }
         file.close();
@@ -46,7 +54,8 @@ void customer_service::saveJson() const {
                             {"Mail",         cus.getCustomerMail().mailAddress},
                             {"Address",      cus.getCustomerAddress().city},
                             {"Phone number", cus.getCustomerPhoneNr()},
-                            {"Remarks",      cus.getCustomerNote()}
+                            {"Remarks",      cus.getCustomerNote()}/*,*/
+                            /*{"Favorites",    cus.getFavorites()}*/
                 };
         x.push_back(customerJson);
     }

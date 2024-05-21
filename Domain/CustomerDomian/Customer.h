@@ -2,6 +2,8 @@
 #ifndef CAR_SHARING_CUSTOMER_H
 #define CAR_SHARING_CUSTOMER_H
 #include <string>
+#include <vector>
+#include <algorithm>
 
 struct Address{
     std::string country;
@@ -19,6 +21,7 @@ struct CustomerName{
     std::string lastName;
     std::string firstName;
 };
+
 class customer {
 
 private:
@@ -29,7 +32,7 @@ private:
     std::string customerPhoneNr;
     std::string customerNote; //something special about the customer
     bool GdprDeleted;          //if true -- costumer dates private
-
+    std::vector<int> favorites;
 
 
 public:
@@ -63,6 +66,12 @@ public:
     bool isGdprDeleted() const;
 
     void setGdprDeleted(bool gdprDeleted);
+
+    void setFavoriteCar(std::vector<int>& favs);
+
+    void addFavoriteCar(int carID);
+
+    std::vector<int> getFavorites() const;
 
 };
 

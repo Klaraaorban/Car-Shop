@@ -68,3 +68,16 @@ bool customer::isGdprDeleted() const {
 void customer::setGdprDeleted(bool gdprDeleted) {
     this->GdprDeleted = gdprDeleted;
 }
+
+void customer::setFavoriteCar(std::vector<int>& favs) {
+    this->favorites = favs;
+}
+
+std::vector<int> customer::getFavorites() const {
+    return this->favorites;
+}
+
+
+void customer::addFavoriteCar(int carID) {
+    this->favorites.push_back(carID);
+}

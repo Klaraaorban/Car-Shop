@@ -5,7 +5,6 @@
 #include "customerController.h"
 #include "exception"
 
-
 customerController::customerController(customer_service &customerService) : customerService(customerService) {}
 
 
@@ -13,20 +12,21 @@ void customerController::CustomerAdd(CustomerName customerName,E_mail customerMa
                                      std::string customerPhoneNr,std::string customerNote,bool GdprDeleted) {
     customer customerToBeAdded(customerName,customerMail,costumerAddress,customerPhoneNr,customerNote,GdprDeleted);
     customerService.addCostumer(customerToBeAdded);
-
 }
 
-void customerController::CustomerDelete(E_mail email)  {
 
+void customerController::CustomerDelete(E_mail email)  {
     std::string emailAdress = email.mailAddress;
     customerService.delete_customer(emailAdress);
 }
+
 
 customer customerController::FindCustomerByEmail(const E_mail &email) {
     std::string emailAdress = email.mailAddress;
     customer customerNeeded = customerService.get_customerby_email(emailAdress);
     return customerNeeded;
 }
+
 
 void customerController::ChangeCustomerEmailPassword(E_mail email,std::string newPassword) {
     std::string emailAdress, oldPassword;
@@ -45,9 +45,10 @@ void customerController::ChangeCustomerEmailPassword(E_mail email,std::string ne
         }
     }
 
-  //  customerService.                // We need a metode in the Service, that updates a specific customer based on the email
-                                // and saved it in the vector and in the json
+    //! customerService-UPDATE NEEDED: we need a method in the service which updates a specific customer based on the email
+    //!                                and saves it in the vector and in the json
 }
+
 
 void customerController::ChangeCustomerNote(E_mail email, std::string newNote) {
     std::string emailAdress = email.mailAddress;
@@ -59,18 +60,18 @@ void customerController::ChangeCustomerNote(E_mail email, std::string newNote) {
         }
     }
 
-    //  customerService.              // The same as in the previous metode, we need to update it based on email
-
+    //!  customerService-UPDATE NEEDED: same as in the previous method, we need to update it based on email
 }
+
 
 customer customerController::FindCustomerByName(CustomerName name) {
     for(auto i : customerService.getAllCustomers()){
         if(i.getCustomerName().firstName == name.firstName && i.getCustomerName().lastName == name.lastName)
             return i;
     }
+    throw logic_error("Customer with this name not existing!");
+}   
 
-    // no error handling, I don't know what handling could I use here
-}
 
 bool customerController::PhoneNumberFormatCorrect(std::string PhoneNR) {   //privat methode
     if(PhoneNR[0] != '+' )
@@ -85,6 +86,7 @@ bool customerController::PhoneNumberFormatCorrect(std::string PhoneNR) {   //pri
 
 }
 
+
 customer customerController::FindCustomerByMobilePhone(const std::string& PhoneNr) {
     if(!PhoneNumberFormatCorrect(PhoneNr))
         throw std::runtime_error("Customer not found.");
@@ -93,7 +95,9 @@ customer customerController::FindCustomerByMobilePhone(const std::string& PhoneN
         if(i.getCustomerPhoneNr() == PhoneNr)
             return i;
     }
+    throw logic_error("Customer with this phone number not found!");
 }
+
 
 std::vector<customer> customerController::ListAllCostumersSortedByFirstName() {
     std::vector<customer> allCustomers = customerService.getAllCustomers();
@@ -103,8 +107,8 @@ std::vector<customer> customerController::ListAllCostumersSortedByFirstName() {
     });
 
     return allCustomers;
-
 }
+
 
 std::vector<customer> customerController::ListAllCostumersSortedByLastName() {
     std::vector<customer> allCustomers = customerService.getAllCustomers();
@@ -116,12 +120,14 @@ std::vector<customer> customerController::ListAllCostumersSortedByLastName() {
     return allCustomers;
 }
 
+
 void customerController::ModifyCustomer(E_mail old_email, CustomerName customerName, E_mail customerMail,
                                         Address costumerAddress, std::string customerPhoneNr, std::string customerNote,
                                         bool GdprDeleted) {
     customer modifiedCustomer(customerName,customerMail,costumerAddress,customerPhoneNr,customerNote,GdprDeleted);
     customerService.update_customer(old_email.mailAddress,modifiedCustomer);
 }
+
 
 void customerController::CustomerAnonymisation(E_mail &email) {
 
@@ -157,6 +163,7 @@ void customerController::CustomerAnonymisation(E_mail &email) {
     }
 }
 
+
 bool customerController::IsEmailStructureCorrect(const E_mail& email) {
     int oki = 0;
 
@@ -170,6 +177,7 @@ bool customerController::IsEmailStructureCorrect(const E_mail& email) {
 
 }
 
+
 bool customerController::IsEmailUnique(const E_mail& email) {
     bool unique = true;
 
@@ -178,4 +186,31 @@ bool customerController::IsEmailUnique(const E_mail& email) {
             unique = false;
 
     return unique;
+}
+
+
+std::vector<int> customerController::SeeFavorites(E_mail &email) {
+    for (auto i : customerService.getAllCustomers()) {
+        if (i.getCustomerMail().mailAddress == email.mailAddress) {
+            return i.getFavorites();
+        }
+    }
+    throw logic_error("Customer with this email not existing!");
+}
+
+
+void customerController::AddToFavorite(E_mail &email, int carID) {
+    for (auto i : customerService.getAllCustomers()) {
+        if (i.getCustomerMail().mailAddress == email.mailAddress) {
+            for (int id : i.getFavorites()) {
+                if (id == carID) 
+                    throw runtime_error("CarID already existing!");
+            }
+            i.addFavoriteCar(carID);
+            return;
+        }
+    }
+    throw logic_error("Customer with this email not existing!");
+
+    //! customerService-UPDATE NEEDED: to load/save the favorites too
 }
