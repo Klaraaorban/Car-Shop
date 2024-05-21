@@ -10,10 +10,35 @@ void orderService::loadFromJson() {
     if (inFile.is_open()) {
         json j;
         inFile >> j;
+        for (const auto &item : j) {
+            Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
+                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], item["_customer_Order"],
+                         item["_worker_Order"]);
+            orders.push_back(ord);
+
+        }
         inFile.close();
 
     }
 }
+
+/*
+ * int _id_Order;
+    string _date_Order;
+    string _status_Order;
+    string _begin_Order;
+    string _end_Order;
+    float _bill_Order;
+    string _observations_Order;
+
+    // TO DO, 3 objects
+    // obiect de tip Auto
+    Car _car_Order;
+    // obiect de tip Kunde
+    customer _customer_Order;
+    // obiect de tip Arbeiter
+    Employee _worker_Order;
+ * */
 
 void orderService::saveToJson() const {
     json j;
