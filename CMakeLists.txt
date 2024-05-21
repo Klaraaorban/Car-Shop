@@ -3,8 +3,29 @@ project(CarShop)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CarShop main.cpp
-        Domain/Bestellung_Domain.h
-        Domain/Bestellung_Domain.cpp
-        Repo/Bestellung_Repo.cpp
-        Service/Bestellung_Service.cpp)
+
+
+add_executable(car_sharing main.cpp
+        Domain/CarDomain/Car.cpp
+        Domain/CarDomain/Car.h
+        Domain/CustomerDomian/Customer.cpp
+        Domain/CustomerDomian/Customer.h
+        Domain/Employee.h
+        Domain/Employee.cpp
+        Domain/User.h
+        Domain/User.cpp
+        Domain/JsonAdapter/JsonAdapter.h
+        Domain/JsonAdapter/JsonAdapter.cpp
+        Domain/JsonAdapter/JsonEmployee.h
+        Domain/JsonAdapter/JsonEmployee.cpp
+        EmployeeService/employeeService.cpp
+        EmployeeService/employeeService.h
+        EmployeeController/employeeController.cpp
+        EmployeeController/employeeController.h
+        Domain/JsonAdapter/JsonOrder.cpp
+        Domain/OrderDomain/Order.cpp
+        OrderController/orderController.h
+        OrderController/orderController.cpp
+        OrderService/orderService.h
+        OrderService/orderService.cpp
+)
