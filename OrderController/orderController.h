@@ -6,15 +6,15 @@
 #define CARSHOP_ORDERCONTROLLER_H
 
 #include "../OrderService/orderService.h"
-#include "../Car/Car.h"
-#include "../Customer/customer.h"
-#include "../Employee/Employee.h"
+#include "../Domain/CarDomain/Car.h"
+#include "../Domain/CustomerDomian/Customer.h"
+#include "../Domain/Employee.h"
 
 class orderController {
 private:
-    orderService &orderService;
+    orderService &OrderService;
 public:
-    orderController(orderController &orderService);
+    orderController(orderService &OrderService);
     void addOrder();
     void getOrderById();
     void updateOrder();

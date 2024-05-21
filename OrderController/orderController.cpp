@@ -3,11 +3,11 @@
 //
 
 #include "orderController.h"
-#include "../OrderService/orderService.h"
+//#include "../OrderService/orderService.h"
 #include <iostream>
 #include <string>
 
-orderController::orderController(orderService &orderservice) : orderService(orderservice) {}
+orderController::orderController(orderService &Orderservice) : OrderService(Orderservice) {}
 
 void orderController::addOrder() {
     int id;
@@ -49,7 +49,7 @@ void orderController::getOrderById() {
     std::cin >> id;
 
     try {
-        Order order = orderService.getOrderById(id);
+        Order order = OrderService.getOrderById(id);
         std::cout << "Id: " << order.getIdOrder() << "\n";
         std::cout << "Date: " << order.getDateOrder() << "\n";
         std::cout << "Status: " << order.getStatusOrder() << "\n";
@@ -104,7 +104,7 @@ void orderController::deleteOrder() {
     std::cin >> id;
 
     try {
-        orderService.deleteOrder(id);
+        OrderService.deleteOrder(id);
         std::cout << "Order deleted successfully.\n";
     } catch (const std::exception &e) {
         std::cerr << e.what() << '\n';
@@ -112,8 +112,8 @@ void orderController::deleteOrder() {
 }
 
 void orderController::listAllOrders() {
-//    auto orders = orderService.getAllOrders();
-    for (const auto &order : orders) {
+    auto orders = OrderService.getAllOrders();
+    for ( auto &order : orders) {
         std::cout << "Id: " << order.getIdOrder() << "\n";
         std::cout << "Date: " << order.getDateOrder() << "\n";
         std::cout << "Status: " << order.getStatusOrder() << "\n";

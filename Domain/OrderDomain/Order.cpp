@@ -74,6 +74,10 @@ void Order::setCarOrder(const Car &carOrder) {
     _car_Order = carOrder;
 }
 
+int Order::getIdCar() {
+    return this->_car_Order.get_id();
+}
+
 customer &Order::getCustomerOrder(){
     return _customer_Order;
 }

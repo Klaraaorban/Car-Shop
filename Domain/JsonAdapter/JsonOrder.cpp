@@ -15,6 +15,6 @@ json JsonOrder::ModelToJson(Order& order) {
     j["_observations_Order"] = order.getObservationsOrder();
     j["_car_Order"] = order.getCarOrder().get_id();
 //    j["_worker_Order"] = order.getWorkerOrder().; // need employee id
-    //j["_customer_Order"] = order.getCustomerOrder().getCustomerID();
+    j["_customer_Order"] = order.getCustomerOrder().getCustomerID();
     return j;
 }

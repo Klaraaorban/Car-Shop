@@ -33,6 +33,8 @@ private:
 public:
      Car &getCarOrder();
 
+     int getIdCar();
+
     void setCarOrder(const Car &carOrder);
 
     customer &getCustomerOrder();
