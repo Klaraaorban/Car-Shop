@@ -50,7 +50,10 @@ void orderService::saveToJson() const {
                             {"_begin_Order", order.getBeginOrder()},
                             {"_end_Order", order.getEndOrder()},
                             {"_bill_Order", order.getBillOrder()},
-                            {"_observations_Order", order.getObservationsOrder()}
+                            {"_observations_Order", order.getObservationsOrder()},
+                            {"_car_Order", order.getCarOrder().get_id()},
+                            {"_customer_Order", order.getCustomerOrder().getCustomerID()},
+                            {"_worker_Order", order.getWorkerOrder()}
 
                     });
     }
@@ -59,4 +62,21 @@ void orderService::saveToJson() const {
         outFile << j.dump(4);
         outFile.close();
     }
+}
+void orderService::addOrder(const Order &order) {
+    orders.push_back(order);
+    saveToJson();
+}
+void orderService::deleteOrder(const int &order_id) {
+    for (auto it = orders.begin(); it != orders.end(); ++it) {
+        if (it->getIdOrder() == order_id) {
+            orders.erase(it);
+            saveToJson();
+            return;
+        }
+    }
+    throw runtime_error("Car not found");
+}
+vector<Order> orderService::getAllrders() const {
+    return orders;
 }
