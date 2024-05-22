@@ -22,10 +22,10 @@ add_executable(car_sharing main.cpp
         EmployeeService/employeeService.h
         EmployeeController/employeeController.cpp
         EmployeeController/employeeController.h
-        Domain/JsonAdapter/JsonOrder.cpp
-        Domain/OrderDomain/Order.cpp
-        OrderController/orderController.h
-        OrderController/orderController.cpp
-        OrderService/orderService.h
-        OrderService/orderService.cpp
+        CustomerService/customer_service.h
+        CustomerService/customer_service.cpp
+        CustomerController/customerController.h
+        CustomerController/customerController.cpp
+        CustomerUI/customerUI.h
+        CustomerUI/customerUI.cpp
 )
