@@ -157,6 +157,7 @@ std::vector<Order> orderController::listAllOrders() {
 //        std::cout << "Bill: " << order.getBillOrder() << "\n";
 //        std::cout << "Observations: " << order.getObservationsOrder() << "\n";
 //    }
+    return orders;
 }
 
 bool orderController::ID_is_valid(int id) {

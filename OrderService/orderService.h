@@ -2,6 +2,9 @@
 // Created by User on 5/17/2024.
 //
 #include "../Domain/OrderDomain/Order.h"
+#include "../CustomerController/customerController.h"
+#include "../CarController/carController.h"
+#include "../EmployeeController/employeeController.h"
 #include <vector>
 #include <string>
 #include <fstream>
@@ -18,13 +21,16 @@ public:
 //    void listAllOrders();
 private:
     vector<Order> orders;
-    string dbFilePath;
+    string dbOrderFilePath;
+    string dbCarFilePath;
+    string dbCustomerFilePath;
+    string dbEmployeeFilePath;
 
-    void loadFromJson();
+    void loadFromJson(string &path_car,string &path_customer,string &path_employee);
     void saveToJson() const;
 
 public:
-    orderService(string &dbFilePath);
+    orderService(string &dbOrderFilePath,string &dbCarFilePath,string &dbCustomerFilePath,string &dbEmployeeFilePath);
     void addOrder(Order &order);
     int createId();
     void updateOrder(int &order_id, Order &updatedOrder);

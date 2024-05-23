@@ -34,4 +34,5 @@ add_executable(car_sharing main.cpp
         OrderController/orderController.cpp
         OrderService/orderService.h
         OrderService/orderService.cpp
+        CarController/carController.cpp
 )

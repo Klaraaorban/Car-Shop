@@ -5,19 +5,22 @@
 #include "../json/single_include/nlohmann/json.hpp"
 using json = nlohmann::json;
 
-orderService::orderService(string &dbFilePath):dbFilePath(dbFilePath) {
-    loadFromJson();
+orderService::orderService(string &dbOrderFilePath,string &dbCarFilePath,string &dbCustomerFilePath,string &dbEmployeeFilePath):dbOrderFilePath(dbOrderFilePath), dbCarFilePath(dbCarFilePath),dbCustomerFilePath(dbCustomerFilePath),dbEmployeeFilePath(dbEmployeeFilePath) {
+    loadFromJson(dbCarFilePath,dbCustomerFilePath,dbEmployeeFilePath);
 }
 
-void orderService::loadFromJson() {
-    ifstream inFile(dbFilePath);
+void orderService::loadFromJson(string &path_car,string &path_customer,string &path_employee) {
+    ifstream inFile(dbOrderFilePath);
     if (inFile.is_open()) {
         json j;
         inFile >> j;
-
+        customer_service customerService(path_customer);
+        customerController controller(customerService);
+        CarService carService(path_car);
+        EmployeeService employeeService(path_employee);
         for (const auto &item : j) {
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
-                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], item["_customer_Order"],
+                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], controller.FindCustomerByID(item["_customer_Order"]),
                          item["_worker_Order"]);
             orders.push_back(ord);
 
@@ -62,7 +65,7 @@ void orderService::saveToJson() const {
 
                     });
     }
-    ofstream outFile(dbFilePath);
+    ofstream outFile(dbOrderFilePath);
     if (outFile.is_open()) {
         outFile << j.dump(4);
         outFile.close();
