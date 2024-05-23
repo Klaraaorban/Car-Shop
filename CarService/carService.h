@@ -16,9 +16,9 @@ private:
 
     void loadFromJson();
     void saveToJson() const;
-
 public:
     CarService(const string &dbFilePath);
+    int createID();
     void addCar(const Car &car);
     void updateCar(const int &car_id, const Car &updatedCar);
     void deleteCar(const int &car_id);
