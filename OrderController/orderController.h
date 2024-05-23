@@ -15,11 +15,13 @@ private:
     orderService &OrderService;
 public:
     orderController(orderService &OrderService);
-    void addOrder();
-    void getOrderById();
-    void updateOrder();
-    void deleteOrder();
-    void listAllOrders();
+    void addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
+                  string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+                  customer &customerOrder, Employee &workerOrder);
+    Order getOrderById(int idOrder);
+    void updateOrder(int idOrder,Order &updatedOrder);
+    void deleteOrder(int orderId);
+    std::vector<Order> listAllOrders();
 };
 
 

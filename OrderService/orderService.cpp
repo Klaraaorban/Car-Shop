@@ -5,7 +5,7 @@
 #include "../json/single_include/nlohmann/json.hpp"
 using json = nlohmann::json;
 
-orderService::orderService(const string &dbFilePath):dbFilePath(dbFilePath) {
+orderService::orderService(string &dbFilePath):dbFilePath(dbFilePath) {
     loadFromJson();
 }
 
@@ -68,11 +68,16 @@ void orderService::saveToJson() const {
         outFile.close();
     }
 }
-void orderService::addOrder(const Order &order) {
+
+int orderService::createId() {
+    return orders.size();
+}
+
+void orderService::addOrder(Order &order) {
     orders.push_back(order);
     saveToJson();
 }
-void orderService::deleteOrder(const int &order_id) {
+void orderService::deleteOrder(int &order_id) {
     for (auto it = orders.begin(); it != orders.end(); ++it) {
         if (it->getIdOrder() == order_id) {
             orders.erase(it);
@@ -83,7 +88,7 @@ void orderService::deleteOrder(const int &order_id) {
     throw runtime_error("Order not found");
 }
 
-void orderService::updateOrder(const int &order_id, const Order &updatedOrder) {
+void orderService::updateOrder(int &order_id, Order &updatedOrder) {
     for (auto &ord : orders) {
         if (ord.getIdOrder() == order_id) {
             ord = updatedOrder;
@@ -94,7 +99,7 @@ void orderService::updateOrder(const int &order_id, const Order &updatedOrder) {
     throw runtime_error("Order not found");
 }
 
-Order orderService::getOrderById(const int &order_id) {
+Order orderService::getOrderById(int &order_id) {
     for(auto &ord: orders){
         if(order_id == ord.getIdOrder()){
             return ord;
@@ -103,7 +108,7 @@ Order orderService::getOrderById(const int &order_id) {
     throw runtime_error("Order not found");
 }
 
-vector<Order> orderService::getAllOrders() const {
+vector<Order> orderService::getAllOrders(){
     return orders;
 }
 
