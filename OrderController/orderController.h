@@ -22,6 +22,7 @@ public:
     void updateOrder(int idOrder,Order &updatedOrder);
     void deleteOrder(int orderId);
     std::vector<Order> listAllOrders();
+    bool ID_is_valid(int id);
 };
 
 
