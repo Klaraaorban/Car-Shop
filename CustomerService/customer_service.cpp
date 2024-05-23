@@ -45,6 +45,7 @@ void customer_service::loadJson() {
     }
 }
 
+
 void customer_service::saveJson() const {
     json x = json::array();
     for (const auto &cus: customers) {
@@ -67,19 +68,12 @@ void customer_service::saveJson() const {
     }
 }
 
+
 void customer_service::addCostumer(const customer &_customer) {
     customers.push_back(_customer);
     saveJson();
 }
 
-customer customer_service::get_customerby_email(const std::string &email) const {
-    for(const auto &cus: customers){
-        if(email == cus.getCustomerMail().mailAddress){
-            return cus;
-        }
-    }
-    throw runtime_error("Customer not found");
-}
 
 void customer_service::update_customer(const std::string &email, const customer &updated_customer) {
     for(auto &cus: customers){
@@ -92,6 +86,7 @@ void customer_service::update_customer(const std::string &email, const customer 
     throw runtime_error("Customer not found");
 }
 
+
 void customer_service::delete_customer(const std::string &email) {
     for(auto i = customers.begin(); i != customers.end(); i++){
         if(i->getCustomerMail().mailAddress == email){
@@ -102,6 +97,7 @@ void customer_service::delete_customer(const std::string &email) {
     }
     throw runtime_error("Customer not found");
 }
+
 
 vector<customer> customer_service::getAllCustomers() const{
     return customers;

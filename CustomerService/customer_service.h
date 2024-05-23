@@ -25,7 +25,6 @@ private:
 public:
     customer_service(const string &path);
     void addCostumer(const customer &_customer);
-    customer get_customerby_email(const string &email) const;
     void update_customer(const string &email, const customer &updated_customer);
     void delete_customer(const string& email);
     vector<customer> getAllCustomers() const;

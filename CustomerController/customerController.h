@@ -27,6 +27,7 @@ public:
     std::vector<customer> ListAllCostumersSortedByFirstName();       // the cout will be in the UI  //finished
     std::vector<customer> ListAllCostumersSortedByLastName();       // the cout will be in the UI  //finished
     customer FindCustomerByEmail(const E_mail &email);                  //finished
+    customer FindCustomerByID(const int& id);                           //finished
     customer FindCustomerByMobilePhone(const std::string& PhoneNr);     //finished
     customer FindCustomerByName(CustomerName name);                     //finished
     void ChangeCustomerEmailPassword(E_mail email,std::string newPassword);   // partially finished
