@@ -12,11 +12,15 @@ orderController::orderController(orderService &Orderservice) : OrderService(Orde
 void orderController::addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
                                string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
                                customer &customerOrder, Employee &workerOrder) {
-    int idOrder=OrderService.createId();
-    Order order_to_be_added(idOrder,dateOrder,statusOrder, beginOrder,
-                             endOrder,  billOrder,  observationsOrder,  carOrder,
-                             customerOrder,  workerOrder);
-    OrderService.addOrder(order_to_be_added);
+    try{
+        int idOrder=OrderService.createId();
+        Order order_to_be_added(idOrder,dateOrder,statusOrder, beginOrder,
+                                endOrder,  billOrder,  observationsOrder,  carOrder,
+                                customerOrder,  workerOrder);
+        OrderService.addOrder(order_to_be_added);
+    }catch (const std::exception &e) {
+        cerr << "Failed to add car: " << e.what() << '\n';
+    }
 //    int id;
 //    std::string date;
 //    std::string status;
@@ -51,8 +55,14 @@ void orderController::addOrder(string &dateOrder,  string &statusOrder,  string 
 }
 
 Order orderController::getOrderById(int idOrder) {
-    Order ord= OrderService.getOrderById(idOrder);
-    return ord;
+    if (! ID_is_valid(idOrder)) {
+        throw invalid_argument("Invalid order ID");
+    }
+    else{
+        Order ord= OrderService.getOrderById(idOrder);
+        return ord;
+    }
+
 
 
 //    int id;
@@ -74,7 +84,14 @@ Order orderController::getOrderById(int idOrder) {
 }
 
 void orderController::updateOrder(int orderId,Order &updatedOrder) {
-    OrderService.updateOrder(orderId,updatedOrder);
+    try{
+        if (! ID_is_valid(orderId)) {
+            throw invalid_argument("Invalid order ID");}
+        OrderService.updateOrder(orderId,updatedOrder);
+    }
+    catch (const std::exception &e) {
+        cerr << "Failed to update order: " << e.what() << '\n';
+    }
 //    int id;
 //    std::cout << "Enter the id of the order to update: ";
 //    std::cin >> id;
@@ -110,7 +127,13 @@ void orderController::updateOrder(int orderId,Order &updatedOrder) {
 }
 
 void orderController::deleteOrder(int orderId) {
-    OrderService.deleteOrder(orderId);
+    try{
+        if (! ID_is_valid(orderId)) {
+            throw invalid_argument("Invalid order ID");}
+        OrderService.deleteOrder(orderId);
+    }catch (const std::exception &e) {
+        cerr << "Failed to delete order: " << e.what() << '\n';
+    }
 //    int id;
 //    std::cout << "Enter the id of the order to delete: ";
 //    std::cin >> id;
@@ -134,4 +157,10 @@ std::vector<Order> orderController::listAllOrders() {
 //        std::cout << "Bill: " << order.getBillOrder() << "\n";
 //        std::cout << "Observations: " << order.getObservationsOrder() << "\n";
 //    }
+}
+
+bool orderController::ID_is_valid(int id) {
+    if (id < 0 )
+        return false;
+    return true;
 }
