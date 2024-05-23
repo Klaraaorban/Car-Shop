@@ -22,9 +22,22 @@ void customerController::CustomerDelete(E_mail email)  {
 
 
 customer customerController::FindCustomerByEmail(const E_mail &email) {
-    std::string emailAdress = email.mailAddress;
-    customer customerNeeded = customerService.get_customerby_email(emailAdress);
-    return customerNeeded;
+    for (auto cus : customerService.getAllCustomers()) {
+        if (email.mailAddress == cus.getCustomerMail().mailAddress) {
+            return cus;
+        }
+    }
+    throw logic_error("Customer with this mail not existing!");
+}
+
+
+customer customerController::FindCustomerByID(const int& id) {
+    for (auto cus : customerService.getAllCustomers()) {
+        if (cus.getCustomerID() == id) {
+            return cus;
+        }
+    }
+    throw logic_error("Customer with this ID not existing!");
 }
 
 
