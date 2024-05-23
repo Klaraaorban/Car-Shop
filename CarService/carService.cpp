@@ -48,6 +48,10 @@ void CarService::saveToJson() const {
     }
 }
 
+int CarService::createID() {
+    return cars.size();
+}
+
 void CarService::addCar(const Car &car) {
     cars.push_back(car);
     saveToJson();
