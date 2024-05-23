@@ -28,4 +28,10 @@ add_executable(car_sharing main.cpp
         CustomerController/customerController.cpp
         CustomerUI/customerUI.h
         CustomerUI/customerUI.cpp
+        Domain/JsonAdapter/JsonOrder.cpp
+        Domain/OrderDomain/Order.cpp
+        OrderController/orderController.h
+        OrderController/orderController.cpp
+        OrderService/orderService.h
+        OrderService/orderService.cpp
 )

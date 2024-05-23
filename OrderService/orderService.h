@@ -27,9 +27,8 @@ public:
     orderService(const string &dbFilePath);
     void addOrder(const Order &order);
     void updateOrder(const int &order_id, const Order &updatedOrder);
+    Order getOrderById(const int &order_id);
     void deleteOrder(const int &order_id);
-    void activate(const int &order_id);
-    void deactivate(const int &order_id);
     vector<Order> getAllOrders() const;
     };
 

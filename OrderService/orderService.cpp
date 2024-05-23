@@ -14,6 +14,7 @@ void orderService::loadFromJson() {
     if (inFile.is_open()) {
         json j;
         inFile >> j;
+
         for (const auto &item : j) {
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
                          item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], item["_customer_Order"],
@@ -83,9 +84,9 @@ void orderService::deleteOrder(const int &order_id) {
 }
 
 void orderService::updateOrder(const int &order_id, const Order &updatedOrder) {
-    for (auto &emp : orders) {
-        if (emp.getIdOrder() == order_id) {
-            emp = updatedOrder;
+    for (auto &ord : orders) {
+        if (ord.getIdOrder() == order_id) {
+            ord = updatedOrder;
             saveToJson();
             return;
         }
@@ -93,6 +94,14 @@ void orderService::updateOrder(const int &order_id, const Order &updatedOrder) {
     throw runtime_error("Order not found");
 }
 
+Order orderService::getOrderById(const int &order_id) {
+    for(auto &ord: orders){
+        if(order_id == ord.getIdOrder()){
+            return ord;
+        }
+    }
+    throw runtime_error("Order not found");
+}
 
 vector<Order> orderService::getAllOrders() const {
     return orders;

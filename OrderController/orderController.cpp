@@ -62,7 +62,6 @@ void orderController::getOrderById() {
     }
 }
 
-
 void orderController::updateOrder() {
     int id;
     std::cout << "Enter the id of the order to update: ";
@@ -95,7 +94,7 @@ void orderController::updateOrder() {
     std::cout << "Enter the observations of the order: ";
     std::cin >> observations;
 
-    orderService.updateOrder(id, date, status, begin, end, bill, observations, car, customer, worker);
+    OrderService.updateOrder(id, date, status, begin, end, bill, observations, car, customer, worker);
 }
 
 void orderController::deleteOrder() {
