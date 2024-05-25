@@ -27,6 +27,7 @@ public:
     void assignOrder(int orderId, Employee &newWorker);
     std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate);
     float getTotalSumOfADate(string &date) ;
+    void completeOrder(int orderId);
 };
 
 

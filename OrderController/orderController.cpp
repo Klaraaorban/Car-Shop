@@ -196,3 +196,13 @@ float orderController::getTotalSumOfADate(string &date) {
         std::cerr << "Failed to get total sum by date: " << e.what() << '\n';
     }
 }
+
+void orderController::completeOrder(int orderId) {
+    try {
+        Order orderToUpdate = OrderService.getOrderById(orderId);
+        orderToUpdate.setStatusOrder((string &) "Completed");
+        OrderService.updateOrder(orderId, orderToUpdate);
+    }catch (const std::exception &e) {
+            std::cerr << "Failed to complete order " << e.what() << '\n';
+        }
+}
