@@ -2,7 +2,13 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../712-2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/googletest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/json" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../DSA" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../DSA py/S1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../GRAPH" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../OOP" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../OS" vcs="Git" />
   </component>
 </project>
