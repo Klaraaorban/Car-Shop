@@ -7,10 +7,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../CarDomain/Car.h"
+#include "../CustomerDomian/Customer.h"
+#include "../EmployeeDomain/Employee.h"
 // TO DO include 3 classes
 
 using namespace std;
-class Bestellung_Domain {
+class Order {
 private:
     int _id_Order;
     string _date_Order;
@@ -22,49 +25,62 @@ private:
 
     // TO DO, 3 objects
     // obiect de tip Auto
-    Auto _car_Order;
+    Car _car_Order;
     // obiect de tip Kunde
-    Kunde _customer_Order;
+    customer _customer_Order;
     // obiect de tip Arbeiter
-    Arbeiter _worker_Order;
+    Employee _worker_Order;
+public:
+     Car &getCarOrder();
+
+     int getIdCar();
+
+    void setCarOrder(const Car &carOrder);
+
+    customer &getCustomerOrder();
+
+    void setCustomerOrder(customer &customerOrder);
+
+    Employee &getWorkerOrder();
+
+    void setWorkerOrder( Employee &workerOrder);
 
 public:
 
-    Bestellung_Domain(int idOrder, const string &dateOrder, const string &statusOrder, const string &beginOrder,
-                      const string &endOrder, float billOrder, const string &observationsOrder, const Auto &carOrder,
-                      const Kunde &customerOrder, const Arbeiter &workerOrder);
+    Order(int idOrder, string &dateOrder,  string &statusOrder,  string &beginOrder,
+          string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+          customer &customerOrder, Employee &workerOrder);
 
-    int getIdOrder() const;
+    int getIdOrder();
 
     void setIdOrder(int idOrder);
 
-    const string &getDateOrder() const;
+    string &getDateOrder();
 
-    void setDateOrder(const string &dateOrder);
+    void setDateOrder(string &dateOrder);
 
-    const string &getStatusOrder() const;
+    string &getStatusOrder();
 
-    void setStatusOrder(const string &statusOrder);
+    void setStatusOrder(string &statusOrder);
 
-    const string &getBeginOrder() const;
+    string &getBeginOrder();
 
-    void setBeginOrder(const string &beginOrder);
+    void setBeginOrder(string &beginOrder);
 
-    const string &getEndOrder() const;
+    string &getEndOrder();
 
-    void setEndOrder(const string &endOrder);
+    void setEndOrder(string &endOrder);
 
-    float getBillOrder() const;
+    float getBillOrder();
 
     void setBillOrder(float billOrder);
 
-    const string &getObservationsOrder() const;
+    string &getObservationsOrder();
 
-    void setObservationsOrder(const string &observationsOrder);
+    void setObservationsOrder( string &observationsOrder);
 
 // private functions
 private:
-    Bestellung_Domain modify_Order();
 
 };
 

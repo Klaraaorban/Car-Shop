@@ -10,6 +10,7 @@
 #include <fstream>
 
 #include "JsonEmployee.h"
+#include "JsonOrder.h"
 
 using json = nlohmann::json;
 
@@ -17,7 +18,7 @@ using json = nlohmann::json;
 template <class T> class JsonAdapter{
 public:
     static void writeToJson(T instance);
-
+    static void writeToJsonOrder(T instance);
 
 public:
 
@@ -35,6 +36,15 @@ void JsonAdapter<T>::writeToJson(T instance) {
         }
 
 }
+template<class T>
+void JsonAdapter<T>::writeToJsonOrder(T instance)
+{
+    json j;
 
+    if (std::is_same<T, Order>::value) {
+        ofstream i("../JsonDB/Order.json");
+        i << JsonOrder::ModelToJson(instance);
+    }
+}
 
 #endif //CARSHOP_JSONADAPTER_H

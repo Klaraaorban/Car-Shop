@@ -2,9 +2,9 @@
 
 using namespace std;
 
-Car::Car(int car_id, string lincensePlate, string model, string brand, int registrationYear, int mileage, int dailyPrice, string fuelType, string gearbox, string color, string remark){
+Car::Car(int car_id, string licensePlate, string model, string brand, int registrationYear, int mileage, int dailyPrice, string fuelType, string gearbox, string color, string remark){
     this->car_id = car_id;
-    this->lincensePlate = lincensePlate;
+    this->licensePlate = licensePlate;
     this->model = model;
     this->brand = brand;
     this->registrationYear = registrationYear;
@@ -14,4 +14,5 @@ Car::Car(int car_id, string lincensePlate, string model, string brand, int regis
     this->gearbox = gearbox;
     this->color = color;
     this->remark = remark;
+    this->active = true;
 }

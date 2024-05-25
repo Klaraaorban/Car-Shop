@@ -2,66 +2,94 @@
 // Created by raulm on 4/24/2024.
 //
 
-#include "Bestellung_Domain.h"
+#include "Order.h"
 
-int Bestellung_Domain::getIdOrder() const {
+int Order::getIdOrder(){
     return _id_Order;
 }
 
-void Bestellung_Domain::setIdOrder(int idOrder) {
+void Order::setIdOrder(int idOrder) {
     _id_Order = idOrder;
 }
 
-const string &Bestellung_Domain::getDateOrder() const {
+string &Order::getDateOrder() {
     return _date_Order;
 }
 
-void Bestellung_Domain::setDateOrder(const string &dateOrder) {
+void Order::setDateOrder(string &dateOrder) {
     _date_Order = dateOrder;
 }
 
-const string &Bestellung_Domain::getStatusOrder() const {
+string &Order::getStatusOrder(){
     return _status_Order;
 }
 
-void Bestellung_Domain::setStatusOrder(const string &statusOrder) {
+void Order::setStatusOrder(string &statusOrder) {
     _status_Order = statusOrder;
 }
 
-const string &Bestellung_Domain::getBeginOrder() const {
+string &Order::getBeginOrder(){
     return _begin_Order;
 }
 
-void Bestellung_Domain::setBeginOrder(const string &beginOrder) {
+void Order::setBeginOrder(string &beginOrder) {
     _begin_Order = beginOrder;
 }
 
-const string &Bestellung_Domain::getEndOrder() const {
+string &Order::getEndOrder(){
     return _end_Order;
 }
 
-void Bestellung_Domain::setEndOrder(const string &endOrder) {
+void Order::setEndOrder(string &endOrder) {
     _end_Order = endOrder;
 }
 
-float Bestellung_Domain::getBillOrder() const {
+float Order::getBillOrder(){
     return _bill_Order;
 }
 
-void Bestellung_Domain::setBillOrder(float billOrder) {
+void Order::setBillOrder(float billOrder) {
     _bill_Order = billOrder;
 }
 
-const string &Bestellung_Domain::getObservationsOrder() const {
+string &Order::getObservationsOrder(){
     return _observations_Order;
 }
 
-void Bestellung_Domain::setObservationsOrder(const string &observationsOrder) {
+void Order::setObservationsOrder(string &observationsOrder) {
     _observations_Order = observationsOrder;
 }
 
-Bestellung_Domain::Bestellung_Domain(int idOrder, const string &dateOrder, const string &statusOrder,
-                                     const string &beginOrder, const string &endOrder, float billOrder,
-                                     const string &observationsOrder, const Auto &carOrder, const Kunde &customerOrder,
-                                     const Arbeiter &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
+Order::Order(int idOrder, string &dateOrder, string &statusOrder,
+                                      string &beginOrder, string &endOrder, float billOrder,
+                                      string &observationsOrder, Car &carOrder, customer &customerOrder,
+                                      Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
                                      _bill_Order(billOrder),_observations_Order(observationsOrder),_car_Order(carOrder),_customer_Order(customerOrder),_worker_Order(workerOrder) {}
+
+Car &Order::getCarOrder() {
+    return _car_Order;
+}
+
+void Order::setCarOrder(const Car &carOrder) {
+    _car_Order = carOrder;
+}
+
+int Order::getIdCar() {
+    return this->_car_Order.get_id();
+}
+
+customer &Order::getCustomerOrder(){
+    return _customer_Order;
+}
+
+void Order::setCustomerOrder(customer &customerOrder) {
+    _customer_Order = customerOrder;
+}
+
+Employee &Order::getWorkerOrder(){
+    return _worker_Order;
+}
+
+void Order::setWorkerOrder(Employee &workerOrder) {
+    _worker_Order = workerOrder;
+}
