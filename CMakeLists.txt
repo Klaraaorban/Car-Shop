@@ -35,4 +35,9 @@ add_executable(car_sharing main.cpp
         OrderService/orderService.h
         OrderService/orderService.cpp
         CarController/carController.cpp
+
+        UI/UI.h
+        UI/UI.cpp
+        Controller/Controller.h
+        Controller/Controller.cpp
 )

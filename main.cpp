@@ -4,10 +4,12 @@
 #include "EmployeeService/employeeService.h"
 #include "Domain/OrderDomain/Order.h"
 #include "json/single_include/nlohmann/json.hpp"
+#include "UI/UI.h"
 
 using json = nlohmann::json;
 
 int main() {
+
     Employee e = Employee("1111","asfasfsa","111","1111","asfasfsa","1111","111",1111,"asfasfsa");
     JsonAdapter<Employee>::writeToJson(e);
 
@@ -18,7 +20,13 @@ int main() {
 //    JsonAdapter<Order>::writeToJsonOrder(o);
 
     std::cout << "Hello, World!" << std::endl;
+    //Employee e = Employee("1111","asfasfsa","111","1111","asfasfsa","1111","111",1111,"asfasfsa");
+    //JsonAdapter<Employee>::writeToJson(e);
 
+    Controller *ctrl = nullptr;
+    UI ui(ctrl);
+    ui.run();
+    cout<<"aici";
     return 0;
 
 }
