@@ -25,7 +25,7 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
         for (const auto &item : j) {
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
                          item["_end_Order"], item["_bill_Order"], item["_observations_Order"], carController.returnCarbyID(item["_car_Order"]), custController.FindCustomerByID(item["_customer_Order"]),
-                         employeeController.getEmployeeById(item["_worker_Order"]);
+                         employeeController.getEmployeeById(item["_worker_Order"]));
             orders.push_back(ord);
 
         }
