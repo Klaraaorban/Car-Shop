@@ -17,13 +17,15 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
         json j;
         inFile >> j;
         customer_service customerService(path_customer);
-        customerController controller(customerService);
+        customerController custController(customerService);
         CarService carService(path_car);
+        CarController carController(carService);
         EmployeeService employeeService(path_employee);
+        EmployeeController employeeController(employeeService);
         for (const auto &item : j) {
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
-                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], item["_car_Order"], controller.FindCustomerByID(item["_customer_Order"]),
-                         item["_worker_Order"]);
+                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], carController.returnCarbyID(item["_car_Order"]), custController.FindCustomerByID(item["_customer_Order"]),
+                         employeeController.getEmployeeById(item["_worker_Order"]);
             orders.push_back(ord);
 
         }
@@ -63,8 +65,7 @@ void orderService::saveToJson() const {
                             {"_observations_Order", order.getObservationsOrder()},
                             {"_car_Order", order.getCarOrder().get_id()},
                             {"_customer_Order", order.getCustomerOrder().getCustomerID()},
-                            {"_worker_Order", order.getWorkerOrder()}
-
+                            {"_worker_Order", order.getWorkerOrder().getId()}
                     });
     }
     ofstream outFile(dbOrderFilePath);

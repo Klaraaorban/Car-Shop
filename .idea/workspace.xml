@@ -22,13 +22,158 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="Some try and catch for the controller">
+      <change afterPath="$PROJECT_DIR$/../DSA/L1/.idea/DSA.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab3/.idea/Lab3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/.idea/Lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/App.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/Bag.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/Bag.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/BagIterator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/BagIterator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/ExtendedTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/ExtendedTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/ShortTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab4/ShortTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/Lab5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/App.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/ExtendedTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/ExtendedTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/SMMIterator.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/SMMIterator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/ShortTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/ShortTest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/SortedMultiMap.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DSA/Lab5/SortedMultiMap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/.idea/GRAPH.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/Lab1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/Graph2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/Graph2.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/app.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab1/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/Lab2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-f1b2b3b9642b509dfa7c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/Lab2.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab2/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/Lab3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/cmake-build-debug/Lab3.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab3/text" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/Lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/cmake-build-debug/Lab4.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab4/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/Lab5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab5/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/Lab6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab6/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/Lab7.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/Graph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/Graph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-3be063b612ebe8d361bb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-248f28a75683a49fafa1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/cmake-build-debug/.cmake/api/v1/reply/index-2024-05-16T15-12-28-0752.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/cmake-build-debug/.cmake/api/v1/reply/target-Lab7-Debug-00478d36fca302a14ae7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../GRAPH/Lab7/data.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/Lab4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Controller/FruitController.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Controller/FruitController.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Domain/Fruit.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Domain/Fruit.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Repository/FruitRepo.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/Repository/FruitRepo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/UI/FruitUI.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OOP/Lab4/UI/FruitUI.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/.idea/OS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/2/1/stefan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/2/andrei" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/3/2/1/stefan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OS/3/2/andrei" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CarShop.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderController/orderController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderController/orderController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderController/orderController.h" beforeDir="false" afterPath="$PROJECT_DIR$/OrderController/orderController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OrderService/orderService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/orderService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/orderService.h" beforeDir="false" afterPath="$PROJECT_DIR$/OrderService/orderService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
@@ -37,6 +182,22 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab2/Matrix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab2/Matrix.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab2/Matrix.h" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab2/Matrix.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab2/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab2/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab2/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab2/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/App.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/App.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/IndexedList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/IndexedList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/IndexedList.h" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/IndexedList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/ListIterator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/ListIterator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/ListIterator.h" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/ListIterator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/ShortTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/ShortTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/Lab3/ShortTest.h" beforeDir="false" afterPath="$PROJECT_DIR$/../DSA/Lab3/ShortTest.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Lab3/DSM.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Lab3/DSM.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Lab3/DSM.h" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Lab3/DSM.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Lab3/Vector.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Lab3/Vector.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OOP/Lab3/Vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/../OOP/Lab3/Vector.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +209,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Bestellung1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -110,11 +276,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="car_sharing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarShop" TARGET_NAME="car_sharing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CarShop" RUN_TARGET_NAME="car_sharing">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -134,6 +295,10 @@
       <workItem from="1716279427115" duration="1000" />
       <workItem from="1716390279655" duration="6323000" />
       <workItem from="1716644035085" duration="2010000" />
+      <workItem from="1716647031676" duration="135000" />
+      <workItem from="1716647175962" duration="126000" />
+      <workItem from="1716647310963" duration="269000" />
+      <workItem from="1716647861704" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
