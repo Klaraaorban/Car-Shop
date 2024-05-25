@@ -41,6 +41,7 @@ public:
     void assignOrder(int order_id,  Employee &newWorker);
     std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate) ;
     float getTotalSumOfADate(string &date);
+    bool isReservation(int order_id);
 
     };
 

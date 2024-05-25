@@ -161,3 +161,12 @@ float orderService::getTotalSumOfADate(string &date)  {
     }
     return totalSum;
 }
+
+bool orderService::isReservation(int order_id){
+    for (auto &order : orders) {
+        if (order.getIdOrder() == order_id && order.getStatusOrder() == "Reservation") {
+            return true;
+        }
+    }
+    return false;
+}
