@@ -37,6 +37,11 @@ public:
     Order getOrderById(int &order_id);
     void deleteOrder(int &order_id);
     vector<Order> getAllOrders();
+    void takeOverOrder(int order_id, Employee &newWorker);
+    void assignOrder(int order_id,  Employee &newWorker);
+    std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate) ;
+    float getTotalSumOfADate(string &date);
+
     };
 
 

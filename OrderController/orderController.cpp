@@ -165,3 +165,34 @@ bool orderController::ID_is_valid(int id) {
         return false;
     return true;
 }
+
+void orderController::takeOverOrder(int orderId, Employee &newWorker) {
+    try {
+        OrderService.takeOverOrder(orderId, newWorker);
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to take over order: " << e.what() << '\n';
+    }
+}
+
+void orderController::assignOrder(int orderId, Employee &newWorker) {
+    try {
+        OrderService.assignOrder(orderId, newWorker);
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to assign order: " << e.what() << '\n';
+    }
+}
+std::vector<Order> orderController::getOrdersByDate( std::string &startDate,  std::string &endDate) {
+    try {
+        return OrderService.getOrdersByDate(startDate, endDate);
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to get orders by date range: " << e.what() << '\n';
+    }
+}
+
+float orderController::getTotalSumOfADate(string &date) {
+    try {
+        return OrderService.getTotalSumOfADate(date);
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to get total sum by date: " << e.what() << '\n';
+    }
+}
