@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/-Facultate$ UBB$ info/CarShop/cmake-build-debug/
+cmake_ninja_workdir = D$:/Facultate/Semestrul2/OOP/CarSharing/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target car_sharing
 
@@ -49,157 +49,125 @@ cmake_ninja_workdir = C$:/-Facultate$ UBB$ info/CarShop/cmake-build-debug/
 
 build cmake_object_order_depends_target_car_sharing: phony || CMakeFiles/car_sharing.dir
 
-build CMakeFiles/car_sharing.dir/main.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/main.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/main.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/main.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/CarDomain/Car.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/CarDomain/Car.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\CarDomain\Car.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\CarDomain
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/CustomerDomian/Customer.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/CustomerDomian/Customer.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\CustomerDomian\Customer.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\CustomerDomian
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/Employee.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/Employee.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\Domain\Employee.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Domain/EmployeeDomain/Employee.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/EmployeeDomain/Employee.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Domain\EmployeeDomain\Employee.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\EmployeeDomain
 
-build CMakeFiles/car_sharing.dir/Domain/User.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/User.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/User.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/User.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\User.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/JsonAdapter/JsonAdapter.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/JsonAdapter/JsonAdapter.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\JsonAdapter\JsonAdapter.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\JsonAdapter
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/JsonAdapter/JsonEmployee.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/JsonAdapter/JsonEmployee.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\JsonAdapter\JsonEmployee.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\JsonAdapter
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/EmployeeService/employeeService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/EmployeeService/employeeService.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\EmployeeService\employeeService.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Services/employeeService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Services/employeeService.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Services\employeeService.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\EmployeeService
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Services
 
-build CMakeFiles/car_sharing.dir/EmployeeController/employeeController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/EmployeeController/employeeController.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\EmployeeController\employeeController.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Controllers/employeeController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Controllers/employeeController.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Controllers\employeeController.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\EmployeeController
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Controllers
 
-build CMakeFiles/car_sharing.dir/CustomerService/customer_service.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/CustomerService/customer_service.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\CustomerService\customer_service.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Services/customerService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Services/customerService.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Services\customerService.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\CustomerService
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Services
 
-build CMakeFiles/car_sharing.dir/CustomerController/customerController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/CustomerController/customerController.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\CustomerController\customerController.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Controllers/customerController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Controllers/customerController.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Controllers\customerController.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\CustomerController
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Controllers
 
-build CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/CustomerUI/customerUI.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/CustomerUI/customerUI.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\CustomerUI\customerUI.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\CustomerUI
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/JsonAdapter/JsonOrder.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/JsonAdapter/JsonOrder.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\JsonAdapter\JsonOrder.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\JsonAdapter
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Domain/OrderDomain/Order.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/OrderDomain/Order.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\Domain\OrderDomain\Order.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\OrderDomain
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/OrderController/orderController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/OrderController/orderController.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\OrderController\orderController.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Controllers/orderController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Controllers/orderController.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Controllers\orderController.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\OrderController
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Controllers
 
-build CMakeFiles/car_sharing.dir/OrderService/orderService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/OrderService/orderService.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\OrderService\orderService.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Services/orderService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Services/orderService.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Services\orderService.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\OrderService
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Services
 
-build CMakeFiles/car_sharing.dir/CarController/carController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/CarController/carController.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\CarController\carController.cpp.obj.d
+build CMakeFiles/car_sharing.dir/Controllers/carController.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Controllers/carController.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Controllers\carController.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\CarController
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Controllers
 
-build CMakeFiles/car_sharing.dir/UI/UI.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/UI/UI.cpp || cmake_object_order_depends_target_car_sharing
+build CMakeFiles/car_sharing.dir/UI/UI.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/UI/UI.cpp || cmake_object_order_depends_target_car_sharing
   DEP_FILE = CMakeFiles\car_sharing.dir\UI\UI.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\UI
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
 
-build CMakeFiles/car_sharing.dir/Controller/Controller.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug C$:/-Facultate$ UBB$ info/CarShop/Controller/Controller.cpp || cmake_object_order_depends_target_car_sharing
-  DEP_FILE = CMakeFiles\car_sharing.dir\Controller\Controller.cpp.obj.d
+build CMakeFiles/car_sharing.dir/MainController/Controller.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/MainController/Controller.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\MainController\Controller.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\car_sharing.dir
-  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Controller
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
-  TARGET_PDB = car_sharing.pdb
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\MainController
+
+build CMakeFiles/car_sharing.dir/Services/carService.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Services/carService.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Services\carService.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\car_sharing.dir
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Services
 
 
 # =============================================================================
@@ -209,23 +177,22 @@ build CMakeFiles/car_sharing.dir/Controller/Controller.cpp.obj: CXX_COMPILER__ca
 #############################################
 # Link the executable car_sharing.exe
 
-build car_sharing.exe: CXX_EXECUTABLE_LINKER__car_sharing_Debug CMakeFiles/car_sharing.dir/main.cpp.obj CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj CMakeFiles/car_sharing.dir/Domain/Employee.cpp.obj CMakeFiles/car_sharing.dir/Domain/User.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj CMakeFiles/car_sharing.dir/EmployeeService/employeeService.cpp.obj CMakeFiles/car_sharing.dir/EmployeeController/employeeController.cpp.obj CMakeFiles/car_sharing.dir/CustomerService/customer_service.cpp.obj CMakeFiles/car_sharing.dir/CustomerController/customerController.cpp.obj CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj CMakeFiles/car_sharing.dir/OrderController/orderController.cpp.obj CMakeFiles/car_sharing.dir/OrderService/orderService.cpp.obj CMakeFiles/car_sharing.dir/CarController/carController.cpp.obj CMakeFiles/car_sharing.dir/UI/UI.cpp.obj CMakeFiles/car_sharing.dir/Controller/Controller.cpp.obj
+build car_sharing.exe: CXX_EXECUTABLE_LINKER__car_sharing_Debug CMakeFiles/car_sharing.dir/main.cpp.obj CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj CMakeFiles/car_sharing.dir/Domain/EmployeeDomain/Employee.cpp.obj CMakeFiles/car_sharing.dir/Domain/User.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj CMakeFiles/car_sharing.dir/Services/employeeService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/employeeController.cpp.obj CMakeFiles/car_sharing.dir/Services/customerService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/customerController.cpp.obj CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj CMakeFiles/car_sharing.dir/Controllers/orderController.cpp.obj CMakeFiles/car_sharing.dir/Services/orderService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/carController.cpp.obj CMakeFiles/car_sharing.dir/UI/UI.cpp.obj CMakeFiles/car_sharing.dir/MainController/Controller.cpp.obj CMakeFiles/car_sharing.dir/Services/carService.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\car_sharing.dir\
   TARGET_FILE = car_sharing.exe
   TARGET_IMPLIB = libcar_sharing.dll.a
-  TARGET_PDB = car_sharing.pdb
+  TARGET_PDB = car_sharing.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\-Facultate UBB info\CarShop\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D D:\Facultate\Semestrul2\OOP\CarSharing\cmake-build-debug && "D:\Apps\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -236,7 +203,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\-Facultate UBB info\CarShop\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\-Facultate UBB info\CarShop" -B"C:\-Facultate UBB info\CarShop\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D D:\Facultate\Semestrul2\OOP\CarSharing\cmake-build-debug && "D:\Apps\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SD:\Facultate\Semestrul2\OOP\CarSharing -BD:\Facultate\Semestrul2\OOP\CarSharing\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -254,7 +221,7 @@ build car_sharing: phony car_sharing.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/-Facultate UBB info/CarShop/cmake-build-debug
+# Folder: D:/Facultate/Semestrul2/OOP/CarSharing/cmake-build-debug
 
 build all: phony car_sharing.exe
 
@@ -265,14 +232,14 @@ build all: phony car_sharing.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/-Facultate$ UBB$ info/CarShop/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Facultate/Semestrul2/OOP/CarSharing/CMakeLists.txt
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/-Facultate$ UBB$ info/CarShop/CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake D$:/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake D$:/Facultate/Semestrul2/OOP/CarSharing/CMakeLists.txt: phony
 
 
 #############################################

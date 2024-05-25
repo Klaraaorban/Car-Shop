@@ -16,7 +16,7 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
     if (inFile.is_open()) {
         json j;
         inFile >> j;
-        customer_service customerService(path_customer);
+        customerService customerService(path_customer);
         customerController custController(customerService);
         CarService carService(path_car);
         CarController carController(carService);

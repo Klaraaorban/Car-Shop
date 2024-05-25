@@ -5,10 +5,10 @@
 #ifndef CARSHOP_ORDERCONTROLLER_H
 #define CARSHOP_ORDERCONTROLLER_H
 
-#include "../OrderService/orderService.h"
+#include "../Services/orderService.h"
 #include "../Domain/CarDomain/Car.h"
 #include "../Domain/CustomerDomian/Customer.h"
-#include "../Domain/Employee.h"
+#include "../Domain/EmployeeDomain/Employee.h"
 
 class orderController {
 private:

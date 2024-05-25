@@ -2,8 +2,8 @@
 // Created by raulm on 5/22/2024.
 //
 
-#ifndef CARSHOP_CUSTOMER_SERVICE_H
-#define CARSHOP_CUSTOMER_SERVICE_H
+#ifndef CARSHOP_CUSTOMERSERVICE_H
+#define CARSHOP_CUSTOMERSERVICE_H
 #pragma once
 #include <vector>
 #include <string>
@@ -14,7 +14,7 @@
 using json = nlohmann::json;
 using namespace std;
 
-class customer_service {
+class customerService {
 private:
     vector<customer> customers;
     string path;
@@ -23,7 +23,7 @@ private:
     void saveJson() const;
 
 public:
-    customer_service(const string &path);
+    customerService(const string &path);
     void addCostumer(const customer &_customer);
     void update_customer(const string &email, const customer &updated_customer);
     void delete_customer(const string& email);
@@ -31,4 +31,4 @@ public:
 };
 
 
-#endif //CARSHOP_CUSTOMER_SERVICE_H
+#endif //CARSHOP_CUSTOMERSERVICE_H

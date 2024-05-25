@@ -5,18 +5,18 @@
 #ifndef CARSHOP_CUSTOMERCONTROLLER_H
 #define CARSHOP_CUSTOMERCONTROLLER_H
 
-#include "../CustomerService/customer_service.h"
+#include "../Services/customerService.h"
 
 class customerController {
 private:
-    customer_service &customerService;
+    customerService &customerService;
 
     bool IsEmailUnique(const E_mail& email);                //finished
     bool IsEmailStructureCorrect(const E_mail& email);      //finished
     bool PhoneNumberFormatCorrect(std::string PhoneNR);     //finished
 
 public:
-    explicit customerController(customer_service &customerService);                             //finished
+    explicit customerController(class customerService &customerService);                             //finished
     void CustomerAdd(CustomerName customerName,E_mail customerMail,Address costumerAddress,
                      std::string customerPhoneNr,std::string customerNote,bool GdprDeleted);    //finished
     void CustomerDelete(E_mail email);      //finished
