@@ -1,5 +1,5 @@
 # ninja log v5
-34	626	7383473290309355	build.ninja	423f1409becd4ea2
+34	626	7383604257534696	build.ninja	423f1409becd4ea2
 1011	1298	7356786209697743	CarShop.exe	ee9c3f6bbaa9eac6
 28	686	7381773080326020	CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj	197fe939939c4eeb
 24	541	7381773078964130	CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj	b19e9eec69919fe7
@@ -16,3 +16,17 @@
 58	4561	7381773119080320	CMakeFiles/car_sharing.dir/CustomerService/customer_service.cpp.obj	88065c0c34acda70
 49	4589	7381773119355524	CMakeFiles/car_sharing.dir/EmployeeService/employeeService.cpp.obj	13998f05ec86f068
 2410	3271	7381773106265254	CMakeFiles/car_sharing.dir/CarController/carController.cpp.obj	f87b675f53230f5a
+13	2076	7383605185477233	CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj	27f75c5e57a61a88
+27	2691	7383605191153649	CMakeFiles/car_sharing.dir/Domain/Employee.cpp.obj	1ba13102ac949615
+2077	4919	7383605213891627	CMakeFiles/car_sharing.dir/Domain/User.cpp.obj	6fdc4ad28b25bf01
+4920	5934	7383605224061706	CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj	a78fd5f3b13cfd16
+5934	7172	7383605236448070	CMakeFiles/car_sharing.dir/EmployeeController/employeeController.cpp.obj	7b0a13da64a7a403
+2692	7566	7383605240388789	CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj	a0983fa32b0ebe3b
+20	7940	7383605244027515	CMakeFiles/car_sharing.dir/main.cpp.obj	27dbb2d7f99afe86
+7941	11815	7383605282861607	CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj	c4e3d81bc363d96e
+7567	12326	7383605287901828	CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj	ea48013002e3def1
+11816	16025	7383605324946066	CMakeFiles/car_sharing.dir/CustomerController/customerController.cpp.obj	dd96177d9912bf00
+7173	16522	7383605329734607	CMakeFiles/car_sharing.dir/EmployeeService/employeeService.cpp.obj	46b5c45366b693fa
+16026	17398	7383605338673755	CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj	60e87b2a2435c9f6
+12326	21111	7383605375678135	CMakeFiles/car_sharing.dir/CustomerService/customer_service.cpp.obj	70a90a04d313ebcf
+17398	21458	7383605379237900	CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj	9ef4604c14f6a1e1

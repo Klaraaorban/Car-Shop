@@ -206,3 +206,48 @@ void orderController::completeOrder(int orderId) {
             std::cerr << "Failed to complete order " << e.what() << '\n';
         }
 }
+
+void orderController::convertReservationToOrder(int reservationId) {
+    Order reservation = getOrderById(reservationId);
+    if (reservation.getStatusOrder() == "Reservation") {
+        reservation.setStatusOrder((string &)"Order");
+        updateOrder(reservationId, reservation);
+    } else {
+        throw runtime_error("Only reservations can be converted to orders.");
+    }
+}
+
+void orderController::deleteReservation(int reservationId,  int userId, std::string& userRole) {
+    try {
+
+        if (!OrderService.isReservation(reservationId)) {
+            throw std::runtime_error("Only reservations can be deleted.");
+        }
+        Order reservation = OrderService.getOrderById(reservationId);
+        if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
+            OrderService.deleteOrder(reservationId);
+            std::cout << "Reservation deleted successfully.\n";
+        } else {
+            throw std::runtime_error("You do not have permission to delete this reservation.");
+        }
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to delete reservation: " << e.what() << '\n';
+    }
+}
+
+void orderController::updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation) {
+    try {
+        if (!OrderService.isReservation(reservationId)) {
+            throw std::runtime_error("Only reservations can be updated.");
+        }
+        Order reservation = OrderService.getOrderById(reservationId);
+        if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
+            OrderService.updateOrder(reservationId, updatedReservation);
+            std::cout << "Reservation updated successfully.\n";
+        } else {
+            throw std::runtime_error("You do not have permission to update this reservation.");
+        }
+    } catch (const std::exception &e) {
+        std::cerr << "Failed to update reservation: " << e.what() << '\n';
+    }
+}

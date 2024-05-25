@@ -28,6 +28,9 @@ public:
     std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate);
     float getTotalSumOfADate(string &date) ;
     void completeOrder(int orderId);
+    void convertReservationToOrder(int reservationId);
+    void deleteReservation(int reservationId,  int userId, std::string& userRole);
+    void updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation);
 };
 
 
