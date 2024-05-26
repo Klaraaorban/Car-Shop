@@ -79,6 +79,8 @@ public:
 
     void setObservationsOrder( string &observationsOrder);
 
+    friend bool inline operator<(Order a, Order b){return a._date_Order < b._date_Order;}
+
 // private functions
 private:
 

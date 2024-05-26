@@ -5,10 +5,10 @@
 #ifndef CARSHOP_ORDERCONTROLLER_H
 #define CARSHOP_ORDERCONTROLLER_H
 
-#include "../OrderService/orderService.h"
+#include "../Services/orderService.h"
 #include "../Domain/CarDomain/Car.h"
 #include "../Domain/CustomerDomian/Customer.h"
-#include "../Domain/Employee.h"
+#include "../Domain/EmployeeDomain/Employee.h"
 
 class orderController {
 private:
@@ -28,6 +28,9 @@ public:
     std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate);
     float getTotalSumOfADate(string &date) ;
     void completeOrder(int orderId);
+    void convertReservationToOrder(int reservationId);
+    void deleteReservation(int reservationId,  int userId, std::string& userRole);
+    void updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation);
 };
 
 

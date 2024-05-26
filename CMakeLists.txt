@@ -10,34 +10,37 @@ add_executable(car_sharing main.cpp
         Domain/CarDomain/Car.h
         Domain/CustomerDomian/Customer.cpp
         Domain/CustomerDomian/Customer.h
-        Domain/Employee.h
-        Domain/Employee.cpp
+        Domain/EmployeeDomain/Employee.h
+        Domain/EmployeeDomain/Employee.cpp
         Domain/User.h
         Domain/User.cpp
         Domain/JsonAdapter/JsonAdapter.h
         Domain/JsonAdapter/JsonAdapter.cpp
         Domain/JsonAdapter/JsonEmployee.h
         Domain/JsonAdapter/JsonEmployee.cpp
-        EmployeeService/employeeService.cpp
-        EmployeeService/employeeService.h
-        EmployeeController/employeeController.cpp
-        EmployeeController/employeeController.h
-        CustomerService/customer_service.h
-        CustomerService/customer_service.cpp
-        CustomerController/customerController.h
-        CustomerController/customerController.cpp
+        Services/employeeService.cpp
+        Services/employeeService.h
+        Controllers/employeeController.cpp
+        Controllers/employeeController.h
+        Services/customerService.h
+        Services/customerService.cpp
+        Controllers/customerController.h
+        Controllers/customerController.cpp
         CustomerUI/customerUI.h
         CustomerUI/customerUI.cpp
         Domain/JsonAdapter/JsonOrder.cpp
         Domain/OrderDomain/Order.cpp
-        OrderController/orderController.h
-        OrderController/orderController.cpp
-        OrderService/orderService.h
-        OrderService/orderService.cpp
-        CarController/carController.cpp
+        Controllers/orderController.h
+        Controllers/orderController.cpp
+        Services/orderService.h
+        Services/orderService.cpp
+        Controllers/carController.cpp
 
         UI/UI.h
         UI/UI.cpp
-        Controller/Controller.h
-        Controller/Controller.cpp
+        MainController/Controller.h
+        MainController/Controller.cpp
+        Services/carService.cpp
+        Domain/JsonAdapter/JsonCar.h
+        Domain/JsonAdapter/JsonCar.cpp
 )

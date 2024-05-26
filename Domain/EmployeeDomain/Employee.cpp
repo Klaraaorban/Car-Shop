@@ -1,44 +1,37 @@
-#include "Employee.h"
-using namespace std;
-Employee::Employee( const string &password, string lastName, string firstName, string email,
-                   string position, string birthDate, string abbreviation, int salary, string remarks)
-        : User(email, password), lastName(lastName), firstName(firstName), email(email), position(position),
-          birthDate(birthDate), abbreviation(abbreviation), salary(salary), remarks(remarks) {}
+#include "../EmployeeDomain/Employee.h"
 
+Employee::Employee(int id, const std::string &password, const std::string &lastName, const std::string &firstName,
+                   const std::string &email, const std::string &position, const std::string &birthDate, int salary): User(email, password), id(id), lastName(lastName), firstName(firstName), position(position),
+                                                                                                                     birthDate(birthDate), salary(salary) {}
 
-string Employee::getLastName() const {
+std::string Employee::getLastName() const {
     return lastName;
 }
 
-string Employee::getFirstName() const {
+std::string Employee::getFirstName() const {
     return firstName;
 }
 
-string Employee::getAbbreviation() const {
+std::string Employee::getAbbreviation() const {
     return abbreviation;
 }
 
-string Employee::getBirthDate() const {
+std::string Employee::getBirthDate() const {
     return birthDate;
 }
 
-string Employee::getPosition() const {
-    return position ;
+std::string Employee::getPosition() const {
+    return position;
 }
-
 
 int Employee::getSalary() const {
     return salary;
-}
-
-string Employee::getRemarks() const {
-    return remarks;
 }
 
 void Employee::setSalary(int salary) {
     this->salary = salary;
 }
 
-void Employee::setRemarks(string remarks) {
-    this->remarks = remarks;
+int Employee::getId() const {
+    return id;
 }

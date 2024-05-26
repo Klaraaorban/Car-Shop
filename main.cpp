@@ -1,31 +1,27 @@
 #include <iostream>
-#include "Domain/Employee.h"
-#include "Domain/JsonAdapter/JsonAdapter.h"
-#include "EmployeeService/employeeService.h"
-#include "Domain/OrderDomain/Order.h"
-#include "json/single_include/nlohmann/json.hpp"
+#include <memory>
 #include "UI/UI.h"
-
-using json = nlohmann::json;
+#include "MainController/Controller.h"
+#include "Controllers/customerController.h"
+#include "Controllers/employeeController.h"
+#include "Controllers/carController.h"
+#include "Services/customerService.h"
+#include "Services/employeeService.h"
+#include "Services/carService.h"
+#include "Services/orderService.h"
 
 int main() {
-
-    Employee e = Employee("1111","asfasfsa","111","1111","asfasfsa","1111","111",1111,"asfasfsa");
-    JsonAdapter<Employee>::writeToJson(e);
-
-//    Car car;
-//    Customer customer;
-//
-//    Order o = Order(1111,"1111","1111","1111","1111",1111,car,customer,e);
-//    JsonAdapter<Order>::writeToJsonOrder(o);
-
-    std::cout << "Hello, World!" << std::endl;
-    //Employee e = Employee("1111","asfasfsa","111","1111","asfasfsa","1111","111",1111,"asfasfsa");
-    //JsonAdapter<Employee>::writeToJson(e);
-
-    Controller *ctrl = nullptr;
-    UI ui(ctrl);
-    ui.run();
+    customerService custSrv("JsonDB/Customer.json");
+    customerController custCtrl(custSrv);
+    EmployeeService emplSrv("JsonDB/Employee.json");
+    EmployeeController emplCtrl(emplSrv);
+    std::unique_ptr <CarService> carSrv = std::make_unique <CarService> ("JasonDB/Car.json");
+    std::unique_ptr <CarController> carCtrl = std::make_unique <CarController> (carSrv.get());
+    orderService ordSrv("JsonDB/Order.json", "JsonDB/Car.json", "JsonDB/Customer.json", "JsonDB/Employee.json");
+    orderController ordCtrl(ordSrv);
+    std::unique_ptr <Controller> ctrl = std::make_unique <Controller> (custCtrl, carCtrl.get(), emplCtrl, ordCtrl);
+    std::unique_ptr <UI> ui = std::make_unique <UI> (ctrl.get());
+    ui->run();
     cout<<"aici";
     return 0;
 

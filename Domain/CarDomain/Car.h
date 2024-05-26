@@ -43,4 +43,7 @@ public:
     string inline get_color(){return color;}
     string inline get_remark(){return remark;}
     bool inline get_active(){return active;}
+
+    friend bool inline operator<(Car a, Car b) {return a.dailyPrice < b.dailyPrice;}
+    friend bool inline operator==(Car a, Car b) {return a.car_id == b.car_id;}
 };

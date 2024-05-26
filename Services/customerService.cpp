@@ -1,10 +1,10 @@
-#include "customer_service.h"
+#include "customerService.h"
 
-customer_service::customer_service(const std::string &path) : path(path) {
+customerService::customerService(const std::string &path) : path(path) {
     loadJson();
 }
 
-void customer_service::loadJson() {
+void customerService::loadJson() {
     ifstream file(path);
     if(file.is_open()){
         json x;
@@ -46,7 +46,7 @@ void customer_service::loadJson() {
 }
 
 
-void customer_service::saveJson() const {
+void customerService::saveJson() const {
     json x = json::array();
     for (const auto &cus: customers) {
         json customerJson = {
@@ -69,13 +69,13 @@ void customer_service::saveJson() const {
 }
 
 
-void customer_service::addCostumer(const customer &_customer) {
+void customerService::addCostumer(const customer &_customer) {
     customers.push_back(_customer);
     saveJson();
 }
 
 
-void customer_service::update_customer(const std::string &email, const customer &updated_customer) {
+void customerService::update_customer(const std::string &email, const customer &updated_customer) {
     for(auto &cus: customers){
         if(cus.getCustomerMail().mailAddress == email){
             cus = updated_customer;
@@ -87,7 +87,7 @@ void customer_service::update_customer(const std::string &email, const customer 
 }
 
 
-void customer_service::delete_customer(const std::string &email) {
+void customerService::delete_customer(const std::string &email) {
     for(auto i = customers.begin(); i != customers.end(); i++){
         if(i->getCustomerMail().mailAddress == email){
             customers.erase(i);
@@ -99,6 +99,6 @@ void customer_service::delete_customer(const std::string &email) {
 }
 
 
-vector<customer> customer_service::getAllCustomers() const{
+vector<customer> customerService::getAllCustomers() const{
     return customers;
 }

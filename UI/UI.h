@@ -5,7 +5,7 @@
 #ifndef CARSHOP_UI_H
 #define CARSHOP_UI_H
 
-#include "../Controller/Controller.h"
+#include "../MainController/Controller.h"
 #include <string>
 
 class UI {

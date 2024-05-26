@@ -5,7 +5,7 @@
 #include "customerController.h"
 #include "exception"
 
-customerController::customerController(customer_service &customerService) : customerService(customerService) {}
+customerController::customerController(customerService &customerService) : customerService(customerService) {}
 
 
 void customerController::CustomerAdd(CustomerName customerName,E_mail customerMail,Address costumerAddress,

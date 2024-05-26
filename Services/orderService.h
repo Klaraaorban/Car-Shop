@@ -2,9 +2,9 @@
 // Created by User on 5/17/2024.
 //
 #include "../Domain/OrderDomain/Order.h"
-#include "../CustomerController/customerController.h"
-#include "../CarController/carController.h"
-#include "../EmployeeController/employeeController.h"
+#include "../Controllers/customerController.h"
+#include "../Controllers/carController.h"
+#include "../Controllers/employeeController.h"
 #include <vector>
 #include <string>
 #include <fstream>
@@ -41,6 +41,7 @@ public:
     void assignOrder(int order_id,  Employee &newWorker);
     std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate) ;
     float getTotalSumOfADate(string &date);
+    bool isReservation(int order_id);
 
     };
 

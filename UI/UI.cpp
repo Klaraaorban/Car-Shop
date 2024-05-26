@@ -31,7 +31,6 @@ int UI::options(){
     return option;
 }
 
-
 void UI::run() {
     this->greeting();
     cout << "Are you a customer or an employee?\n1. Customer\n2. Employee\n0. Exit\nType a number: ";
@@ -41,8 +40,8 @@ void UI::run() {
         if (mainOpt == 1) {//customer
             pair<string, string> auth = this->autentification();
             //apel functie identificare customer dupa email si password
-            cout << "Choose option:\n1. Manage account\n2. Search car\n";
-            cout << "3. Manage order\n0. Exit\n";
+            customer logedCust = ctrl->findCustomerByEmailandPassword(auth.first, auth.second);
+            cout << "Choose option:\n1. Manage account\n2. Search car\n3. Manage order\n0. Exit\nType an option: ";
             int opt;
             bool run = true;
             while (run) {
@@ -53,8 +52,7 @@ void UI::run() {
                         break;
                     }
                     case 1: {
-                        cout
-                                << "Choose option:\n1. Change password\n2. Change remarks\n3. Change favorites list\n4. View favorites list \n0. Back\n";
+                        cout<< "Choose option:\n1. Change password\n2. Change remarks\n3. Change favorites list\n4. View favorites list \n0. Back\nType an option: ";
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
@@ -76,44 +74,54 @@ void UI::run() {
                                 break;
                             }
                             default:
-                                cout << "Choose a valid option\n";
-
+                                cout << "Choose a valid option: ";
                         }
-
                         break;
                     }
                     case 2: {
-                        cout
-                                << "Choose option:\n1. View cars for a specific date\n2. Search car by license plate\n3. View ordered cars\n0. Back\n";
+                        cout<< "Choose option:\n1. View cars for a specific date\n2. Search car by license plate\n3. View ordered cars\n0. Back\nType an option: ";
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
                                 break;
                             case 1: {
-                                //ctrl.viewCarsForSpecificDate();
+                                string begin, end;
+                                cout<<"From: ";
+                                getline(cin, begin);
+                                cout<<"To: ";
+                                getline(cin, end);
+                                vector<Car> carList = ctrl->notOrderedCars(begin, end);
+                                for(auto &car: carList) {
+                                    cout<<car.get_brand()<<' '<<car.get_model()<<' '<<car.get_gearbox()<<' '<<car.get_dailyPrice()<<endl;
+                                }
                                 break;
                             }
                             case 2: {
-                                //ctrl.searchCarByLicensePlate();
+                                string licensePlate;
+                                cout<<"License plate: ";
+                                getline(cin, licensePlate);
+                                Car searchedCar = ctrl->findCarByLicensePlate(licensePlate);
+                                cout<<searchedCar.get_brand()<<' '<<searchedCar.get_model()<<' '<<searchedCar.get_gearbox()<<' '<<searchedCar.get_dailyPrice()<<endl;
                                 break;
                             }
                             case 3: {
-                                //ctrl.viewOrderedCars();
+                                cout<<"Your ordered cars:\n";
+                                vector<Car> carList = ctrl->orderedCars(logedCust.getCustomerID());
+                                for(auto &car: carList) {
+                                    cout<<car.get_brand()<<' '<<car.get_model()<<' '<<car.get_gearbox()<<' '<<car.get_dailyPrice()<<endl;
+                                }
                                 break;
                             }
-
                             default:
-                                cout << "Choose a valid option\n";
+                                cout << "Choose a valid option: ";
 
                         }
                         break;
                     }
                     case 3: {
-                        cout
-                                << "Choose option:\n1. Create reservation\n2. Delete reservation\n3. Change reservation\n4. View orders for a specific date \n5. Search order by nr\n6. See total price\n0. Back\n";
+                        cout<< "Choose option:\n1. Create reservation\n2. Delete reservation\n3. Change reservation\n4. View orders for a specific date \n5. Search order by nr\n6. See total price\n0. Back\nType an option: ";
                         int opt2 = options();
                         switch (opt2) {
-
                             case 0:
                                 break;
                             case 1: {
@@ -141,18 +149,19 @@ void UI::run() {
                                 break;
                             }
                             default:
-                                cout << "Choose a valid option\n";
+                                cout << "Choose a valid option: ";
                         }
                         break;
                     }
                     default: {
-                        cout << "Choose a valid option\n";
+                        cout << "Choose a valid option: ";
                     }
                 }
             }
         } else if (mainOpt == 2) {//employee
             pair<string, string> auth = this->autentification();
             //apel functie identificare employee dupa email si password
+            Employee logedEmpl = ctrl->findEmployeeByEmailandPassword(auth.first, auth.second);
             cout<< "Choose option:\n1. Manage account\n2. Manage employees\n3.Manage customers\n4. Manage cars\n5. Manage orders\n0. Exit\nType an option: ";
             int opt = options();
             bool run = true;
@@ -184,7 +193,7 @@ void UI::run() {
                     }
                     case 2: {
                         cout<< "Choose option:\n1. View employees\n2. Search employee by nickname\n3. Search employee by e-mail\n4. Search employee by name\n5. Search employee by birthdate\n";
-                        if (false)
+                        if (logedEmpl.getPosition() == "admin")
                             cout<< "6. Create employee\n7. Change employee\n8. Activate/deactivate employee\n9. Delete employee\n10. Change employee to admin\n11. Change admin to employee\n12. Reset password for employee\n13. View employee salary\n";
                         cout << "0. Back\nType an option: ";
                         int opt2 = options();
@@ -272,31 +281,153 @@ void UI::run() {
                             case 0:
                                 break;
                             case 1: {
-                                //apelare functie create car
+                                string brand, model, licensePlate, fuelType, gearbox, color, remarks;
+                                int registrationYear, mileage, dailyPrice;
+                                cout<<"Brand: ";
+                                getline(cin, brand);
+                                cout<<"Model: ";
+                                getline(cin, model);
+                                cout<<"License plate: ";
+                                getline(cin, licensePlate);
+                                while(!ctrl->validateLicensePlate(licensePlate)) {
+                                    cout<<"Invalid license plate! Enter a valid license plate: ";
+                                    getline(cin, licensePlate);
+                                }
+                                licensePlate = ctrl->modifyLicensePlate(licensePlate);
+                                cout<<"Registration year: ";
+                                cin>>registrationYear;
+                                while(!ctrl->validateRegistrationYear(registrationYear)) {
+                                    cout<<"Invalid registration year! Enter a valid registration year: ";
+                                    cin>>registrationYear;
+                                }
+                                cout<<"Mileage: ";
+                                cin>>mileage;
+                                while(!ctrl->validateMileage(mileage)) {
+                                    cout<<"Invalid mileage! Enter a valid mileage: ";
+                                    cin>>mileage;
+                                }
+                                cout<<"Fuel type: ";
+                                getline(cin, fuelType);
+                                cout<<"Gearbox: ";
+                                getline(cin, gearbox);
+                                cout<<"Color: ";
+                                getline(cin, color);
+                                cout<<"Daily price: ";
+                                cin>>dailyPrice;
+                                while(!ctrl->validateDailyPrice(dailyPrice)) {
+                                    cout<<"Invalid daily price! Enter a valid daily price: ";
+                                    cin>>dailyPrice;
+                                }
+                                cout<<"Remarks: ";
+                                getline(cin, remarks);
+                                ctrl->addCar(true, licensePlate, model, brand, registrationYear, mileage, dailyPrice, fuelType, gearbox, color,remarks);
+                                cout<<"Car created.";
                                 break;
                             }
                             case 2: {
-                                //aperale functie change car
+                                string brand, model, licensePlate, fuelType, gearbox, color, remarks;
+                                int id, registrationYear, mileage, dailyPrice;
+                                cout<<"ID: ";
+                                cin>>id;
+                                while(!ctrl->validateID(id)) {
+                                    cout<<"Invalid ID! Enter a valid ID: ";
+                                    cin>>id;
+                                }
+                                cout<<"Brand: ";
+                                getline(cin, brand);
+                                cout<<"Model: ";
+                                getline(cin, model);
+                                cout<<"License plate: ";
+                                getline(cin, licensePlate);
+                                while(!ctrl->validateLicensePlate(licensePlate)) {
+                                    cout<<"Invalid license plate! Enter a valid license plate: ";
+                                    getline(cin, licensePlate);
+                                }
+                                licensePlate = ctrl->modifyLicensePlate(licensePlate);
+                                cout<<"Registration year: ";
+                                cin>>registrationYear;
+                                while(!ctrl->validateRegistrationYear(registrationYear)) {
+                                    cout<<"Invalid registration year! Enter a valid registration year: ";
+                                    cin>>registrationYear;
+                                }
+                                cout<<"Mileage: ";
+                                cin>>mileage;
+                                while(!ctrl->validateMileage(mileage)) {
+                                    cout<<"Invalid mileage! Enter a valid mileage: ";
+                                    cin>>mileage;
+                                }
+                                cout<<"Fuel type: ";
+                                getline(cin, fuelType);
+                                cout<<"Gearbox: ";
+                                getline(cin, gearbox);
+                                cout<<"Color: ";
+                                getline(cin, color);
+                                cout<<"Daily price: ";
+                                cin>>dailyPrice;
+                                while(!ctrl->validateDailyPrice(dailyPrice)) {
+                                    cout<<"Invalid daily price! Enter a valid daily price: ";
+                                    cin>>dailyPrice;
+                                }
+                                cout<<"Remarks: ";
+                                getline(cin, remarks);
+                                ctrl->updateCar(id,true, licensePlate, model, brand, registrationYear, mileage, dailyPrice, fuelType, gearbox, color,remarks);
+                                cout<<"Car updated.";
                                 break;
                             }
                             case 3: {
                                 //aperale functie delete car
+                                int id;
+                                cout<<"ID: ";
+                                cin>>id;
+                                while(!ctrl->validateID(id)) {
+                                    cout<<"Invalid ID! Enter a valid ID: ";
+                                    cin>>id;
+                                }
+                                ctrl->deleteCar(id);
+                                cout<<"Car deleted.";
                                 break;
                             }
                             case 4: {
                                 //aperale functie deactivate car
+                                int id;
+                                cout<<"ID: ";
+                                cin>>id;
+                                while(!ctrl->validateID(id)) {
+                                    cout<<"Invalid ID! Enter a valid ID: ";
+                                    cin>>id;
+                                }
+                                ctrl->deactivate(id);
+                                cout<<"Car deactivated";
                                 break;
                             }
                             case 5: {
-                                //aperale functie view cars
+                                string begin, end;
+                                cout<<"From: ";
+                                getline(cin, begin);
+                                cout<<"To: ";
+                                getline(cin, end);
+                                vector<Car> carList = ctrl->notOrderedCars(begin, end);
+                                for(auto &car: carList) {
+                                    cout<<car.get_brand()<<' '<<car.get_model()<<' '<<car.get_gearbox()<<' '<<car.get_dailyPrice()<<endl;
+                                }
                                 break;
                             }
                             case 6: {
-                                //aperale functie search by license plate
+                                string licensePlate;
+                                cout<<"License plate: ";
+                                getline(cin, licensePlate);
+                                Car searchedCar = ctrl->findCarByLicensePlate(licensePlate);
+                                cout<<searchedCar.get_brand()<<' '<<searchedCar.get_model()<<' '<<searchedCar.get_gearbox()<<' '<<searchedCar.get_dailyPrice()<<endl;
                                 break;
                             }
                             case 7: {
-                                //aperale functie view ordered cars
+                                int custID;
+                                cout<<"Customer ID: ";
+                                cin>>custID;
+                                vector<Car> carList = ctrl->orderedCars(custID);
+                                for(auto &car: carList) {
+                                    cout<<car.get_brand()<<' '<<car.get_model()<<' '<<car.get_gearbox()<<' '<<car.get_dailyPrice()<<endl;
+                                }
                                 break;
                             }
                             default: {
