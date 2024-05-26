@@ -4,6 +4,7 @@
 
 #include "UI.h"
 #include <iostream>
+#include <utility>
 using namespace std;
 
 UI::UI(Controller *ctrl) {
@@ -19,9 +20,9 @@ pair<string, string> UI::autentification() {
     string email, password;
     cout<<"Authentification\n";
     cout<<"Type in your email: ";
-    cin>>email;
+    getline(cin,email);
     cout<<"Type in your password: ";
-    cin>>password;
+    getline(cin,password);
     return make_pair(email, password);
 }
 
