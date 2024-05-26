@@ -4,15 +4,15 @@
 #include "carController.h"
 
 //Constructor
-CarController::CarController(CarService &service) : carService(service){}
+CarController::CarController(CarService *service) : carService(service){}
 
 //Add a new car
 void CarController::addCar(bool active, string licensePlate, string model,string brand,int registrationYear,
 int mileage,int dailyPrice,string fuelType,string gearbox,string color,string remark) {
     try {
-        int car_id = carService.createID();
+        int car_id = carService->createID();
         Car car(car_id, licensePlate, model, brand, registrationYear, mileage, dailyPrice, fuelType, gearbox, color, remark);
-        carService.addCar(car);
+        carService->addCar(car);
     } catch (const std::exception &e) {
         cerr << "Failed to add car: " << e.what() << '\n';
     }
@@ -24,7 +24,7 @@ void CarController::deleteCar(int car_id) {
         if (! validateID(car_id)) {
             throw invalid_argument("Invalid car ID");
         }
-        carService.deleteCar(car_id);
+        carService->deleteCar(car_id);
     } catch (const std::exception &e) {
         cerr << "Failed to delete car: " << e.what() << '\n';
     }
@@ -36,7 +36,7 @@ void CarController::updateCar(int car_id, bool active, string licensePlate, stri
 
     try {
         Car newCar(car_id, licensePlate, model, brand, registrationYear, mileage, dailyPrice, fuelType, gearbox, color, remark);
-        carService.updateCar(car_id, newCar);
+        carService->updateCar(car_id, newCar);
     } catch (const std::exception &e) {
         cerr << "Failed to update car: " << e.what() << '\n';
     }
@@ -46,7 +46,7 @@ void CarController::updateCar(int car_id, bool active, string licensePlate, stri
 // Activate a car by ID
 void CarController::activate(int car_id) {
     try {
-        carService.activate(car_id);
+        carService->activate(car_id);
     } catch (const std::runtime_error &e) {
         cerr << "Failed to activate car: " << e.what() << '\n';
     }
@@ -55,7 +55,7 @@ void CarController::activate(int car_id) {
 // Deactivate a car by ID
 void CarController::deactivate(int car_id) {
     try {
-        carService.deactivate(car_id);
+        carService->deactivate(car_id);
     } catch (const std::runtime_error &e) {
         cerr << "Failed to deactivate car: " << e.what() << '\n';
     }
@@ -65,7 +65,7 @@ void CarController::deactivate(int car_id) {
 vector<Car> CarController::listallCars() {
     // only save active cars
     vector<Car> activeCars;
-    for (Car car : carService.getAllCars()) {
+    for (Car car : carService->getAllCars()) {
         if (car.get_active() ) {
             activeCars.push_back(car);
         }
@@ -81,14 +81,14 @@ vector<Car> CarController::listallCars() {
 
 // Find a car by license plate
 Car CarController::findCarByLicensePlate(string licensePlate) {
-    Car found_car = carService.findCarByLicensePlate(licensePlate);
+    Car found_car = carService->findCarByLicensePlate(licensePlate);
     return found_car;
 }
 
 // Return a car by ID
 Car CarController::returnCarbyID(int car_id) {
     vector<Car> cars;
-    cars = carService.getAllCars();
+    cars = carService->getAllCars();
     for (Car car : cars)
         if(car.get_id() == car_id)
             return car;
@@ -113,7 +113,7 @@ bool CarController::validateLicensePlate(string licensePlate) {
     }
     // is unique
     vector<Car> cars;
-    cars = carService.getAllCars();
+    cars = carService->getAllCars();
     int found = 1;
     for (Car car : cars) {
         if (car.get_lincensePlate() == licensePlate)found ++;

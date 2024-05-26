@@ -8,9 +8,10 @@ using namespace std;
 
 class CarController {
 private:
-    CarService &carService;
+    CarService *carService = nullptr;
 public:
-    CarController(CarService &service);
+    CarController(CarService *service);
+
     void addCar(bool active, string licensePlate, string model,string brand,int registrationYear, int mileage,int dailyPrice,string fuelType,string gearbox,string color,string remark);
     void updateCar(int car_id, bool active, string licensePlate, string model,string brand,int registrationYear, int mileage,int dailyPrice,string fuelType,string gearbox,string color,string remark);
     void deleteCar(int car_id);
@@ -26,11 +27,6 @@ public:
     bool validateDailyPrice(int dailyPrice);
     bool validateID(int id);
     string modifyLicensePlate(string licensePlate);
-
-
-
-
-
 
 
 };

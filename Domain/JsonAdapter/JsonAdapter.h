@@ -11,6 +11,7 @@
 
 #include "JsonEmployee.h"
 #include "JsonOrder.h"
+#include "JsonCar.h"
 
 using json = nlohmann::json;
 
@@ -26,16 +27,20 @@ public:
 
 template<class T>
 void JsonAdapter<T>::writeToJson(T instance) {
-        json j;
+    json j;
 
 //todo check this for everytype
-        if( std::is_same<T,Employee>::value){
-            ofstream i("../JsonDB/Employee.json");
-            i<< JsonEmployee::ModelToJson(instance);
+    if( std::is_same<T,Employee>::value){
+        ofstream i("../JsonDB/Employee.json");
+        i<< JsonEmployee::ModelToJson(instance);
 
-        }
-
+    }
+    if( std::is_same<T,Car>::value){
+        ofstream i("../JsonDB/Car.json");
+        i<< JsonCar::ModelToJson(instance);
+    }
 }
+
 template<class T>
 void JsonAdapter<T>::writeToJsonOrder(T instance)
 {

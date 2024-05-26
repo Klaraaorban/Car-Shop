@@ -21,53 +21,32 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
-      <change afterPath="$PROJECT_DIR$/Controllers/employeeController.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Controllers/employeeController.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/employeeService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="latest version">
+      <change afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonCar.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonCar.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarController/carController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarController/carController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarService/carService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/carService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CarService/carService.h" beforeDir="false" afterPath="$PROJECT_DIR$/Services/carService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerController/customerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/customerController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerController/customerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/customerController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/customer_service.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/customerService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerService/customer_service.h" beforeDir="false" afterPath="$PROJECT_DIR$/Services/customerService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerUI/customerUI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerUI/customerUI.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CustomerUI/customerUI.h" beforeDir="false" afterPath="$PROJECT_DIR$/CustomerUI/customerUI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Employee.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Employee.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/JsonAdapter/JsonEmployee.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonEmployee.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeController/employeeController.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeController/employeeController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeService/employeeService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmployeeService/employeeService.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderController/orderController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/orderController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderController/orderController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/orderController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/orderService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/orderService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OrderService/orderService.h" beforeDir="false" afterPath="$PROJECT_DIR$/Services/orderService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.h" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/carController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/carController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/CarDomain/Car.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/CarDomain/Car.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/JsonAdapter/JsonAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonAdapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/OrderDomain/Order.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/OrderDomain/Order.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainController/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
@@ -94,6 +73,9 @@
     &quot;accountId&quot;: &quot;76fb048e-dc2b-44ec-a24a-ff35b0f6d3de&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Domain/OrderDomain/Order.h" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -124,11 +106,13 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Facultate/Semestrul2/OOP/Labor4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -146,9 +130,9 @@
     </key>
   </component>
   <component name="RunManager" selected="C/C++ File.main.cpp">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="car_sharing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarShop" TARGET_NAME="car_sharing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CarShop" RUN_TARGET_NAME="car_sharing">
@@ -182,7 +166,8 @@
       <workItem from="1716644035085" duration="3413000" />
       <workItem from="1716655570446" duration="1647000" />
       <workItem from="1716660004756" duration="2167000" />
-      <workItem from="1716666738157" duration="3383000" />
+      <workItem from="1716666738157" duration="4267000" />
+      <workItem from="1716706948138" duration="11274000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
@@ -272,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716646103486</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="latest version">
+      <option name="closed" value="true" />
+      <created>1716670317766</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716670317766</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +300,7 @@
     <MESSAGE value="Commit Update Branch" />
     <MESSAGE value="Some try and catch for the controller" />
     <MESSAGE value="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions" />
+    <MESSAGE value="latest version" />
+    <option name="LAST_COMMIT_MESSAGE" value="latest version" />
   </component>
 </project>

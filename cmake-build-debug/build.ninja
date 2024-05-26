@@ -169,6 +169,12 @@ build CMakeFiles/car_sharing.dir/Services/carService.cpp.obj: CXX_COMPILER__car_
   OBJECT_DIR = CMakeFiles\car_sharing.dir
   OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Services
 
+build CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonCar.cpp.obj: CXX_COMPILER__car_sharing_unscanned_Debug D$:/Facultate/Semestrul2/OOP/CarSharing/Domain/JsonAdapter/JsonCar.cpp || cmake_object_order_depends_target_car_sharing
+  DEP_FILE = CMakeFiles\car_sharing.dir\Domain\JsonAdapter\JsonCar.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\car_sharing.dir
+  OBJECT_FILE_DIR = CMakeFiles\car_sharing.dir\Domain\JsonAdapter
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target car_sharing
@@ -177,7 +183,7 @@ build CMakeFiles/car_sharing.dir/Services/carService.cpp.obj: CXX_COMPILER__car_
 #############################################
 # Link the executable car_sharing.exe
 
-build car_sharing.exe: CXX_EXECUTABLE_LINKER__car_sharing_Debug CMakeFiles/car_sharing.dir/main.cpp.obj CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj CMakeFiles/car_sharing.dir/Domain/EmployeeDomain/Employee.cpp.obj CMakeFiles/car_sharing.dir/Domain/User.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj CMakeFiles/car_sharing.dir/Services/employeeService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/employeeController.cpp.obj CMakeFiles/car_sharing.dir/Services/customerService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/customerController.cpp.obj CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj CMakeFiles/car_sharing.dir/Controllers/orderController.cpp.obj CMakeFiles/car_sharing.dir/Services/orderService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/carController.cpp.obj CMakeFiles/car_sharing.dir/UI/UI.cpp.obj CMakeFiles/car_sharing.dir/MainController/Controller.cpp.obj CMakeFiles/car_sharing.dir/Services/carService.cpp.obj
+build car_sharing.exe: CXX_EXECUTABLE_LINKER__car_sharing_Debug CMakeFiles/car_sharing.dir/main.cpp.obj CMakeFiles/car_sharing.dir/Domain/CarDomain/Car.cpp.obj CMakeFiles/car_sharing.dir/Domain/CustomerDomian/Customer.cpp.obj CMakeFiles/car_sharing.dir/Domain/EmployeeDomain/Employee.cpp.obj CMakeFiles/car_sharing.dir/Domain/User.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonAdapter.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonEmployee.cpp.obj CMakeFiles/car_sharing.dir/Services/employeeService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/employeeController.cpp.obj CMakeFiles/car_sharing.dir/Services/customerService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/customerController.cpp.obj CMakeFiles/car_sharing.dir/CustomerUI/customerUI.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonOrder.cpp.obj CMakeFiles/car_sharing.dir/Domain/OrderDomain/Order.cpp.obj CMakeFiles/car_sharing.dir/Controllers/orderController.cpp.obj CMakeFiles/car_sharing.dir/Services/orderService.cpp.obj CMakeFiles/car_sharing.dir/Controllers/carController.cpp.obj CMakeFiles/car_sharing.dir/UI/UI.cpp.obj CMakeFiles/car_sharing.dir/MainController/Controller.cpp.obj CMakeFiles/car_sharing.dir/Services/carService.cpp.obj CMakeFiles/car_sharing.dir/Domain/JsonAdapter/JsonCar.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\car_sharing.dir
