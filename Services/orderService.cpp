@@ -19,7 +19,7 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
         customerService customerService(path_customer);
         customerController custController(customerService);
         CarService carService(path_car);
-        CarController carController(carService);
+        CarController carController(&carService);
         EmployeeService employeeService(path_employee);
         EmployeeController employeeController(employeeService);
         for (const auto &item : j) {

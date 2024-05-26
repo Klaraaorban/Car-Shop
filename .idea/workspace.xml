@@ -21,32 +21,24 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="latest version">
-      <change afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonCar.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonCar.h" afterDir="false" />
+    <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/carController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/carController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/carController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/CarDomain/Car.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/CarDomain/Car.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/JsonAdapter/JsonAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonAdapter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/OrderDomain/Order.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/OrderDomain/Order.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainController/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/orderController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/orderController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/JsonAdapter/JsonOrder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonOrder.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/orderService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/orderService.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
@@ -55,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Bestellung1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,9 +65,6 @@
     &quot;accountId&quot;: &quot;76fb048e-dc2b-44ec-a24a-ff35b0f6d3de&quot;
   }
 }</component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Domain/OrderDomain/Order.h" root0="SKIP_INSPECTION" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -95,24 +84,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "C/C++ File.main.cpp.executor": "Run",
     "CMake Application.CarShop.executor": "Run",
     "CMake Application.car_sharing.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.advertisement.text.has.clang-format": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Facultate/Semestrul2/OOP/Labor4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "structure.view.defaults.are.configured": "true",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -123,13 +108,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Facultate\Semestrul2\OOP\CarSharing\Services" />
-      <recent name="D:\Facultate\Semestrul2\OOP\CarSharing\Controllers" />
-      <recent name="D:\Facultate\Semestrul2\OOP\CarSharing\Domain\EmployeeDomain" />
       <recent name="C:\Users\raulm\Documents\Semester 2\CarShop\CustomerService" />
     </key>
   </component>
-  <component name="RunManager" selected="C/C++ File.main.cpp">
+  <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -140,16 +122,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarShop" TARGET_NAME="main.cpp" CONFIG_NAME="main.cpp">
-      <option name="sourceFile" value="main.cpp" />
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="C/C++ File.main.cpp" />
-      <item itemvalue="CMake Application.car_sharing" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,10 +136,6 @@
       <workItem from="1716279427115" duration="1000" />
       <workItem from="1716390279655" duration="6323000" />
       <workItem from="1716644035085" duration="3413000" />
-      <workItem from="1716655570446" duration="1647000" />
-      <workItem from="1716660004756" duration="2167000" />
-      <workItem from="1716666738157" duration="4267000" />
-      <workItem from="1716706948138" duration="11274000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
@@ -257,15 +225,7 @@
       <option name="project" value="LOCAL" />
       <updated>1716646103486</updated>
     </task>
-    <task id="LOCAL-00012" summary="latest version">
-      <option name="closed" value="true" />
-      <created>1716670317766</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1716670317766</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +260,6 @@
     <MESSAGE value="Commit Update Branch" />
     <MESSAGE value="Some try and catch for the controller" />
     <MESSAGE value="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions" />
-    <MESSAGE value="latest version" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest version" />
+    <option name="LAST_COMMIT_MESSAGE" value="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions" />
   </component>
 </project>

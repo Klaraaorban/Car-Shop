@@ -12,7 +12,7 @@
 
 class orderController {
 private:
-    orderService &OrderService;
+    orderService *OrderService= nullptr;
 public:
     orderController(orderService &OrderService);
     void addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,

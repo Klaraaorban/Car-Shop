@@ -4,7 +4,7 @@
 
 #include "Controller.h"
 
-Controller::Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController ordController) :
+Controller::Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController *ordController) :
         custController(custController), carController(carController), emplController(emplController), ordController(ordController)
 {
 
@@ -34,7 +34,7 @@ void Controller::deactivate(int car_id) {
 vector<Car> Controller::notOrderedCars(string from, string to) {
     vector<Car> ordered, notOrdered;
     bool ok = true;
-    for(auto &ord :ordController.getOrdersByDate(from, to)) {
+    for(auto &ord :ordController->getOrdersByDate(from, to)) {
         ordered.push_back(ord.getCarOrder());
     }
     for(auto &car: carController->listallCars()){
@@ -54,7 +54,7 @@ Car Controller::findCarByLicensePlate(string licensePlate) {
 
 vector<Car> Controller::orderedCars(int custID) {
     vector<Car> ordered;
-    vector<Order> allOrders = ordController.listAllOrders();
+    vector<Order> allOrders = ordController->listAllOrders();
     sort(allOrders.begin(), allOrders.end(), [](Order a, Order b) {return a < b;});
     for(auto &ord: allOrders) {
         if(ord.getCustomerOrder().getCustomerID() == custID)

@@ -16,9 +16,9 @@ private:
     customerController custController;
     CarController *carController = nullptr;
     EmployeeController emplController;
-    orderController ordController;
+    orderController *ordController= nullptr;
 public:
-    Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController ordController);
+    Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController *ordController);
 
     customer findCustomerByEmailandPassword(string email, string password);
     Employee findEmployeeByEmailandPassword(string email, string password);
