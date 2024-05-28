@@ -3,14 +3,15 @@
 int customer::customerID = 0; //initialization with 0
 
 customer::customer(CustomerName customerName, E_mail customerMail, Address customerAddress,
-                   std::string customerPhoneNr, std::string customerNote, bool GdprDeleted) {
+                   std::string customerPhoneNr, std::string customerNote, bool GdprDeleted, std::vector<int> favorites) {
     this->customerName = customerName;
     this->customerMail = customerMail;
     this->customerAddress = customerAddress;
     this->customerPhoneNr = customerPhoneNr;
     this->customerNote = customerNote;
     this->GdprDeleted = GdprDeleted;
-    this->customerID = ++customerID;
+    this->favorites = favorites;
+    this->customerID = customerID++;
 }
 
 int customer::getCustomerID() const {
@@ -75,9 +76,4 @@ void customer::setFavoriteCar(std::vector<int>& favs) {
 
 std::vector<int> customer::getFavorites() const {
     return this->favorites;
-}
-
-
-void customer::addFavoriteCar(int carID) {
-    this->favorites.push_back(carID);
 }

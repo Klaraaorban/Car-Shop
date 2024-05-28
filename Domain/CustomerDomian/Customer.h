@@ -30,49 +30,30 @@ private:
     E_mail customerMail;
     Address customerAddress;
     std::string customerPhoneNr;
-    std::string customerNote; //something special about the customer
-    bool GdprDeleted;          //if true -- costumer dates private
+    std::string customerNote;
+    bool GdprDeleted;          //if true --> costumer data is private
     std::vector<int> favorites;
 
 
 public:
-    customer(CustomerName customerName,E_mail customerMail,Address costumerAddress,
-             std::string customerPhoneNr,std::string customerNote,bool GdprDeleted);
-
-    int getCustomerID() const;
-
-    void setCustomerID(int customerId);
-
-    const CustomerName &getCustomerName() const;
-
-    void setCustomerName(const CustomerName &customerName);
-
-    const E_mail &getCustomerMail() const;
-
-    void setCustomerMail(const E_mail &customerMail);
-
-    const Address &getCustomerAddress() const;
-
-    void setCustomerAddress(const Address &costumerAddress);
-
-    const std::string &getCustomerPhoneNr() const;
-
-    void setCustomerPhoneNr(const std::string &customerPhoneNr);
-
-    const std::string &getCustomerNote() const;
-
-    void setCustomerNote(const std::string &customerNote);
-
-    bool isGdprDeleted() const;
-
-    void setGdprDeleted(bool gdprDeleted);
-
-    void setFavoriteCar(std::vector<int>& favs);
-
-    void addFavoriteCar(int carID);
-
-    std::vector<int> getFavorites() const;
-
+    customer(CustomerName customerName, E_mail customerMail, Address costumerAddress,
+             std::string customerPhoneNr, std::string customerNote, bool GdprDeleted, std::vector<int> favorites);
+    /*tested*/  int getCustomerID() const;
+    /*tested*/  void setCustomerID(int customerId);
+    /*tested*/ const CustomerName &getCustomerName() const;
+    /*tested*/ void setCustomerName(const CustomerName &customerName);
+    /*tested*/ const E_mail &getCustomerMail() const;
+    /*tested*/ void setCustomerMail(const E_mail &customerMail);
+    /*tested*/ const Address &getCustomerAddress() const;
+    /*tested*/ void setCustomerAddress(const Address &costumerAddress);
+    /*tested*/ const std::string &getCustomerPhoneNr() const;
+    /*tested*/ void setCustomerPhoneNr(const std::string &customerPhoneNr);
+    /*tested*/ const std::string &getCustomerNote() const;
+    /*tested*/ void setCustomerNote(const std::string &customerNote);
+    /*tested*/ bool isGdprDeleted() const;
+    /*tested*/ void setGdprDeleted(bool gdprDeleted);
+    /*tested*/ void setFavoriteCar(std::vector<int>& favs);
+    /*tested*/ std::vector<int> getFavorites() const;
 };
 
 
