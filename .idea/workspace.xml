@@ -23,7 +23,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainController/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

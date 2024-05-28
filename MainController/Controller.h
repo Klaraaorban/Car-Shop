@@ -46,6 +46,23 @@ public:
     vector<Car> getFavoritesList(customer logedCust);
     void createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
                             vector<int> favorites);
+    void addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
+                              string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+                              customer &customerOrder, Employee &workerOrder);
+    Order getOrderById(int idOrder);
+    void updateOrder(int orderId,Order &updatedOrder);
+    void deleteOrder(int orderId);
+    std::vector<Order> listAllOrders();
+    bool ID_is_valid(int id);
+    void takeOverOrder(int orderId, Employee &newWorker);
+    void assignOrder(int orderId, Employee &newWorker);
+    std::vector<Order> getOrdersByDate( std::string &startDate,  std::string &endDate);
+    float getTotalSumOfADate(string &date);
+    void completeOrder(int orderId);
+    void convertReservationToOrder(int reservationId);
+    void deleteReservation(int reservationId,  int userId, std::string& userRole);
+    void updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation);
+
 };
 
 #endif //CARSHOP_CONTROLLER_H
