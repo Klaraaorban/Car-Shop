@@ -15,7 +15,7 @@ int main() {
     customerController custCtrl(custSrv);
     EmployeeService emplSrv("JsonDB/Employee.json");
     EmployeeController emplCtrl(emplSrv);
-    std::unique_ptr <CarService> carSrv = std::make_unique <CarService> ("JasonDB/Car.json");
+    std::unique_ptr <CarService> carSrv = std::make_unique <CarService> ("JsonDB/Car.json");
     std::unique_ptr <CarController> carCtrl = std::make_unique <CarController> (carSrv.get());
     orderService ordSrv("JsonDB/Order.json", "JsonDB/Car.json", "JsonDB/Customer.json", "JsonDB/Employee.json");
     orderController ordCtrl(ordSrv);
