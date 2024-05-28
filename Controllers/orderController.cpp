@@ -220,12 +220,12 @@ void orderController::convertReservationToOrder(int reservationId) {
 void orderController::deleteReservation(int reservationId,  int userId, std::string& userRole) {
     try {
 
-        if (!OrderService.isReservation(reservationId)) {
+        if (!OrderService->isReservation(reservationId)) {
             throw std::runtime_error("Only reservations can be deleted.");
         }
-        Order reservation = OrderService.getOrderById(reservationId);
+        Order reservation = OrderService->getOrderById(reservationId);
         if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
-            OrderService.deleteOrder(reservationId);
+            OrderService->deleteOrder(reservationId);
             std::cout << "Reservation deleted successfully.\n";
         } else {
             throw std::runtime_error("You do not have permission to delete this reservation.");
@@ -237,12 +237,12 @@ void orderController::deleteReservation(int reservationId,  int userId, std::str
 
 void orderController::updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation) {
     try {
-        if (!OrderService.isReservation(reservationId)) {
+        if (!OrderService->isReservation(reservationId)) {
             throw std::runtime_error("Only reservations can be updated.");
         }
-        Order reservation = OrderService.getOrderById(reservationId);
+        Order reservation = OrderService->getOrderById(reservationId);
         if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
-            OrderService.updateOrder(reservationId, updatedReservation);
+            OrderService->updateOrder(reservationId, updatedReservation);
             std::cout << "Reservation updated successfully.\n";
         } else {
             throw std::runtime_error("You do not have permission to update this reservation.");

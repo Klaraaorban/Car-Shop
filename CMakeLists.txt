@@ -26,8 +26,6 @@ add_executable(car_sharing main.cpp
         Services/customerService.cpp
         Controllers/customerController.h
         Controllers/customerController.cpp
-        CustomerUI/customerUI.h
-        CustomerUI/customerUI.cpp
         Domain/JsonAdapter/JsonOrder.cpp
         Domain/OrderDomain/Order.cpp
         Controllers/orderController.h

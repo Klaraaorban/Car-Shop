@@ -7,7 +7,7 @@
 #include <algorithm>
 using json = nlohmann::json;
 using namespace std;
-orderService::orderService(string &dbOrderFilePath,string &dbCarFilePath,string &dbCustomerFilePath,string &dbEmployeeFilePath):dbOrderFilePath(dbOrderFilePath), dbCarFilePath(dbCarFilePath),dbCustomerFilePath(dbCustomerFilePath),dbEmployeeFilePath(dbEmployeeFilePath) {
+orderService::orderService(string dbOrderFilePath,string dbCarFilePath,string dbCustomerFilePath,string dbEmployeeFilePath):dbOrderFilePath(dbOrderFilePath), dbCarFilePath(dbCarFilePath),dbCustomerFilePath(dbCustomerFilePath),dbEmployeeFilePath(dbEmployeeFilePath) {
     loadFromJson(dbCarFilePath,dbCustomerFilePath,dbEmployeeFilePath);
 }
 
