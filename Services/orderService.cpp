@@ -6,7 +6,7 @@
 #include "../json/single_include/nlohmann/json.hpp"
 #include <algorithm>
 using json = nlohmann::json;
-
+using namespace std;
 orderService::orderService(string &dbOrderFilePath,string &dbCarFilePath,string &dbCustomerFilePath,string &dbEmployeeFilePath):dbOrderFilePath(dbOrderFilePath), dbCarFilePath(dbCarFilePath),dbCustomerFilePath(dbCustomerFilePath),dbEmployeeFilePath(dbEmployeeFilePath) {
     loadFromJson(dbCarFilePath,dbCustomerFilePath,dbEmployeeFilePath);
 }
@@ -23,8 +23,21 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
         EmployeeService employeeService(path_employee);
         EmployeeController employeeController(employeeService);
         for (const auto &item : j) {
+            Order ord3(item["_id_Order"],
+                       item["_date_Order"],
+                       item["_status_Order"],
+                       item["_begin_Order"],
+                       item["_end_Order"],
+                       stof(item["_bill_order"].dump()),
+                       item["_obserations_Order"],
+                       carController.returnCarbyID(stoi(item["_car_Order"].dump())),
+                       custController.FindCustomerByID(item["_customer_Order"]),
+                       employeeController.getEmployeeById(item["_worker_Order"]));
+
+
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
-                         item["_end_Order"], item["_bill_Order"], item["_observations_Order"], carController.returnCarbyID(item["_car_Order"]), custController.FindCustomerByID(item["_customer_Order"]),
+                         item["_end_Order"], stof(item["_bill_Order"].dump()), item["_observations_Order"],
+                         carController.returnCarbyID(item["_car_Order"]), custController.FindCustomerByID(item["_customer_Order"]),
                          employeeController.getEmployeeById(item["_worker_Order"]));
             orders.push_back(ord);
 
