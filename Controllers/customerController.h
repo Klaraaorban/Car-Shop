@@ -5,7 +5,7 @@
 #ifndef CARSHOP_CUSTOMERCONTROLLER_H
 #define CARSHOP_CUSTOMERCONTROLLER_H
 
-#include "../CustomerService/customer_service.h"
+#include "../Services/customerService.h"
 
 class customerController {
 private:
