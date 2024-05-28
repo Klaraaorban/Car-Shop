@@ -16,9 +16,9 @@ void UI::greeting() {
 }
 
 
-pair<string, string> UI::autentification() {
+pair<string, string> UI::authentication() {
     string email, password;
-    cout<<"Authentification\n";
+    cout<<"Authentication\n";
     cout<<"Type in your email: ";
     getline(cin,email);
     cout<<"Type in your password: ";
@@ -39,7 +39,7 @@ void UI::run() {
     bool mainRun = true;
     while(mainRun) {
         if (mainOpt == 1) {//customer
-            pair<string, string> auth = this->autentification();
+            pair<string, string> auth = this->authentication();
             //apel functie identificare customer dupa email si password
             customer logedCust = ctrl->findCustomerByEmailandPassword(auth.first, auth.second);
             cout << "Choose option:\n1. Manage account\n2. Search car\n3. Manage order\n0. Exit\nType an option: ";
@@ -160,7 +160,7 @@ void UI::run() {
                 }
             }
         } else if (mainOpt == 2) {//employee
-            pair<string, string> auth = this->autentification();
+            pair<string, string> auth = this->authentication();
             //apel functie identificare employee dupa email si password
             Employee logedEmpl = ctrl->findEmployeeByEmailandPassword(auth.first, auth.second);
             cout<< "Choose option:\n1. Manage account\n2. Manage employees\n3.Manage customers\n4. Manage cars\n5. Manage orders\n0. Exit\nType an option: ";

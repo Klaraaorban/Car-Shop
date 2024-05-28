@@ -12,7 +12,7 @@ class UI {
 private:
     Controller *ctrl = nullptr;
     void greeting();
-    std::pair<std::string, std::string> autentification();  //add the password of the customer to proceed
+    std::pair<std::string, std::string> authentication();  //add the password of the customer to proceed
     int options();
 public:
     UI(Controller *ctrl);
