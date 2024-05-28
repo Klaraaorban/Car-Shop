@@ -23,15 +23,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/employeeController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/employeeController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/employeeController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/employeeController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MainController/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/employeeService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/employeeService.h" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,13 +104,13 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.car_sharing">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CarShop" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
     </configuration>
     <configuration name="car_sharing" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CarShop" TARGET_NAME="car_sharing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CarShop" RUN_TARGET_NAME="car_sharing">
       <method v="2">
@@ -148,7 +141,6 @@
       <workItem from="1716390279655" duration="6323000" />
       <workItem from="1716644035085" duration="3413000" />
       <workItem from="1716744044481" duration="667000" />
-      <workItem from="1716921011700" duration="8798000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
