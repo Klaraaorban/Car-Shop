@@ -35,3 +35,15 @@ void Employee::setSalary(int salary) {
 int Employee::getId() const {
     return id;
 }
+
+std::size_t Employee::getPassword() const {
+    return User::getPassword();
+}
+
+std::string Employee::getRemarks() const {
+    return remarks;
+}
+
+void Employee::setRemarks(const std::string &remarks) {
+    this->remarks = remarks;
+}

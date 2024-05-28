@@ -46,6 +46,18 @@ public:
     vector<Car> getFavoritesList(customer logedCust);
     void createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
                             vector<int> favorites);
+
+
+    void addEmployee(int id, const std::string &password, const std::string &lastName, const std::string &firstName, const std::string &email, const std::string &position, const std::string &birthDate, int salary);
+    Employee getEmployeeByEmail(const std::string& email) const;
+    Employee getEmployeeById(int id) const;
+    void updateEmployee(int id, const std::string& password, const std::string& lastName, const std::string& firstName, const std::string& position, const std::string& birthDate, int salary, const std::string& abbreviation);
+    void deleteEmployee(int id);
+    std::vector<Employee> getAllEmployees() const;
+    Employee authenticateEmployee(const std::string& email, const std::string& password);
+    std::vector<Employee> getEmployeesByName(const std::string &name) const;
+    std::vector<Employee> getEmployeesByBirthdate(const std::string &birthdate) const;
+    void changeRemarks(int id, const std::string &remarks);
 };
 
 #endif //CARSHOP_CONTROLLER_H

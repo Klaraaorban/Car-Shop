@@ -15,9 +15,12 @@ public:
     std::string getAbbreviation() const;
     std::string getBirthDate() const;
     std::string getPosition() const;
+    std::string getRemarks() const;
+    std::size_t getPassword() const override;
     int getSalary() const;
 
     void setSalary(int salary);
+    void setRemarks(const std::string &remarks);
 
     int getId() const;
 
@@ -28,6 +31,7 @@ private:
     std::string position;
     std::string birthDate;
     std::string abbreviation;
+    std::string remarks;
     int salary;
 };
 

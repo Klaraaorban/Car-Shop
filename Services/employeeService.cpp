@@ -89,6 +89,56 @@ void EmployeeService::deleteEmployee(const int &id) {
     throw std::runtime_error("Employee not found");
 }
 
+Employee EmployeeService::authenticateEmployee(const std::string &email, const std::string &password) const {
+    static std::hash<std::string> hasher;
+    size_t hashedPassword = hasher(password);
+    for (const auto &emp : employees) {
+        if (emp.getEmail() == email && emp.getPassword() == hashedPassword) {
+            return emp;
+        }
+    }
+    throw std::runtime_error("Authentication failed");
+}
+
+
 std::vector<Employee> EmployeeService::getAllEmployees() const {
     return employees;
+}
+
+
+std::vector<Employee> EmployeeService::getEmployeesByName(const std::string &name) const {
+    std::vector<Employee> matchingEmployees;
+    for (const auto &emp : employees) {
+        if (emp.getLastName() == name || emp.getFirstName() == name) {
+            matchingEmployees.push_back(emp);
+        }
+    }
+    if (matchingEmployees.empty()) {
+        throw std::runtime_error("Employee not found");
+    }
+    return matchingEmployees;
+}
+
+std::vector<Employee> EmployeeService::getEmployeesByBirthdate(const std::string &birthdate) const {
+    std::vector<Employee> matchingEmployees;
+    for (const auto &emp : employees) {
+        if (emp.getBirthDate() == birthdate) {
+            matchingEmployees.push_back(emp);
+        }
+    }
+    if (matchingEmployees.empty()) {
+        throw std::runtime_error("Employee not found");
+    }
+    return matchingEmployees;
+}
+
+void EmployeeService::changeRemarks(const int &id, const std::string &remarks) {
+    for (auto &emp : employees) {
+        if (emp.getId() == id) {
+            emp.setRemarks(remarks);
+            saveToJson();
+            return;
+        }
+    }
+    throw std::runtime_error("Employee not found");
 }

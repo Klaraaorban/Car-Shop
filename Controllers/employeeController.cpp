@@ -30,3 +30,19 @@ void EmployeeController::deleteEmployee(int id) {
 std::vector<Employee> EmployeeController::getAllEmployees() const {
     return employeeService->getAllEmployees();
 }
+
+Employee EmployeeController::authenticateEmployee(const std::string& email, const std::string& password) const {
+    return employeeService->authenticateEmployee(email, password);
+}
+
+std::vector<Employee> EmployeeController::getEmployeesByName(const std::string &name) const {
+    return employeeService->getEmployeesByName(name);
+}
+
+std::vector<Employee> EmployeeController::getEmployeesByBirthdate(const std::string &birthdate) const {
+    return employeeService->getEmployeesByBirthdate(birthdate);
+}
+
+void EmployeeController::changeRemarks(int id, const std::string &remarks) {
+    employeeService->changeRemarks(id, remarks);
+}

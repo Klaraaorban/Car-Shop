@@ -124,3 +124,48 @@ void Controller::createCustomer(CustomerName name, E_mail mail, Address address,
                                 vector<int> favorites) {
 custController->customerAdd(name, mail, address, phoneNr, note, GdprDeleted, favorites);
 }
+
+
+
+
+void Controller::addEmployee(int id, const std::string &password, const std::string &lastName, const std::string &firstName,
+                             const std::string &email, const std::string &position, const std::string &birthDate, int salary) {
+    emplController->addEmployee(id, password, lastName, firstName, email, position, birthDate, salary);
+}
+
+Employee Controller::getEmployeeByEmail(const std::string& email) const {
+    return emplController->getEmployeeByEmail(email);
+}
+
+Employee Controller::getEmployeeById(int id) const {
+    return emplController->getEmployeeById(id);
+}
+
+void Controller::updateEmployee(int id, const std::string& password, const std::string& lastName, const std::string& firstName,
+                                const std::string& position, const std::string& birthDate, int salary, const std::string& abbreviation) {
+    emplController->updateEmployee(id, password, lastName, firstName, position, birthDate, salary, abbreviation);
+}
+
+void Controller::deleteEmployee(int id) {
+    emplController->deleteEmployee(id);
+}
+
+std::vector<Employee> Controller::getAllEmployees() const {
+    return emplController->getAllEmployees();
+}
+
+Employee Controller::authenticateEmployee(const std::string& email, const std::string& password) {
+    return emplController->authenticateEmployee(email, password);
+}
+
+std::vector<Employee> Controller::getEmployeesByName(const std::string &name) const {
+    return emplController->getEmployeesByName(name);
+}
+
+std::vector<Employee> Controller::getEmployeesByBirthdate(const std::string &birthdate) const {
+    return emplController->getEmployeesByBirthdate(birthdate);
+}
+
+void Controller::changeRemarks(int id, const std::string &remarks) {
+    emplController->changeRemarks(id, remarks);
+}
