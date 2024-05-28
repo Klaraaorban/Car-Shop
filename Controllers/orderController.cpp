@@ -7,17 +7,17 @@
 #include <iostream>
 #include <string>
 
-orderController::orderController(orderService &Orderservice) : OrderService(Orderservice) {}
+orderController::orderController(orderService *Orderservice) {}
 
 void orderController::addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
                                string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
                                customer &customerOrder, Employee &workerOrder) {
     try{
-        int idOrder=OrderService.createId();
+        int idOrder=OrderService->createId();
         Order order_to_be_added(idOrder,dateOrder,statusOrder, beginOrder,
                                 endOrder,  billOrder,  observationsOrder,  carOrder,
                                 customerOrder,  workerOrder);
-        OrderService.addOrder(order_to_be_added);
+        OrderService->addOrder(order_to_be_added);
     }catch (const std::exception &e) {
         cerr << "Failed to add car: " << e.what() << '\n';
     }
@@ -59,7 +59,7 @@ Order orderController::getOrderById(int idOrder) {
         throw invalid_argument("Invalid order ID");
     }
     else{
-        Order ord= OrderService.getOrderById(idOrder);
+        Order ord= OrderService->getOrderById(idOrder);
         return ord;
     }
 
@@ -87,7 +87,7 @@ void orderController::updateOrder(int orderId,Order &updatedOrder) {
     try{
         if (! ID_is_valid(orderId)) {
             throw invalid_argument("Invalid order ID");}
-        OrderService.updateOrder(orderId,updatedOrder);
+        OrderService->updateOrder(orderId,updatedOrder);
     }
     catch (const std::exception &e) {
         cerr << "Failed to update order: " << e.what() << '\n';
@@ -130,7 +130,7 @@ void orderController::deleteOrder(int orderId) {
     try{
         if (! ID_is_valid(orderId)) {
             throw invalid_argument("Invalid order ID");}
-        OrderService.deleteOrder(orderId);
+        OrderService->deleteOrder(orderId);
     }catch (const std::exception &e) {
         cerr << "Failed to delete order: " << e.what() << '\n';
     }
@@ -147,7 +147,7 @@ void orderController::deleteOrder(int orderId) {
 }
 
 std::vector<Order> orderController::listAllOrders() {
-    auto orders = OrderService.getAllOrders();
+    auto orders = OrderService->getAllOrders();
 //    for ( auto &order : orders) {
 //        std::cout << "Id: " << order.getIdOrder() << "\n";
 //        std::cout << "Date: " << order.getDateOrder() << "\n";
@@ -168,7 +168,7 @@ bool orderController::ID_is_valid(int id) {
 
 void orderController::takeOverOrder(int orderId, Employee &newWorker) {
     try {
-        OrderService.takeOverOrder(orderId, newWorker);
+        OrderService->takeOverOrder(orderId, newWorker);
     } catch (const std::exception &e) {
         std::cerr << "Failed to take over order: " << e.what() << '\n';
     }
@@ -176,14 +176,14 @@ void orderController::takeOverOrder(int orderId, Employee &newWorker) {
 
 void orderController::assignOrder(int orderId, Employee &newWorker) {
     try {
-        OrderService.assignOrder(orderId, newWorker);
+        OrderService->assignOrder(orderId, newWorker);
     } catch (const std::exception &e) {
         std::cerr << "Failed to assign order: " << e.what() << '\n';
     }
 }
 std::vector<Order> orderController::getOrdersByDate( std::string &startDate,  std::string &endDate) {
     try {
-        return OrderService.getOrdersByDate(startDate, endDate);
+        return OrderService->getOrdersByDate(startDate, endDate);
     } catch (const std::exception &e) {
         std::cerr << "Failed to get orders by date range: " << e.what() << '\n';
     }
@@ -191,7 +191,7 @@ std::vector<Order> orderController::getOrdersByDate( std::string &startDate,  st
 
 float orderController::getTotalSumOfADate(string &date) {
     try {
-        return OrderService.getTotalSumOfADate(date);
+        return OrderService->getTotalSumOfADate(date);
     } catch (const std::exception &e) {
         std::cerr << "Failed to get total sum by date: " << e.what() << '\n';
     }
@@ -199,9 +199,9 @@ float orderController::getTotalSumOfADate(string &date) {
 
 void orderController::completeOrder(int orderId) {
     try {
-        Order orderToUpdate = OrderService.getOrderById(orderId);
+        Order orderToUpdate = OrderService->getOrderById(orderId);
         orderToUpdate.setStatusOrder((string &) "Completed");
-        OrderService.updateOrder(orderId, orderToUpdate);
+        OrderService->updateOrder(orderId, orderToUpdate);
     }catch (const std::exception &e) {
             std::cerr << "Failed to complete order " << e.what() << '\n';
         }
@@ -220,12 +220,12 @@ void orderController::convertReservationToOrder(int reservationId) {
 void orderController::deleteReservation(int reservationId,  int userId, std::string& userRole) {
     try {
 
-        if (!OrderService.isReservation(reservationId)) {
+        if (!OrderService->isReservation(reservationId)) {
             throw std::runtime_error("Only reservations can be deleted.");
         }
-        Order reservation = OrderService.getOrderById(reservationId);
+        Order reservation = OrderService->getOrderById(reservationId);
         if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
-            OrderService.deleteOrder(reservationId);
+            OrderService->deleteOrder(reservationId);
             std::cout << "Reservation deleted successfully.\n";
         } else {
             throw std::runtime_error("You do not have permission to delete this reservation.");
@@ -237,12 +237,12 @@ void orderController::deleteReservation(int reservationId,  int userId, std::str
 
 void orderController::updateReservation(int reservationId, int userId,  std::string &userRole,  Order &updatedReservation) {
     try {
-        if (!OrderService.isReservation(reservationId)) {
+        if (!OrderService->isReservation(reservationId)) {
             throw std::runtime_error("Only reservations can be updated.");
         }
-        Order reservation = OrderService.getOrderById(reservationId);
+        Order reservation = OrderService->getOrderById(reservationId);
         if (userRole == "Employee" || (userRole == "Customer" && reservation.getCustomerOrder().getCustomerID() == userId)) {
-            OrderService.updateOrder(reservationId, updatedReservation);
+            OrderService->updateOrder(reservationId, updatedReservation);
             std::cout << "Reservation updated successfully.\n";
         } else {
             throw std::runtime_error("You do not have permission to update this reservation.");

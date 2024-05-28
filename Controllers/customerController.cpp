@@ -5,24 +5,24 @@
 #include "customerController.h"
 #include "exception"
 
-customerController::customerController(customerService &service) : service(service) {}
+customerController::customerController(customerService *service) : service(service) {}
 
 
 void customerController::customerAdd(CustomerName customerName, E_mail customerMail, Address costumerAddress,
                                      std::string customerPhoneNr, std::string customerNote, bool GdprDeleted, vector<int> favorites) {
     customer customerToBeAdded(customerName, customerMail, costumerAddress, customerPhoneNr, customerNote, GdprDeleted, favorites);
-    service.addCostumer(customerToBeAdded);
+    service->addCostumer(customerToBeAdded);
 }
 
 
 void customerController::customerDelete(std::string email)  {
-    service.deleteCustomer(email);
+    service->deleteCustomer(email);
 }
 
 
 customer customerController::FindCustomerByEmail(const E_mail &email) {
-    for (auto cus : service.getAllCustomers()) {
-        if (email.mailAddress == cus.getCustomerMail().mailAddress) {
+    for (auto cus : service->getAllCustomers()) {
+        if (email.mailAddress == cus.getCustomerMail().mailAddress && email.mailPassword == cus.getCustomerMail().mailPassword) {
             return cus;
         }
     }
@@ -31,7 +31,7 @@ customer customerController::FindCustomerByEmail(const E_mail &email) {
 
 
 customer customerController::FindCustomerByID(const int& id) {
-    for (auto cus : service.getAllCustomers()) {
+    for (auto cus : service->getAllCustomers()) {
         if (cus.getCustomerID() == id) {
             return cus;
         }
@@ -41,7 +41,7 @@ customer customerController::FindCustomerByID(const int& id) {
 
 
 customer customerController::FindCustomerByName(CustomerName name) {
-    for(auto cus : service.getAllCustomers()){
+    for(auto cus : service->getAllCustomers()){
         if(cus.getCustomerName().firstName == name.firstName && cus.getCustomerName().lastName == name.lastName)
             return cus;
     }
@@ -66,7 +66,7 @@ customer customerController::FindCustomerByPhoneNr(const std::string& PhoneNr) {
     if(!PhoneNumberFormatCorrect(PhoneNr))
         throw std::runtime_error("Phone number not correct!");
 
-    for(auto cus : service.getAllCustomers()){
+    for(auto cus : service->getAllCustomers()){
         if(cus.getCustomerPhoneNr() == PhoneNr)
             return cus;
     }
@@ -75,7 +75,7 @@ customer customerController::FindCustomerByPhoneNr(const std::string& PhoneNr) {
 
 
 std::vector<customer> customerController::ListAllCostumersSortedByName(std::string option) {
-    std::vector<customer> customers = service.getAllCustomers();
+    std::vector<customer> customers = service->getAllCustomers();
 
     if (option == "first") {
         std::sort(customers.begin(), customers.end(), [](const customer& a, const customer& b) {
@@ -95,7 +95,7 @@ std::vector<customer> customerController::ListAllCostumersSortedByName(std::stri
 
 void customerController::ChangeCustomer(std::string old_mail, std::string option, E_mail mail, CustomerName name, Address address,
                                         std::string phoneNr, std::string note, bool GdprDeleted, std::vector<int> favorites) {
-    for(auto cus : service.getAllCustomers()) {
+    for(auto cus : service->getAllCustomers()) {
         if (cus.getCustomerMail().mailAddress == old_mail) {
             if (option == "password") {
                 E_mail newMail;
@@ -105,7 +105,7 @@ void customerController::ChangeCustomer(std::string old_mail, std::string option
                                          cus.getCustomerNote(), cus.isGdprDeleted(), cus.getFavorites());
                 updatedCustomer.setCustomerID(cus.getCustomerID());
                 customerDelete(cus.getCustomerMail().mailAddress);
-                service.addCostumer(updatedCustomer);
+                service->addCostumer(updatedCustomer);
                 cus.setCustomerMail(newMail);
                 return;
             }
@@ -114,7 +114,7 @@ void customerController::ChangeCustomer(std::string old_mail, std::string option
                                          cus.getCustomerPhoneNr(), note, cus.isGdprDeleted(), cus.getFavorites());
                 updatedCustomer.setCustomerID(cus.getCustomerID());
                 customerDelete(cus.getCustomerMail().mailAddress);
-                service.addCostumer(updatedCustomer);
+                service->addCostumer(updatedCustomer);
                 cus.setCustomerNote(note);
                 return;
             }
@@ -151,7 +151,7 @@ void customerController::ChangeCustomer(std::string old_mail, std::string option
                 customer updatedCustomer(name, mail, address, phoneNr, note, GdprDeleted, favorites);
                 updatedCustomer.setCustomerID(cus.getCustomerID());
                 customerDelete(cus.getCustomerMail().mailAddress);
-                service.addCostumer(updatedCustomer);
+                service->addCostumer(updatedCustomer);
                 cus.setCustomerAddress(address);
                 cus.setCustomerMail(mail);
                 cus.setCustomerName(name);
@@ -184,7 +184,7 @@ bool customerController::IsEmailStructureCorrect(const E_mail& email) {
 bool customerController::IsEmailUnique(const E_mail& email) {
     bool unique = true;
 
-    for(auto i : service.getAllCustomers())
+    for(auto i : service->getAllCustomers())
         if(i.getCustomerMail().mailAddress == email.mailAddress)
             unique = false;
 
@@ -192,8 +192,8 @@ bool customerController::IsEmailUnique(const E_mail& email) {
 }
 
 
-std::vector<int> customerController::SeeFavorites(E_mail &email) {
-    for (auto i : service.getAllCustomers()) {
+std::vector<int> customerController::SeeFavorites(E_mail email) {
+    for (auto i : service->getAllCustomers()) {
         if (i.getCustomerMail().mailAddress == email.mailAddress) {
             return i.getFavorites();
         }
@@ -202,16 +202,16 @@ std::vector<int> customerController::SeeFavorites(E_mail &email) {
 }
 
 
-void customerController::AddToFavorite(E_mail email, int carID) {
-    for (auto i : service.getAllCustomers()) {
+void customerController::AddToFavorite(E_mail email, Car &newCar) {
+    for (auto i : service->getAllCustomers()) {
         if (i.getCustomerMail().mailAddress == email.mailAddress) {
             vector<int> favorites = i.getFavorites();
             for (int id = 0; id < favorites.size(); id) {
-                if (favorites[id] == carID) 
+                if (favorites[id] == newCar.get_id()) 
                     throw runtime_error("CarID already existing!");
             }
-            favorites.push_back(carID);
-            service.updateCustomer(email.mailAddress, favorites);
+            favorites.push_back(newCar.get_id());
+            service->changeFavorite(email.mailAddress, favorites);
             return;
         }
     }

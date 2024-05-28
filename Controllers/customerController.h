@@ -6,17 +6,18 @@
 #define CARSHOP_CUSTOMERCONTROLLER_H
 
 #include "../Services/customerService.h"
+#include "../Domain/CarDomain/Car.h"
 
 class customerController {
 private:
-    customerService &service;
+    customerService *service = nullptr;
 
     bool IsEmailUnique(const E_mail& email);                //finished
     bool IsEmailStructureCorrect(const E_mail& email);      //finished
     bool PhoneNumberFormatCorrect(std::string PhoneNR);     //finished
 
 public:
-    explicit customerController(customerService &service);                             //finished
+    explicit customerController(customerService *service);                             //finished
     void customerAdd(CustomerName customerName, E_mail customerMail, Address costumerAddress,
                      std::string customerPhoneNr, std::string customerNote, bool GdprDeleted, vector<int> favorites);    //finished
     void customerDelete(std::string email);                                          //finished
@@ -28,8 +29,8 @@ public:
 
     void ChangeCustomer(std::string old_email, std::string option, E_mail mail, CustomerName name, Address address, std::string phoneNr,
                         std::string note, bool GdprDeleted, std::vector<int> favorites);
-    std::vector<int> SeeFavorites(E_mail &email);       //finished
-    void AddToFavorite(E_mail email, int carID);        //finished
+    std::vector<int> SeeFavorites(E_mail email);       //finished
+    void AddToFavorite(E_mail email, Car &newCar);        //finished
 
 };
 

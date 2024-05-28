@@ -1,3 +1,4 @@
+
 //
 // Created by miruna on 24.05.2024.
 //
@@ -13,12 +14,12 @@
 class Controller {
 private:
     //controllerele mici
-    customerController custController;
+    customerController *custController = nullptr;
     CarController *carController = nullptr;
-    EmployeeController emplController;
+    EmployeeController *emplController = nullptr;
     orderController *ordController= nullptr;
 public:
-    Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController *ordController);
+    Controller(customerController *custController, CarController *carController, EmployeeController *emplController, orderController *ordController);
 
     customer findCustomerByEmailandPassword(string email, string password);
     Employee findEmployeeByEmailandPassword(string email, string password);
@@ -38,6 +39,13 @@ public:
     bool validateDailyPrice(int dailyPrice);
     bool validateID(int id);
     string modifyLicensePlate(string licensePlate);
+
+    void changePassword(customer logedCust, string newPassword);
+    void changeNote(customer logedCust, string newNote);
+    void changeFavorite(customer logedCust, Car newCar);
+    vector<Car> getFavoritesList(customer logedCust);
+    void createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
+                            vector<int> favorites);
 };
 
 #endif //CARSHOP_CONTROLLER_H

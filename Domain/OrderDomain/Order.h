@@ -47,9 +47,9 @@ public:
 
 public:
 
-    Order(int idOrder, string &dateOrder,  string &statusOrder,  string &beginOrder,
-          string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
-          customer &customerOrder, Employee &workerOrder);
+    Order(int idOrder, const string &dateOrder,  const string &statusOrder, const string &beginOrder,
+          const string &endOrder, float billOrder,const string &observationsOrder, Car carOrder,
+          customer customerOrder, Employee workerOrder);
 
     int getIdOrder();
 

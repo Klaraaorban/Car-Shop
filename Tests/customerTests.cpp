@@ -4,7 +4,6 @@
 #include "../Domain/CustomerDomian/Customer.h"
 #include "../Controllers/customerController.h"
 #include "../Services/customerService.h"
-#include "../json/single_include/nlohmann/json.hpp"
 
 using json = nlohmann::json;
 
@@ -179,12 +178,12 @@ void testControllerList(customerController controller) {
     customersFirst = controller.ListAllCostumersSortedByName("first");
     int cnt = 0;
     for (auto i : customersFirst) {
-        // std::cout<<i.getCustomerID()<<" / "<<i.getCustomerName().firstName<<" "<<i.getCustomerName().lastName<<" / "<<
-        //     i.getCustomerMail().mailAddress<<" / "<<i.getCustomerAddress().city<<" "<<i.getCustomerAddress().country<<" "<<
-        //     i.getCustomerAddress().street<<" "<<i.getCustomerAddress().streetNumber<<" / "<<i.getCustomerNote()<<" / Favorites: ";
-        // for (int idx = 0; idx < i.getFavorites().size(); idx++)
-        //     std::cout << i.getFavorites()[idx] << " ";
-        // std::cout << "\n";
+    //     std::cout<<i.getCustomerID()<<" / "<<i.getCustomerName().firstName<<" "<<i.getCustomerName().lastName<<" / "<<
+    //         i.getCustomerMail().mailAddress<<" / "<<i.getCustomerAddress().city<<" "<<i.getCustomerAddress().country<<" "<<
+    //         i.getCustomerAddress().street<<" "<<i.getCustomerAddress().streetNumber<<" / "<<i.getCustomerNote()<<" / Favorites: ";
+    //     for (int idx = 0; idx < i.getFavorites().size(); idx++)
+    //         std::cout << i.getFavorites()[idx] << " ";
+    //     std::cout << "\n";
         cnt++;
     }
     assert(cnt == customersFirst.size());
@@ -205,11 +204,6 @@ void testControllerList(customerController controller) {
 };
 
 
-// void testAdd() {
-
-// };
-
-
 void testAllFunctions() {
     customer newCustomer = testCreate();
     testSetters_GettersPart1(newCustomer);
@@ -217,7 +211,7 @@ void testAllFunctions() {
     testSetters_GettersPart2(newCustomer);
     std::cout << "\n";
     customerService service = customerService("../JsonDB/Customer.json");
-    customerController controller = customerController(service);
+    customerController controller = customerController(&service);
     testControllerAdd(controller, newCustomer);
     testControllerList(controller);
 }

@@ -6,6 +6,7 @@
 #include <fstream>
 #include "../Domain/CustomerDomian/Customer.h"
 #include "../json/single_include/nlohmann/json.hpp"
+#include "../Domain/CarDomain/Car.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -21,7 +22,7 @@ private:
 public:
     customerService(const string &path);
     void addCostumer(const customer &_customer);
-    void updateCustomer(std::string mail, vector<int> favorites);
+    void changeFavorite(std::string mail, std::vector<int> favorite);
     void deleteCustomer(string& email);
     vector<customer> getAllCustomers() const;
 };

@@ -60,10 +60,10 @@ void Order::setObservationsOrder(string &observationsOrder) {
     _observations_Order = observationsOrder;
 }
 
-Order::Order(int idOrder, string &dateOrder, string &statusOrder,
-                                      string &beginOrder, string &endOrder, float billOrder,
-                                      string &observationsOrder, Car &carOrder, customer &customerOrder,
-                                      Employee &workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
+Order::Order(int idOrder,const  string &dateOrder,const string &statusOrder,
+                                      const string &beginOrder, const string &endOrder, float billOrder,
+                                      const string &observationsOrder, Car carOrder, customer customerOrder,
+                                      Employee workerOrder) : _id_Order(idOrder), _date_Order(dateOrder),_status_Order(statusOrder),_begin_Order(beginOrder), _end_Order(endOrder),
                                      _bill_Order(billOrder),_observations_Order(observationsOrder),_car_Order(carOrder),_customer_Order(customerOrder),_worker_Order(workerOrder) {}
 
 Car &Order::getCarOrder() {

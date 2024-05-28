@@ -14,7 +14,7 @@ class orderController {
 private:
     orderService *OrderService= nullptr;
 public:
-    orderController(orderService &OrderService);
+    orderController(orderService *OrderService);
     void addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
                   string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
                   customer &customerOrder, Employee &workerOrder);

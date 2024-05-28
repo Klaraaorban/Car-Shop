@@ -51,20 +51,19 @@ void customerService::loadJson() {
 
 
 void customerService::saveJson() const {
-    json x = json::array();
-    for (const auto &cus: customers) {
-        json customerJson = {
-                            {"ID",           cus.getCustomerID()},
-                            {"Name",         cus.getCustomerName().firstName + " " + cus.getCustomerName().lastName},
-                            {"Mail",         cus.getCustomerMail().mailAddress + " " + cus.getCustomerMail().mailPassword},
-                            {"Address",      cus.getCustomerAddress().city + " " + cus.getCustomerAddress().country + " " +
+    json x;
+    for (auto &cus: customers) {
+        x.push_back({
+                        {"ID",           cus.getCustomerID()},
+                        {"Name",         cus.getCustomerName().firstName + " " + cus.getCustomerName().lastName},
+                        {"Mail",         cus.getCustomerMail().mailAddress + " " + cus.getCustomerMail().mailPassword},
+                        {"Address",      cus.getCustomerAddress().city + " " + cus.getCustomerAddress().country + " " +
                                              cus.getCustomerAddress().street + " " + to_string(cus.getCustomerAddress().streetNumber)},
-                            {"Phone number", cus.getCustomerPhoneNr()},
-                            {"Notes",        cus.getCustomerNote()},
-                            {"GDPR",         cus.isGdprDeleted()},
-                            {"Favorites",    cus.getFavorites()}
-                };
-        x.push_back(customerJson);
+                        {"Phone number", cus.getCustomerPhoneNr()},
+                        {"Notes",        cus.getCustomerNote()},
+                        {"GDPR",         cus.isGdprDeleted()},
+                        {"Favorites",    cus.getFavorites()}
+                });
     }
 
     ofstream fileout(path);
@@ -81,10 +80,10 @@ void customerService::addCostumer(const customer &_customer) {
 }
 
 
-void customerService::updateCustomer(std::string mail, vector<int> favorites) {
+void customerService::changeFavorite(std::string mail, std::vector<int> favorite) {
     for(auto cus : customers){
         if(cus.getCustomerMail().mailAddress == mail){
-            cus.setFavoriteCar(favorites);
+            cus.setFavoriteCar(favorite);
             saveJson();
             return;
         }

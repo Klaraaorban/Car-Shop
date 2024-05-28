@@ -4,7 +4,7 @@
 
 #include "Controller.h"
 
-Controller::Controller(customerController custController, CarController *carController, EmployeeController emplController, orderController *ordController) :
+Controller::Controller(customerController *custController, CarController *carController, EmployeeController *emplController, orderController *ordController) :
         custController(custController), carController(carController), emplController(emplController), ordController(ordController)
 {
 
@@ -87,3 +87,40 @@ string Controller::modifyLicensePlate(string licensePlate) {
     return carController->modifyLicensePlate(licensePlate);
 }
 
+customer Controller::findCustomerByEmailandPassword(string email, string password) {
+    E_mail mail;
+    mail.mailAddress = email;
+    mail.mailPassword = password;
+    return custController->FindCustomerByEmail(mail);
+}
+
+void Controller::changePassword(customer cus, string newPassword) {
+    E_mail newMail;
+    newMail.mailAddress = cus.getCustomerMail().mailAddress;
+    newMail.mailPassword = newPassword;
+    custController->ChangeCustomer(cus.getCustomerMail().mailAddress, "password", newMail, cus.getCustomerName(),
+                cus.getCustomerAddress(), cus.getCustomerPhoneNr(), cus.getCustomerNote(), cus.isGdprDeleted(), cus.getFavorites());
+}
+
+void Controller::changeNote(customer cus, string newNote) {
+    custController->ChangeCustomer(cus.getCustomerMail().mailAddress, "note", cus.getCustomerMail(), cus.getCustomerName(),
+                cus.getCustomerAddress(), cus.getCustomerPhoneNr(), newNote, cus.isGdprDeleted(), cus.getFavorites());
+}
+
+void Controller::changeFavorite(customer cus, Car newCar) {
+    custController->AddToFavorite(cus.getCustomerMail(), newCar);
+}
+
+vector<Car> Controller::getFavoritesList(customer cus) {
+    vector<int> carIDs = custController->SeeFavorites(cus.getCustomerMail());
+    vector<Car> cars;
+    for (int i = 0; i < carIDs.size(); i++) {
+        cars.push_back(carController->returnCarbyID(carIDs[i]));
+    }
+    return cars;
+}
+
+void Controller::createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
+                                vector<int> favorites) {
+custController->customerAdd(name, mail, address, phoneNr, note, GdprDeleted, favorites);
+}

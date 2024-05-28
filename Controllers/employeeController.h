@@ -5,7 +5,7 @@
 #include <string>
 class EmployeeController {
 public:
-    EmployeeController(EmployeeService &service);
+    EmployeeController(EmployeeService *employeeService);
 
     void addEmployee(int id, const std::string &password, const std::string &lastName, const std::string &firstName,
                      const std::string &email, const std::string &position, const std::string &birthDate, int salary);
@@ -21,7 +21,7 @@ public:
 
     std::vector<Employee> getAllEmployees() const;
 private:
-    EmployeeService &employeeService;
+    EmployeeService *employeeService;
 };
 
 
