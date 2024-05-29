@@ -12,6 +12,8 @@ json JsonEmployee::ModelToJson(Employee employee) {
     j["email"] = employee.getEmail();
     j["position"] = employee.getPosition();
     j["birthDate"] = employee.getBirthDate();
-    j["abreviation"] = employee.getAbbreviation();
+    j["nickname"] = employee.getNickname();
+    j["remarks"]= employee.getRemarks();
+    j["salary"]= employee.getSalary();
     return j;
 }
