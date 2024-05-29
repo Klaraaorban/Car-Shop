@@ -61,6 +61,22 @@ public:
     std::vector<Employee> getEmployeesByBirthdate(const std::string &birthdate) const;
     void changeRemarks(int id, const std::string &remarks);
     Employee getEmployeeByNickname(const std::string &nickanme) const;
+    void addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
+                              string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+                              customer &customerOrder, Employee &workerOrder);
+    Order getOrderById(int idOrder);
+    void updateOrder(int orderId, Order &updatedOrder);
+    void deleteOrder(int orderId);
+    std::vector<Order> listAllOrders();
+    bool ID_is_valid(int id);
+    void takeOverOrder(int orderId, Employee &newWorker);
+    void assignOrder(int orderId, Employee &newWorker);
+    std::vector<Order> getOrdersByDate(string &startDate, string &endDate);
+    float getTotalSumOfADate(string &date);
+    void completeOrder(int orderId);
+    void deleteReservation(int reservationId, int userId, string &userRole);
+    void updateReservation(int reservationId, int userId, string &userRole, Order &updatedReservation);
+    void convertReservationToOrder(int reservationId);
 };
 
 #endif //CARSHOP_CONTROLLER_H

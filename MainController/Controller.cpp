@@ -94,6 +94,10 @@ customer Controller::findCustomerByEmailandPassword(string email, string passwor
     return custController->FindCustomerByEmail(mail);
 }
 
+Employee Controller::findEmployeeByEmailandPassword(std::string email, std::string password) {
+    return emplController->getEmployeeByEmail(email);
+}
+
 void Controller::changePassword(customer cus, string newPassword) {
     E_mail newMail;
     newMail.mailAddress = cus.getCustomerMail().mailAddress;
@@ -172,4 +176,62 @@ void Controller::changeRemarks(int id, const std::string &remarks) {
 
 Employee Controller::getEmployeeByNickname(const std::string &nickanme) const{
     return emplController->getEmployeeByNickname(nickanme);
+}
+void Controller::addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
+                          string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
+                          customer &customerOrder, Employee &workerOrder){
+    ordController->addOrder(dateOrder,statusOrder,beginOrder,endOrder,billOrder,observationsOrder,carOrder,customerOrder,workerOrder);
+}
+
+Order Controller::getOrderById(int idOrder) {
+    return ordController->getOrderById(idOrder);
+}
+
+void Controller::updateOrder(int orderId, Order &updatedOrder) {
+    ordController->updateOrder(orderId,updatedOrder);
+}
+
+void Controller::deleteOrder(int orderId) {
+    ordController->deleteOrder(orderId);
+}
+
+std::vector<Order> Controller::listAllOrders() {
+    auto orders = ordController->listAllOrders();
+    return orders;
+}
+
+bool Controller::ID_is_valid(int id) {
+    return ordController->ID_is_valid(id);
+}
+
+void Controller::takeOverOrder(int orderId, Employee &newWorker) {
+    ordController->takeOverOrder(orderId,newWorker);
+}
+
+void Controller::assignOrder(int orderId, Employee &newWorker) {
+    ordController->assignOrder(orderId,newWorker);
+}
+
+std::vector<Order> Controller::getOrdersByDate(string &startDate, string &endDate) {
+    return ordController->getOrdersByDate(startDate,endDate);
+}
+
+float Controller::getTotalSumOfADate(string &date) {
+    return ordController->getTotalSumOfADate(date);
+}
+
+void Controller::completeOrder(int orderId) {
+    ordController->completeOrder(orderId);
+}
+
+void Controller::deleteReservation(int reservationId, int userId, string &userRole) {
+    ordController->deleteReservation(reservationId,userId,userRole);
+}
+
+void Controller::updateReservation(int reservationId, int userId, string &userRole, Order &updatedReservation) {
+    ordController->updateReservation(reservationId,userId,userRole,updatedReservation);
+}
+
+void Controller::convertReservationToOrder(int reservationId) {
+    ordController->convertReservationToOrder(reservationId);
 }
