@@ -15,6 +15,7 @@ public:
     void deleteEmployee(const int &id);
     std::vector<Employee> getAllEmployees() const;
     Employee getEmployeeByEmail(const std::string &email) const;
+    Employee getEmployeeByNickname(const std::string &nickname) const;
     Employee authenticateEmployee(const std::string &email, const std::string &password) const;
     std::vector<Employee> getEmployeesByName(const std::string &name) const;
     std::vector<Employee> getEmployeesByBirthdate(const std::string &birthdate) const;

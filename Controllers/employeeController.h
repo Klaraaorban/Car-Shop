@@ -7,8 +7,8 @@ class EmployeeController {
 public:
     EmployeeController(EmployeeService *employeeService);
 
-    void addEmployee(int id, const std::string &password, const std::string &lastName, const std::string &firstName,
-                     const std::string &email, const std::string &position, const std::string &birthDate, int salary);
+    void addEmployee(int id, const std::string &password, const std::string &nickname ,const std::string &lastName, const std::string &firstName,
+                     const std::string &email, const std::string &position, const std::string &birthDate, int salary, const std::string &remarks);
 
     Employee getEmployeeByEmail(const std::string& email) const;
 
@@ -16,8 +16,8 @@ public:
 
     Employee authenticateEmployee(const std::string& email, const std::string& password) const;
 
-    void updateEmployee(int id, const std::string& password, const std::string& lastName, const std::string& firstName,
-                        const std::string& position, const std::string& birthDate, int salary, const std::string& abbreviation);
+    void updateEmployee(int id, const std::string& password,const std::string& nickname, const std::string& lastName, const std::string& firstName,
+                        const std::string& position, const std::string& birthDate, int salary, const std::string& remarks);
 
     void deleteEmployee(int id);
 
@@ -26,6 +26,8 @@ public:
     std::vector<Employee> getEmployeesByName(const std::string &name) const;
 
     std::vector<Employee> getEmployeesByBirthdate(const std::string &birthdate) const;
+
+    Employee getEmployeeByNickname(const std::string &nickname) const;
 
     void changeRemarks(int id, const std::string &remarks);
 private:

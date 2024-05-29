@@ -15,8 +15,8 @@ void EmployeeService::loadFromJson() {
         json j;
         inFile >> j;
         for (const auto &item : j) {
-            Employee emp(item["id"], item["password"], item["lastName"], item["firstName"], item["email"],
-                         item["position"], item["birthDate"], item["salary"]);
+            Employee emp(item["id"], item["password"],item["nickname"], item["lastName"], item["firstName"], item["email"],
+                         item["position"], item["birthDate"], item["salary"], item["remarks"]);
             employees.push_back(emp);
         }
         inFile.close();
@@ -29,12 +29,14 @@ void EmployeeService::saveToJson() const {
         j.push_back({
                             {"id", emp.getId()},
                             {"password", emp.getPassword()},
+                            {"nickname", emp.getNickname()},
                             {"lastName", emp.getLastName()},
                             {"firstName", emp.getFirstName()},
                             {"email", emp.getEmail()},
                             {"position", emp.getPosition()},
                             {"birthDate", emp.getBirthDate()},
-                            {"salary", emp.getSalary()}
+                            {"salary", emp.getSalary()},
+                            {"remarks",emp.getRemarks()}
                     });
     }
     std::ofstream outFile(dbFilePath);
@@ -117,6 +119,15 @@ std::vector<Employee> EmployeeService::getEmployeesByName(const std::string &nam
         throw std::runtime_error("Employee not found");
     }
     return matchingEmployees;
+}
+
+Employee EmployeeService::getEmployeeByNickname(const std::string &nickname) const {
+    for (const auto &emp : employees) {
+        if (emp.getNickname() == nickname) {
+            return emp;
+        }
+    }
+    throw std::runtime_error("Employee not found");
 }
 
 std::vector<Employee> EmployeeService::getEmployeesByBirthdate(const std::string &birthdate) const {

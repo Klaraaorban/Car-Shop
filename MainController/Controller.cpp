@@ -128,9 +128,9 @@ custController->customerAdd(name, mail, address, phoneNr, note, GdprDeleted, fav
 
 
 
-void Controller::addEmployee(int id, const std::string &password, const std::string &lastName, const std::string &firstName,
-                             const std::string &email, const std::string &position, const std::string &birthDate, int salary) {
-    emplController->addEmployee(id, password, lastName, firstName, email, position, birthDate, salary);
+void Controller::addEmployee(int id, const std::string& password,const std::string& nickname, const std::string& lastName, const std::string& firstName, const std::string& email,
+                             const std::string& position, const std::string& birthDate, int salary, const std::string& remarks) {
+    emplController->addEmployee(id, password, nickname, lastName, firstName, email, position, birthDate, salary, remarks);
 }
 
 Employee Controller::getEmployeeByEmail(const std::string& email) const {
@@ -141,9 +141,9 @@ Employee Controller::getEmployeeById(int id) const {
     return emplController->getEmployeeById(id);
 }
 
-void Controller::updateEmployee(int id, const std::string& password, const std::string& lastName, const std::string& firstName,
-                                const std::string& position, const std::string& birthDate, int salary, const std::string& abbreviation) {
-    emplController->updateEmployee(id, password, lastName, firstName, position, birthDate, salary, abbreviation);
+void Controller::updateEmployee(int id, const std::string& password,const std::string& nickname, const std::string& lastName, const std::string& firstName,
+                                const std::string& position, const std::string& birthDate, int salary, const std::string& remarks) {
+    emplController->updateEmployee(id, password, nickname, lastName, firstName, position, birthDate, salary, remarks);
 }
 
 void Controller::deleteEmployee(int id) {
@@ -168,4 +168,8 @@ std::vector<Employee> Controller::getEmployeesByBirthdate(const std::string &bir
 
 void Controller::changeRemarks(int id, const std::string &remarks) {
     emplController->changeRemarks(id, remarks);
+}
+
+Employee Controller::getEmployeeByNickname(const std::string &nickanme) const{
+    return emplController->getEmployeeByNickname(nickanme);
 }

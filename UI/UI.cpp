@@ -214,7 +214,7 @@ void UI::run() {
                                 cout << "Enter new password: ";
                                 string newPassword;
                                 getline(cin, newPassword);
-                                ctrl->updateEmployee(logedEmpl.getId(), newPassword, logedEmpl.getLastName(), logedEmpl.getFirstName(), logedEmpl.getPosition(), logedEmpl.getBirthDate(), logedEmpl.getSalary(), logedEmpl.getAbbreviation());
+                                ctrl->updateEmployee(logedEmpl.getId(), newPassword, logedEmpl.getNickname(),logedEmpl.getLastName(), logedEmpl.getFirstName(), logedEmpl.getPosition(), logedEmpl.getBirthDate(), logedEmpl.getSalary(), logedEmpl.getRemarks());
                                 break;
                             }
                             case 2: {
@@ -255,11 +255,17 @@ void UI::run() {
                                 break;
                             }
                             case 2: {
-                                //aperale functie search employees by nickname
+                                // search employees by nickname
+                                cout << "Enter Nickname: ";
+                                string nickname;
+                                getline(cin, nickname);
+                                Employee foundEmployee = ctrl->getEmployeeByNickname(nickname);
+                                cout << "Employee found with ID: " << foundEmployee.getId() << ", Last Name: " << foundEmployee.getLastName() << ", First Name: " << foundEmployee.getFirstName() << ", Position: " << foundEmployee.getPosition() << endl;
                                 break;
+
                             }
                             case 3: {
-
+                                //search employee by email
                                 cout << "Enter email: ";
                                 string email;
                                 getline(cin, email);
