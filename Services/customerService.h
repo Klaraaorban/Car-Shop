@@ -24,7 +24,7 @@ public:
     void addCostumer(const customer &_customer);
     void changeFavorite(std::string mail, std::vector<int> favorite);
     void deleteCustomer(string& email);
-    vector<customer> getAllCustomers() const;
+    vector<customer> getAllCustomers();
 };
 
 

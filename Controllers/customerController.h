@@ -31,6 +31,9 @@ public:
                         std::string note, bool GdprDeleted, std::vector<int> favorites);
     std::vector<int> SeeFavorites(E_mail email);       //finished
     void AddToFavorite(E_mail email, Car &newCar);        //finished
+    customer ReturnCustomerByID(int id);
+
+    std::vector<customer> getAllCustomer();
 
 };
 

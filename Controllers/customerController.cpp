@@ -217,3 +217,14 @@ void customerController::AddToFavorite(E_mail email, Car &newCar) {
     }
     throw logic_error("Customer with this email not existing!");
 }
+
+customer customerController::ReturnCustomerByID(int id) {
+    for(auto i : service->getAllCustomers())
+        if(i.getCustomerID() == id)
+            return i;
+}
+
+std::vector<customer> customerController::getAllCustomer()  {
+    std::vector<customer> allCustomers = service->getAllCustomers();
+    return  allCustomers;
+}

@@ -32,6 +32,9 @@ public:
     vector<Car> notOrderedCars(string from, string to);
     Car findCarByLicensePlate(string licensePlate);
     vector<Car> orderedCars(int custID);
+    vector<Car> listallCars();
+    Car returnCarbyID(int car_id);
+
 
     bool validateLicensePlate(string licensePlate);
     bool validateRegistrationYear(int registrationYear);
@@ -46,6 +49,15 @@ public:
     vector<Car> getFavoritesList(customer logedCust);
     void createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
                             vector<int> favorites);
+    std::vector<customer> getAllCustomer();
+    customer FindCustomerByPhoneNr(const std::string& PhoneNr);
+    void customerDelete(std::string email);
+    std::vector<customer> ListAllCostumersSortedByName(std::string option);     //finished
+    customer FindCustomerByName(CustomerName name);                             //finished
+    void ChangeCustomer(std::string old_email, std::string option, E_mail mail, CustomerName name, Address address, std::string phoneNr,
+                        std::string note, bool GdprDeleted, std::vector<int> favorites);
+
+    customer getCustomerByID(int id);
 
 
     void addEmployee(int id, const std::string& password,const std::string& nickname, const std::string& lastName, const std::string& firstName, const std::string& email,

@@ -6,6 +6,7 @@
 #include "UI.h"
 #include <iostream>
 #include <utility>
+#include <string.h>
 using namespace std;
 
 UI::UI(Controller *ctrl) {
@@ -152,27 +153,131 @@ void UI::run() {
                             case 0:
                                 break;
                             case 1: {
-                                //ctrl.createReservation();
+
+                                int idOrder;
+                                string dateOrder,statusOrder,beginOrder, endOrder, observationsOrder;
+                                float billOrder;
+                                int carId;
+                                int customerId;
+                                int employeeId;
+
+                                cout<< "Enter Id of the Order: \n";
+                                cin >> idOrder;
+                                cout<< "\n Enter date of the Order: \n";
+                                getline(cin,dateOrder);
+                                statusOrder = "Reservation";
+                                cout << "\n Enter begin order: \n";
+                                cin >> beginOrder;
+                                cout << "\n Enter end order: \n";
+                                cin >> endOrder;
+                                cout << "\n Enter observations order: \n";
+                                getline(cin,observationsOrder);
+                                cout << "\n Enter bill order: \n";
+                                cin >> billOrder;
+
+
+
+                                vector<Employee> vec_employee = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_employee.size(); i++){
+                                    cout << vec_employee[i].getId() << ". " <<vec_employee[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee employe = ctrl->getEmployeeById(decizieEmplyee);
+
+
+                                vector<Car> vec_car = ctrl->listallCars();
+                                for(int i = 0;  i<vec_car.size(); i++){
+                                    cout << vec_car[i].get_id() << ". " <<vec_car[i].get_model() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCar;
+                                cin>>decizieCar;
+                                Car car = ctrl->returnCarbyID(decizieCar);
+
+                                vector<customer> vec_cust = ctrl->getAllCustomer();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getCustomerID() << ". " <<vec_cust[i].getCustomerName().firstName<< ' '<<vec_cust[i].getCustomerName().lastName <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCustomer;
+                                cin>>decizieCustomer;
+                                customer customer = ctrl->getCustomerByID(decizieCustomer);
+
+                                ctrl->addOrder(dateOrder,statusOrder,beginOrder, endOrder, billOrder, observationsOrder,
+                                               car,customer, employe);
+
                                 break;
                             }
                             case 2: {
-                                //ctrl.deleteReservation();
+                                //aperale functie delete reservation
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                Order ord1 = ctrl->getOrderById(decizieOrderId);
+                                int employeeId = ord1.getWorkerOrder().getId();
+
+                                string role = "Employee";
+                                ctrl->deleteReservation(decizieOrderId,employeeId,role);
                                 break;
                             }
                             case 3: {
                                 //ctrl.changeReservation();
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    if (vec_order[i].getStatusOrder()=="Reservation")
+                                        cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                ctrl->convertReservationToOrder(decizieOrderId);
+
                                 break;
                             }
                             case 4: {
                                 //ctrl.viewOrderForSpecificDate();
+                                string startDate;
+                                string endDate;
+                                cout<< "\n Enter start date\n";
+                                getline(cin,startDate);
+                                cout<< "\n Enter end date\n";
+                                getline(cin,endDate);
+                                vector<Order> vec_orders = ctrl->getOrdersByDate(startDate,endDate);
+                                for(int i = 0; i<vec_orders.size(); i++){
+                                    cout<< vec_orders[i].getIdOrder()<< ' '<< vec_orders[i].getCarOrder().get_model()<< ' '<< vec_orders[i].getCustomerOrder().getCustomerName().firstName<< ' '<<vec_orders[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
                                 break;
+
                             }
                             case 5: {
                                 //ctrl.searchOrderByNumber();
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+                                Order order1 = ctrl->getOrderById(decizieOrderId);
+                                cout<< order1.getCustomerOrder().getCustomerName().firstName<< ' '<< order1.getCustomerOrder().getCustomerName().lastName<< ' '<<order1.getCarOrder().get_model();
                                 break;
+
                             }
                             case 6: {
                                 //ctrl.seeTotalPrice();
+                                string date;
+                                cout<< "\n Enter date\n";
+                                getline(cin,date);
+                                cout<< "Total sum: "<< ctrl->getTotalSumOfADate(date)<<'\n';
+
                                 break;
                             }
                             default:
@@ -479,16 +584,84 @@ void UI::run() {
                                 cout << "Enter your First and Last name: ";
                                 getline(cin, first);
                                 getline(cin, last);
+                                cout<<endl;
+                                cout << "Enter email: ";
+                                getline(cin, mailAdd);
+                                cout<<endl;
+                                cout << "Enter password: ";
+                                getline(cin, mailPass);
+                                cout<<endl;
+                                cout << "Country of costumer:";
+                                getline(cin, country);
+                                cout<<endl;
+                                cout << "City of costumer:";
+                                getline(cin, city);
+                                cout<<endl;
+                                cout << "Street of costumer:";
+                                getline(cin, street);
+                                cout<<endl;
+                                cout << "Number of house of costumer:";
+                                cin >> streetNum;
+                                cout<<endl;
+                                cout << "Phone number of costumer:";
+                                getline(cin, phone);
+                                cout<<endl;
+                                cout << "Note about costumer:";
+                                getline(cin, note);
+                                cout<<endl;
+                                //apelare functie create customer
+                                ctrl->createCustomer({first,last}, {mailAdd, mailPass}, {country, city, street, streetNum},phone, note, gdpr, favorites);
+                                break;
+
+
 
                                 //apelare functie create customer
-                                break;
+
                             }
                             case 2: {
                                 //aperale functie change customer
+                                string first, last, mailAdd, mailPass, city, country, street, phone, note;
+                                int streetNum;
+                                bool gdpr;
+                                vector<int> favorites;
+                                cout << "Enter your First and Last name: ";
+                                getline(cin, first);
+                                getline(cin, last);
+                                cout<<endl;
+                                cout << "Enter email: ";
+                                getline(cin, mailAdd);
+                                cout<<endl;
+                                cout << "Enter password: ";
+                                getline(cin, mailPass);
+                                cout<<endl;
+                                cout << "Country of costumer:";
+                                getline(cin, country);
+                                cout<<endl;
+                                cout << "City of costumer:";
+                                getline(cin, city);
+                                cout<<endl;
+                                cout << "Street of costumer:";
+                                getline(cin, street);
+                                cout<<endl;
+                                cout << "Number of house of costumer:";
+                                cin >> streetNum;
+                                cout<<endl;
+                                cout << "Phone number of costumer:";
+                                getline(cin, phone);
+                                cout<<endl;
+                                cout << "Note about costumer:";
+                                getline(cin, note);
+                                cout<<endl;
+//                                ctrl->ChangeCustomer(first, last, mailAdd, mailPass, city, country, street, phone, note)
                                 break;
                             }
                             case 3: {
                                 //aperale functie delete customer
+                                string email;
+                                cout << "Give the email to delete a customer: ";
+                                getline(cin, email);
+                                cout << endl;
+                                ctrl->customerDelete(email);
                                 break;
                             }
                             case 4: {
@@ -497,18 +670,43 @@ void UI::run() {
                             }
                             case 5: {
                                 //aperale functie view customers
+                                string option;
+                                cout << "Give a preference whichby to show the customers(first/last): ";
+                                getline(cin, option);
+                                cout<<endl;
+                                ctrl->ListAllCostumersSortedByName(option);
                                 break;
                             }
                             case 6: {
                                 //aperale functie search customer by email
+                                string email, password;
+                                cout << "Search by email: ";
+                                getline(cin, email);
+                                cout<<endl;
+                                cout << "Give password: ";
+                                getline(cin, password);
+                                ctrl->findCustomerByEmailandPassword(email, password);
                                 break;
                             }
                             case 7: {
                                 //aperale functie search customer by phone
+                                string Phone_nr;
+                                cout << "Give searched phone number: ";
+                                getline(cin, Phone_nr);
+                                cout<<endl;
+                                ctrl->FindCustomerByPhoneNr(Phone_nr);
                                 break;
                             }
                             case 8: {
                                 //aperale functie search customer by name
+                                string first, last;
+                                cout << "Given first name: ";
+                                getline(cin, first);
+                                cout<<endl;
+                                cout << "Last name: ";
+                                getline(cin, last);
+                                cout << endl;
+                                ctrl->FindCustomerByName({first, last});
                                 break;
                             }
                             case 9: {
@@ -701,50 +899,384 @@ void UI::run() {
                                 break;
                             case 1: {
                                 //apelare functie create order
+
+                                int idOrder;
+                                string dateOrder,statusOrder,beginOrder, endOrder, observationsOrder;
+                                float billOrder;
+                                int carId;
+                                int customerId;
+                                int employeeId;
+
+                                cout<< "Enter Id of the Order: \n";
+                                cin >> idOrder;
+                                cout<< "\n Enter date of the Order: \n";
+                                getline(cin,dateOrder);
+                                cout << "\n Enter status order: (Completed/ Reservation/ new): ";
+                                cin >> statusOrder;
+                                cout << "\n Enter begin order: \n";
+                                cin >> beginOrder;
+                                cout << "\n Enter end order: \n";
+                                cin >> endOrder;
+                                cout << "\n Enter observations order: \n";
+                                getline(cin,observationsOrder);
+                                cout << "\n Enter bill order: \n";
+                                cin >> billOrder;
+
+
+
+                                vector<Employee> vec_employee = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_employee.size(); i++){
+                                    cout << vec_employee[i].getId() << ". " <<vec_employee[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee employe = ctrl->getEmployeeById(decizieEmplyee);
+
+
+                                vector<Car> vec_car = ctrl->listallCars();
+                                for(int i = 0;  i<vec_car.size(); i++){
+                                    cout << vec_car[i].get_id() << ". " <<vec_car[i].get_model() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCar;
+                                cin>>decizieCar;
+                                Car car = ctrl->returnCarbyID(decizieCar);
+
+                                vector<customer> vec_cust = ctrl->getAllCustomer();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getCustomerID() << ". " <<vec_cust[i].getCustomerName().firstName<< ' '<<vec_cust[i].getCustomerName().lastName <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCustomer;
+                                cin>>decizieCustomer;
+                                customer customer = ctrl->getCustomerByID(decizieCustomer);
+
+                                ctrl->addOrder(dateOrder,statusOrder,beginOrder, endOrder, billOrder, observationsOrder,
+                                               car,customer, employe);
                                 break;
                             }
                             case 2: {
                                 //aperale functie change reservation
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    if (vec_order[i].getStatusOrder()=="Reservation")
+                                        cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                ctrl->convertReservationToOrder(decizieOrderId);
                                 break;
                             }
                             case 3: {
-                                //aperale functie change order
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                int idOrder;
+                                string dateOrder,statusOrder,beginOrder, endOrder, observationsOrder;
+                                float billOrder;
+                                int carId;
+                                int customerId;
+                                int employeeId;
+
+                                cout<< "Enter Id of the Order: \n";
+                                cin >> idOrder;
+                                cout<< "\n Enter date of the Order: \n";
+                                getline(cin,dateOrder);
+                                cout << "\n Enter status order: (Completed/ Reservation/ new): ";
+                                cin >> statusOrder;
+                                cout << "\n Enter begin order: \n";
+                                cin >> beginOrder;
+                                cout << "\n Enter end order: \n";
+                                cin >> endOrder;
+                                cout << "\n Enter observations order: \n";
+                                getline(cin,observationsOrder);
+                                cout << "\n Enter bill order: \n";
+                                cin >> billOrder;
+
+
+
+                                vector<Employee> vec_employee = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_employee.size(); i++){
+                                    cout << vec_employee[i].getId() << ". " <<vec_employee[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee employe = ctrl->getEmployeeById(decizieEmplyee);
+
+
+                                vector<Car> vec_car = ctrl->listallCars();
+                                for(int i = 0;  i<vec_car.size(); i++){
+                                    cout << vec_car[i].get_id() << ". " <<vec_car[i].get_model() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCar;
+                                cin>>decizieCar;
+                                Car car = ctrl->returnCarbyID(decizieCar);
+
+                                vector<customer> vec_cust = ctrl->getAllCustomer();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getCustomerID() << ". " <<vec_cust[i].getCustomerName().firstName<< ' '<<vec_cust[i].getCustomerName().lastName <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCustomer;
+                                cin>>decizieCustomer;
+                                customer customer = ctrl->getCustomerByID(decizieCustomer);
+
+                                Order newOrder(idOrder,dateOrder,statusOrder,beginOrder, endOrder, billOrder, observationsOrder,
+                                               car,customer, employe);
+
+                                ctrl->updateOrder(decizieOrderId,newOrder);
+
                                 break;
                             }
                             case 4: {
-                                //aperale functie complete order
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+                                ctrl->completeOrder(decizieOrderId);
                                 break;
                             }
                             case 5: {
                                 //aperale functie retrieve order from another employee
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                vector<Employee> vec_cust = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getId() << ". " <<vec_cust[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee newEmployee = ctrl->getEmployeeById(decizieEmplyee);
+
+                                ctrl->takeOverOrder(decizieOrderId, newEmployee);
+
                                 break;
                             }
                             case 6: {
                                 //aperale functie give order to another employee
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                vector<Employee> vec_cust = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getId() << ". " <<vec_cust[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee newEmployee = ctrl->getEmployeeById(decizieEmplyee);
+
+                                ctrl->assignOrder(decizieOrderId, newEmployee);
                                 break;
                             }
                             case 7: {
-                                //aperale functie create reservation
+                                //apelare functie create reservation
+
+                                int idOrder;
+                                string dateOrder,statusOrder,beginOrder, endOrder, observationsOrder;
+                                float billOrder;
+                                int carId;
+                                int customerId;
+                                int employeeId;
+
+                                cout<< "Enter Id of the Order: \n";
+                                cin >> idOrder;
+                                cout<< "\n Enter date of the Order: \n";
+                                getline(cin,dateOrder);
+                                statusOrder = "Reservation";
+                                cout << "\n Enter begin order: \n";
+                                cin >> beginOrder;
+                                cout << "\n Enter end order: \n";
+                                cin >> endOrder;
+                                cout << "\n Enter observations order: \n";
+                                getline(cin,observationsOrder);
+                                cout << "\n Enter bill order: \n";
+                                cin >> billOrder;
+
+
+
+                                vector<Employee> vec_employee = ctrl->getAllEmployees();
+                                for(int i = 0;  i<vec_employee.size(); i++){
+                                    cout << vec_employee[i].getId() << ". " <<vec_employee[i].getFirstName() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieEmplyee;
+                                cin>>decizieEmplyee;
+                                Employee employe = ctrl->getEmployeeById(decizieEmplyee);
+
+
+                                vector<Car> vec_car = ctrl->listallCars();
+                                for(int i = 0;  i<vec_car.size(); i++){
+                                    cout << vec_car[i].get_id() << ". " <<vec_car[i].get_model() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCar;
+                                cin>>decizieCar;
+                                Car car = ctrl->returnCarbyID(decizieCar);
+
+                                vector<customer> vec_cust = ctrl->getAllCustomer();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getCustomerID() << ". " <<vec_cust[i].getCustomerName().firstName<< ' '<<vec_cust[i].getCustomerName().lastName <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCustomer;
+                                cin>>decizieCustomer;
+                                customer customer = ctrl->getCustomerByID(decizieCustomer);
+
+                                ctrl->addOrder(dateOrder,statusOrder,beginOrder, endOrder, billOrder, observationsOrder,
+                                               car,customer, employe);
                                 break;
                             }
+
                             case 8: {
                                 //aperale functie delete reservation
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                Order ord1 = ctrl->getOrderById(decizieOrderId);
+                                int employeeId = ord1.getWorkerOrder().getId();
+
+                                string role = "Employee";
+                                ctrl->deleteReservation(decizieOrderId,employeeId,role);
+
                                 break;
                             }
                             case 9: {
                                 //aperale functie change reservation
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the reservation ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                Order ord1 = ctrl->getOrderById(decizieOrderId);
+                                int employeeId = ord1.getWorkerOrder().getId();
+                                Employee employee= ctrl->getEmployeeById(employeeId);
+
+                                string role = "Employee";
+
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+
+                                int idOrder;
+                                string dateOrder,statusOrder,beginOrder, endOrder, observationsOrder;
+                                float billOrder;
+                                int carId;
+                                int customerId;
+
+
+                                cout<< "Enter Id of the Order: \n";
+                                cin >> idOrder;
+                                cout<< "\n Enter date of the Order: \n";
+                                getline(cin,dateOrder);
+                                cout << "\n Enter status order: (Completed/ Reservation/ new): ";
+                                cin >> statusOrder;
+                                cout << "\n Enter begin order: \n";
+                                cin >> beginOrder;
+                                cout << "\n Enter end order: \n";
+                                cin >> endOrder;
+                                cout << "\n Enter observations order: \n";
+                                getline(cin,observationsOrder);
+                                cout << "\n Enter bill order: \n";
+                                cin >> billOrder;
+
+
+
+                                vector<Car> vec_car = ctrl->listallCars();
+                                for(int i = 0;  i<vec_car.size(); i++){
+                                    cout << vec_car[i].get_id() << ". " <<vec_car[i].get_model() <<'\n';
+                                }
+                                cout<< "Pick Id Employee: ";
+                                int decizieCar;
+                                cin>>decizieCar;
+                                Car car = ctrl->returnCarbyID(decizieCar);
+
+                                vector<customer> vec_cust = ctrl->getAllCustomer();
+                                for(int i = 0;  i<vec_cust.size(); i++){
+                                    cout << vec_cust[i].getCustomerID() << ". " <<vec_cust[i].getCustomerName().firstName<< ' '<<vec_cust[i].getCustomerName().lastName <<'\n';
+                                }
+                                cout<< "Pick Id Customer: ";
+                                int decizieCustomer;
+                                cin>>decizieCustomer;
+                                customer customer = ctrl->getCustomerByID(decizieCustomer);
+
+                                Order newOrder(idOrder,dateOrder,statusOrder,beginOrder, endOrder, billOrder, observationsOrder,
+                                               car,customer, employee);
+
+                                ctrl->updateReservation(decizieOrderId,employeeId,role,newOrder);
+
                                 break;
                             }
                             case 10: {
                                 //apelare functie view orders for specific date
+                                string startDate;
+                                string endDate;
+                                cout<< "\n Enter start date\n";
+                                getline(cin,startDate);
+                                cout<< "\n Enter end date\n";
+                                getline(cin,endDate);
+                                vector<Order> vec_orders = ctrl->getOrdersByDate(startDate,endDate);
+                                for(int i = 0; i<vec_orders.size(); i++){
+                                    cout<< vec_orders[i].getIdOrder()<< ' '<< vec_orders[i].getCarOrder().get_model()<< ' '<< vec_orders[i].getCustomerOrder().getCustomerName().firstName<< ' '<<vec_orders[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
                                 break;
                             }
                             case 11: {
                                 //apelare functie search order by nr
+                                int oldIdOrder;
+                                vector<Order> vec_order = ctrl->listAllOrders();
+                                for(int i = 0; i < vec_order.size(); i++){
+                                    cout << vec_order[i].getIdOrder()<< ". " << vec_order[i].getCustomerOrder().getCustomerName().firstName<<' '<< vec_order[i].getCustomerOrder().getCustomerName().lastName<<'\n';
+                                }
+                                int decizieOrderId;
+                                cout<< "Enter the order ID you want to change: ";
+                                cin>>decizieOrderId;
+                                Order order1 = ctrl->getOrderById(decizieOrderId);
+                                cout<< order1.getCustomerOrder().getCustomerName().firstName<< ' '<< order1.getCustomerOrder().getCustomerName().lastName<< ' '<<order1.getCarOrder().get_model();
                                 break;
                             }
                             case 12: {
-                                //apelare functie see total price
+                                string date;
+                                cout<< "\n Enter date\n";
+                                getline(cin,date);
+                                cout<< "Total sum: "<< ctrl->getTotalSumOfADate(date)<<'\n';
+
                                 break;
                             }
                             default: {

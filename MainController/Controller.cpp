@@ -63,6 +63,16 @@ vector<Car> Controller::orderedCars(int custID) {
     return ordered;
 }
 
+vector<Car> Controller::listallCars() {
+    vector<Car> cars = carController->listallCars();
+    return cars;
+}
+
+Car Controller::returnCarbyID(int car_id) {
+    Car car = carController->returnCarbyID(car_id);
+    return car;
+}
+
 bool Controller::validateLicensePlate(string licensePlate) {
     return carController->validateLicensePlate(licensePlate);
 }
@@ -124,12 +134,42 @@ vector<Car> Controller::getFavoritesList(customer cus) {
     return cars;
 }
 
+std::vector<customer> Controller::getAllCustomer()  {
+    return custController->getAllCustomer();
+}
+
+customer Controller::getCustomerByID(int id) {
+    custController->ReturnCustomerByID(id);
+}
+
 void Controller::createCustomer(CustomerName name, E_mail mail, Address address, string phoneNr, string note, bool GdprDeleted,
                                 vector<int> favorites) {
 custController->customerAdd(name, mail, address, phoneNr, note, GdprDeleted, favorites);
 }
 
+customer Controller::FindCustomerByPhoneNr(const string &PhoneNr) {
+    return custController->FindCustomerByPhoneNr(PhoneNr);
+}
 
+void Controller::customerDelete(std::string email) {
+    E_mail mail;
+    mail.mailAddress = email;
+    customerDelete(email);
+}
+
+
+std::vector<customer> Controller::ListAllCostumersSortedByName(std::string option) {
+    return std::vector<customer>();
+}
+
+customer Controller::FindCustomerByName(CustomerName name) {
+    return custController->FindCustomerByName(name);
+}
+void Controller::ChangeCustomer(std::string old_email, std::string option, E_mail mail, CustomerName name, Address address,
+                                std::string phoneNr, std::string note, bool GdprDeleted, std::vector<int> favorites) {
+//    custController->ChangeCustomer(std::string old_email, std::string option, E_mail mail, CustomerName name, Address address,
+//            std::string phoneNr, std::string note, bool GdprDeleted, std::vector<int> favorites);
+}
 
 
 void Controller::addEmployee(int id, const std::string& password,const std::string& nickname, const std::string& lastName, const std::string& firstName, const std::string& email,

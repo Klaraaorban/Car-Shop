@@ -104,6 +104,6 @@ void customerService::deleteCustomer(std::string &email) {
 }
 
 
-vector<customer> customerService::getAllCustomers() const{
+vector<customer> customerService::getAllCustomers() {
     return customers;
 }
