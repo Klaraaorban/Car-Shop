@@ -38,6 +38,8 @@ int Employee::getId() const {
 
 std::size_t Employee::getPassword() const {
     return User::getPassword();
+
+
 }
 
 std::string Employee::getRemarks() const {

@@ -23,14 +23,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/employeeController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/employeeController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/employeeController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/employeeController.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainController/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/employeeService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/employeeService.h" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +137,7 @@
       <workItem from="1716390279655" duration="6323000" />
       <workItem from="1716644035085" duration="3413000" />
       <workItem from="1716744044481" duration="667000" />
-      <workItem from="1716963594174" duration="4061000" />
+      <workItem from="1716963594174" duration="9312000" />
     </task>
     <task id="LOCAL-00001" summary="Commit 1">
       <option name="closed" value="true" />
@@ -233,7 +227,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716646103486</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
+      <option name="closed" value="true" />
+      <created>1716967675035</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716967675035</updated>
+    </task>
+    <task id="LOCAL-00013" summary="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
+      <option name="closed" value="true" />
+      <created>1716969577769</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1716969577769</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -293,9 +293,87 @@ void UI::run() {
                             }
                             case 6:{
                                 //create employee
+                                cout << "Enter ID: ";
+                                int id;
+                                cin >> id;
+                                cin.ignore();
+
+                                cout << "Enter password: ";
+                                string password;
+                                getline(cin, password);
+
+                                cout << "Enter nickname: ";
+                                string nickname;
+                                getline(cin, nickname);
+
+                                cout << "Enter last name: ";
+                                string lastName;
+                                getline(cin, lastName);
+
+                                cout << "Enter first name: ";
+                                string firstName;
+                                getline(cin, firstName);
+
+                                cout << "Enter email: ";
+                                string email;
+                                getline(cin, email);
+
+                                cout << "Enter position: ";
+                                string position;
+                                getline(cin, position);
+
+                                cout << "Enter birthdate: ";
+                                string birthDate;
+                                getline(cin, birthDate);
+
+                                cout << "Enter salary: ";
+                                int salary;
+                                cin >> salary;
+                                cin.ignore();
+
+                                cout << "Enter remarks: ";
+                                string remarks;
+                                getline(cin, remarks);
+
+                                ctrl->addEmployee(id, password, nickname, lastName, firstName, email, position, birthDate, salary, remarks);
+                                cout << "Employee created successfully." << endl;
+                                break;
                             }
                             case 7:{
-                                //change emplyee
+                                //change employee
+                                cout << "Enter employee ID to update: ";
+                                int id;
+                                cin >> id;
+                                cin.ignore();
+
+                                Employee emp = ctrl->getEmployeeById(id);
+                                size_t password = emp.getPassword();
+                                string passw=std::to_string(password);
+
+                                cout << "Enter new nickname: ";
+                                string nickname;
+                                getline(cin, nickname);
+
+                                cout << "Enter new last name: ";
+                                string lastName;
+                                getline(cin, lastName);
+
+                                cout << "Enter new first name: ";
+                                string firstName;
+                                getline(cin, firstName);
+
+                                cout << "Enter new birthdate: ";
+                                string birthDate;
+                                getline(cin, birthDate);
+
+                                cout << "Enter new salary: ";
+                                int salary;
+                                cin >> salary;
+                                cin.ignore();
+
+                                ctrl->updateEmployee(id, passw, nickname, lastName, firstName, emp.getPosition(), birthDate, salary, emp.getRemarks());
+                                cout << "Employee updated successfully." << endl;
+                                break;
 
                             }
                             case 8:{
@@ -304,18 +382,55 @@ void UI::run() {
                             }
                             case 9:{
                                 //delete emp
+                                cout << "Enter employee ID to delete: ";
+                                int id;
+                                cin >> id;
+                                ctrl->deleteEmployee(id);
+                                cout << "Employee deleted successfully." << endl;
+                                break;
 
                             }
                             case 10:{
                                 //change emp to admin
+                                cout << "Enter employee ID to change to admin: ";
+                                int id;
+                                cin >> id;
+                                Employee emp = ctrl->getEmployeeById(id);
+                                size_t password = emp.getPassword();
+                                string passw=std::to_string(password);
+                                ctrl->updateEmployee(id, passw, emp.getNickname(), emp.getLastName(), emp.getFirstName(), "admin", emp.getBirthDate(), emp.getSalary(), emp.getRemarks());
+                                cout << "Employee changed to Admin successfully." << endl;
+                                break;
 
                             }
                             case 11:{
                                 //change admin to emp
+                                cout << "Enter admin ID to change to employee: ";
+                                int id;
+                                cin >> id;
+                                Employee emp = ctrl->getEmployeeById(id);
+                                size_t password = emp.getPassword();
+                                string passw=std::to_string(password);
+                                ctrl->updateEmployee(id, passw, emp.getNickname(), emp.getLastName(), emp.getFirstName(), "employee", emp.getBirthDate(), emp.getSalary(), emp.getRemarks());
+                                cout << "Admin changed to employee successfully." << endl;
+                                break;
 
                             }
                             case 12:{
                                 //reset passw for emp
+                                cout << "Enter employee ID to reset password: ";
+                                int id;
+                                cin >> id;
+                                cin.ignore();
+
+                                cout << "Enter new password: ";
+                                string newPassword;
+                                getline(cin, newPassword);
+
+                                Employee emp = ctrl->getEmployeeById(id);
+                                ctrl->updateEmployee(id, newPassword, emp.getNickname(), emp.getLastName(), emp.getFirstName(), emp.getPosition(), emp.getBirthDate(), emp.getSalary(), emp.getRemarks());
+                                cout << "Password reset successfully." << endl;
+                                break;
 
 
                             }
