@@ -43,4 +43,5 @@ add_executable(car_sharing main.cpp
         Domain/JsonAdapter/JsonCar.cpp
         Tests/carTest.cpp
         Tests/carTest.h
+        Tests/Order_tests.cpp
 )

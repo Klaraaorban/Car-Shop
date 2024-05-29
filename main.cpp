@@ -12,6 +12,8 @@
 #include "Services/orderService.h"
 #include "json/single_include/nlohmann/json.hpp"
 #include <filesystem>
+#include "Tests/Order_tests.h"
+
 using json = nlohmann::json;
 
 void runTests() {
@@ -20,6 +22,7 @@ void runTests() {
 }
 
 int main() {
+    Tests_order();
     filesystem::path p=filesystem::current_path();
     std::unique_ptr<customerService> custSrv = std::make_unique<customerService>(p.string()+"\\..\\JsonDB\\Customer.json");
     std::unique_ptr<customerController> custCtrl = std::make_unique<customerController>(custSrv.get());
