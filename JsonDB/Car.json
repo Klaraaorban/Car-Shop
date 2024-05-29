@@ -1,0 +1,16 @@
+[
+  {
+    "car_id": 0,
+    "licensePlate": "CJ01AB",
+    "model": "Logan",
+    "brand": "Dacia",
+    "registrationYear": 2004,
+    "mileage": 100000,
+    "dailyPrice": 10000,
+    "fuelType": "Diesel",
+    "gearbox": "Manual",
+    "color": "blue",
+    "remark": "abcd",
+    "active": true
+  }
+]

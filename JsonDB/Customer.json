@@ -1,0 +1,12 @@
+[
+  {
+    "ID": 0,
+    "Name": "Ion Popescu",
+    "Mail": "ion abcd",
+    "Address": "cluj romania constanta 15",
+    "Phone number": "23989023",
+    "Notes": "dasfa",
+    "GDPR":  true,
+    "Favorites": [0]
+  }
+]

@@ -14,12 +14,14 @@ void EmployeeService::loadFromJson() {
     if (inFile.is_open()) {
         json j;
         inFile >> j;
-        for (const auto &item : j) {
+        inFile.close();
+        for (const auto item : j) {
             Employee emp(item["id"], item["password"],item["nickname"], item["lastName"], item["firstName"], item["email"],
                          item["position"], item["birthDate"], item["salary"], item["remarks"]);
             employees.push_back(emp);
+
         }
-        inFile.close();
+
     }
 }
 
@@ -61,6 +63,7 @@ Employee EmployeeService::getEmployeeByEmail(const std::string &email) const {
 }
 
 Employee EmployeeService::getEmployeeById(const int &id) const {
+    std::cout<<id;
     for (const auto &emp : employees) {
         if (emp.getId() == id) {
             return emp;

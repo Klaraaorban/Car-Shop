@@ -22,10 +22,12 @@ pair<string, string> UI::authentication() {
     string email, password;
     cout<<"Authentication\n";
     cout<<"Type in your email: ";
-    getline(cin,email);
+//    getline(cin,email);
+    cin>>email;
     cout<<endl;
     cout<<"Type in your password: ";
-    getline(cin,password);
+//    getline(cin,password);
+    cin>>password;
     cout<<endl;
     return make_pair(email, password);
 }
@@ -107,6 +109,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
                                 string begin, end;
@@ -151,6 +154,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
 
@@ -316,6 +320,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
                                 cout << "Enter new password: ";
@@ -348,6 +353,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
 
@@ -575,6 +581,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
                                 string first, last, mailAdd, mailPass, city, country, street, phone, note;
@@ -609,6 +616,9 @@ void UI::run() {
                                 cout << "Note about costumer:";
                                 getline(cin, note);
                                 cout<<endl;
+
+//                                ctrl->createCustomer()
+
                                 //apelare functie create customer
                                 ctrl->createCustomer({first,last}, {mailAdd, mailPass}, {country, city, street, streetNum},phone, note, gdpr, favorites);
                                 break;
@@ -725,6 +735,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
                                 string brand, model, licensePlate, fuelType, gearbox, color, remarks;
@@ -896,6 +907,7 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                run = false;
                                 break;
                             case 1: {
                                 //apelare functie create order

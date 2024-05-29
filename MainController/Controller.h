@@ -55,7 +55,7 @@ public:
     std::vector<customer> ListAllCostumersSortedByName(std::string option);     //finished
     customer FindCustomerByName(CustomerName name);                             //finished
     void ChangeCustomer(std::string old_email, std::string option, E_mail mail, CustomerName name, Address address, std::string phoneNr,
-                        std::string note, bool GdprDeleted, std::vector<int> favorites);
+                        std::string note, bool GdprDeleted, std::vector<int> favorites);
 
     customer getCustomerByID(int id);
 

@@ -7,7 +7,7 @@
 #include <iostream>
 #include <string>
 
-orderController::orderController(orderService *Orderservice) {}
+orderController::orderController(orderService *Orderservice): OrderService(Orderservice) {}
 
 void orderController::addOrder(string &dateOrder,  string &statusOrder,  string &beginOrder,
                                string &endOrder, float billOrder, string &observationsOrder, Car &carOrder,
@@ -134,29 +134,10 @@ void orderController::deleteOrder(int orderId) {
     }catch (const std::exception &e) {
         cerr << "Failed to delete order: " << e.what() << '\n';
     }
-//    int id;
-//    std::cout << "Enter the id of the order to delete: ";
-//    std::cin >> id;
-//
-//    try {
-//        OrderService.deleteOrder(id);
-//        std::cout << "Order deleted successfully.\n";
-//    } catch (const std::exception &e) {
-//        std::cerr << e.what() << '\n';
-//    }
 }
 
 std::vector<Order> orderController::listAllOrders() {
     auto orders = OrderService->getAllOrders();
-//    for ( auto &order : orders) {
-//        std::cout << "Id: " << order.getIdOrder() << "\n";
-//        std::cout << "Date: " << order.getDateOrder() << "\n";
-//        std::cout << "Status: " << order.getStatusOrder() << "\n";
-//        std::cout << "Begin: " << order.getBeginOrder() << "\n";
-//        std::cout << "End: " << order.getEndOrder() << "\n";
-//        std::cout << "Bill: " << order.getBillOrder() << "\n";
-//        std::cout << "Observations: " << order.getObservationsOrder() << "\n";
-//    }
     return orders;
 }
 

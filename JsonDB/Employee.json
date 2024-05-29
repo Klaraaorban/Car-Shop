@@ -1,1 +1,14 @@
-{"abreviation":"111","birthDate":"1111","email":"1111","firstName":"111","lastName":"asfasfsa","position":"asfasfsa"}
+[
+  {
+    "id": 0,
+    "password": "abcd",
+    "nickname": "johnny",
+    "lastName": "Doe",
+    "firstName": "John",
+    "email": "john",
+    "position": "Admin",
+    "birthDate": "1990-01-01",
+    "salary": 50000,
+    "remarks": "Good employee"
+  }
+]

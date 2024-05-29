@@ -6,8 +6,8 @@
 
 class Employee : public User {
 public:
-    Employee(int id, const std::string &password, const std::string nickname ,const std::string &lastName, const std::string &firstName,
-             const std::string &email, const std::string &position, const std::string &birthDate, int salary, const std::string remarks);
+    Employee(int id, const std::string password, const std::string nickname ,const std::string lastName, const std::string firstName,
+             const std::string email, const std::string position, const std::string birthDate, int salary, const std::string remarks);
 
 
     std::string getLastName() const;
