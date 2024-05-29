@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include "Tests/carTest.h"
 #include "UI/UI.h"
 #include "MainController/Controller.h"
 #include "Controllers/customerController.h"
@@ -12,6 +13,11 @@
 #include "json/single_include/nlohmann/json.hpp"
 #include <filesystem>
 using json = nlohmann::json;
+
+void runTests() {
+    CarTests t1;
+    t1.testAllFunctions();
+}
 
 int main() {
     filesystem::path p=filesystem::current_path();
