@@ -64,6 +64,8 @@ void UI::run() {
                         int opt2 = options();
                         switch (opt2) {
                             case 0:
+                                mainRun= false;
+                                run= false;
                                 break;
                             case 1: {
                                 string newPassword;
@@ -293,6 +295,7 @@ void UI::run() {
                         cout << "Choose a valid option: ";
                     }
                 }
+
             }
         }
 
@@ -313,6 +316,7 @@ void UI::run() {
                 switch (opt) {
                     case 0: {
                         run = false;
+                        mainRun= false;
                         break;
                     }
                     case 1: {
