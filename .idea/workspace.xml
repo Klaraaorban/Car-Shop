@@ -23,8 +23,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2bf01faf-2c70-4e3a-b607-e5aa93cf6b27" name="Changes" comment="takeOverOrder,assignOrder,getOrdersByDate,getTotalSumOfADate functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/EmployeeDomain/Employee.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/employeeService.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Services/employeeService.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/JsonAdapter/JsonEmployee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/JsonAdapter/JsonEmployee.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainController/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/MainController/Controller.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UI/UI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UI/UI.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +39,12 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Bestellung1" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {

@@ -94,6 +94,10 @@ customer Controller::findCustomerByEmailandPassword(string email, string passwor
     return custController->FindCustomerByEmail(mail);
 }
 
+Employee Controller::findEmployeeByEmailandPassword(std::string email, std::string password) {
+    return emplController->getEmployeeByEmail(email);
+}
+
 void Controller::changePassword(customer cus, string newPassword) {
     E_mail newMail;
     newMail.mailAddress = cus.getCustomerMail().mailAddress;

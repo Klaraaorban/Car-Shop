@@ -22,8 +22,10 @@ pair<string, string> UI::authentication() {
     cout<<"Authentication\n";
     cout<<"Type in your email: ";
     getline(cin,email);
+    cout<<endl;
     cout<<"Type in your password: ";
     getline(cin,password);
+    cout<<endl;
     return make_pair(email, password);
 }
 
