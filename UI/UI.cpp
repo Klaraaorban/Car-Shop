@@ -70,7 +70,8 @@ void UI::run() {
                             case 1: {
                                 string newPassword;
                                 cout << "Enter a new password: ";
-                                getline(cin, newPassword);
+//                                getline(cin, newPassword);
+                                cin>>newPassword;
                                 ctrl->changePassword(logedCust, newPassword);
                                 cout << "Password changed!";
                                 break;
@@ -78,7 +79,8 @@ void UI::run() {
                             case 2: {
                                 string newNote;
                                 cout << "Enter a new Note: ";
-                                getline(cin, newNote);
+//                                getline(cin, newNote);
+                                cin>>newNote;
                                 ctrl->changeNote(logedCust, newNote);
                                 cout << "Note changed!";
                                 break;
@@ -86,7 +88,8 @@ void UI::run() {
                             case 3: {
                                 string licencePlate;
                                 cout << "Enter the car's licence plate you want to add: ";
-                                getline(cin, licencePlate);
+//                                getline(cin, licencePlate);
+                                cin>>licencePlate;
                                 Car car = ctrl->findCarByLicensePlate(licencePlate);
                                 ctrl->changeFavorite(logedCust, car);
                                 break;
@@ -116,9 +119,11 @@ void UI::run() {
                             case 1: {
                                 string begin, end;
                                 cout << "From: ";
-                                getline(cin, begin);
+//                                getline(cin, begin);
+                                cin>>begin;
                                 cout << "To: ";
-                                getline(cin, end);
+//                                getline(cin, end);
+                                cin>>end;
                                 vector<Car> carList = ctrl->notOrderedCars(begin, end);
                                 for (auto &car: carList) {
                                     cout << car.get_brand() << ' ' << car.get_model() << ' ' << car.get_gearbox() << ' '
@@ -129,7 +134,8 @@ void UI::run() {
                             case 2: {
                                 string licensePlate;
                                 cout << "License plate: ";
-                                getline(cin, licensePlate);
+//                                getline(cin, licensePlate);
+                                cin>>licensePlate;
                                 Car searchedCar = ctrl->findCarByLicensePlate(licensePlate);
                                 cout << searchedCar.get_brand() << ' ' << searchedCar.get_model() << ' '
                                      << searchedCar.get_gearbox() << ' ' << searchedCar.get_dailyPrice() << endl;
@@ -170,14 +176,16 @@ void UI::run() {
                                 cout<< "Enter Id of the Order: \n";
                                 cin >> idOrder;
                                 cout<< "\n Enter date of the Order: \n";
-                                getline(cin,dateOrder);
+//                                getline(cin,dateOrder);
+                                cin>>dateOrder;
                                 statusOrder = "Reservation";
                                 cout << "\n Enter begin order: \n";
                                 cin >> beginOrder;
                                 cout << "\n Enter end order: \n";
                                 cin >> endOrder;
                                 cout << "\n Enter observations order: \n";
-                                getline(cin,observationsOrder);
+//                                getline(cin,observationsOrder);
+                                cin>>observationsOrder;
                                 cout << "\n Enter bill order: \n";
                                 cin >> billOrder;
 
@@ -252,9 +260,11 @@ void UI::run() {
                                 string startDate;
                                 string endDate;
                                 cout<< "\n Enter start date\n";
-                                getline(cin,startDate);
+//                                getline(cin,startDate);
+                                cin>>startDate;
                                 cout<< "\n Enter end date\n";
-                                getline(cin,endDate);
+//                                getline(cin,endDate);
+                                cin>>endDate;
                                 vector<Order> vec_orders = ctrl->getOrdersByDate(startDate,endDate);
                                 for(int i = 0; i<vec_orders.size(); i++){
                                     cout<< vec_orders[i].getIdOrder()<< ' '<< vec_orders[i].getCarOrder().get_model()<< ' '<< vec_orders[i].getCustomerOrder().getCustomerName().firstName<< ' '<<vec_orders[i].getCustomerOrder().getCustomerName().lastName<<'\n';
@@ -281,7 +291,8 @@ void UI::run() {
                                 //ctrl.seeTotalPrice();
                                 string date;
                                 cout<< "\n Enter date\n";
-                                getline(cin,date);
+//                                getline(cin,date);
+                                cin>>date;
                                 cout<< "Total sum: "<< ctrl->getTotalSumOfADate(date)<<'\n';
 
                                 break;
@@ -329,14 +340,16 @@ void UI::run() {
                             case 1: {
                                 cout << "Enter new password: ";
                                 string newPassword;
-                                getline(cin, newPassword);
+//                                getline(cin, newPassword);
+                                cin>>newPassword;
                                 ctrl->updateEmployee(logedEmpl.getId(), newPassword, logedEmpl.getNickname(),logedEmpl.getLastName(), logedEmpl.getFirstName(), logedEmpl.getPosition(), logedEmpl.getBirthDate(), logedEmpl.getSalary(), logedEmpl.getRemarks());
                                 break;
                             }
                             case 2: {
                                 cout << "Enter new remarks: ";
                                 string newRemarks;
-                                getline(cin, newRemarks);
+//                                getline(cin, newRemarks);
+                                cin>>newRemarks;
                                 ctrl->changeRemarks(logedEmpl.getId(), newRemarks);
                                 cout << "Remarks changed successfully." << endl;
                                 break;
@@ -371,7 +384,8 @@ void UI::run() {
                                 // search employee by nickname
                                 cout << "Enter Nickname: ";
                                 string nickname;
-                                getline(cin, nickname);
+//                                getline(cin, nickname);
+                                cin>>nickname;
                                 Employee foundEmployee = ctrl->getEmployeeByNickname(nickname);
                                 cout << "Employee found with ID: " << foundEmployee.getId() << ", Last Name: " << foundEmployee.getLastName() << ", First Name: " << foundEmployee.getFirstName() << ", Position: " << foundEmployee.getPosition() << endl;
                                 break;
@@ -381,7 +395,8 @@ void UI::run() {
                                 //search employee by email
                                 cout << "Enter email: ";
                                 string email;
-                                getline(cin, email);
+//                                getline(cin, email);
+                                cin>>email;
                                 Employee foundEmployee = ctrl->getEmployeeByEmail(email);
                                 cout << "Employee found with ID: " << foundEmployee.getId() << ", Last Name: " << foundEmployee.getLastName() << ", First Name: " << foundEmployee.getFirstName() << ", Position: " << foundEmployee.getPosition() << endl;
 
@@ -390,7 +405,8 @@ void UI::run() {
                             case 4: {
                                 cout << "Enter employee name: ";
                                 string name;
-                                getline(cin, name);
+//                                getline(cin, name);
+                                cin>>name;
                                 vector<Employee> employeesByName = ctrl->getEmployeesByName(name);
 
                                 for (const auto &employee : employeesByName) {
@@ -401,7 +417,8 @@ void UI::run() {
                             case 5: {
                                 cout << "Enter birthdate: ";
                                 string birthdate;
-                                getline(cin, birthdate);
+//                                getline(cin, birthdate);
+                                cin>>birthdate;
                                 vector<Employee> employeesByBirthdate = ctrl->getEmployeesByBirthdate(birthdate);
                                 for (const auto &employee : employeesByBirthdate) {
                                     cout << "ID: " << employee.getId() << ", Last Name: " << employee.getLastName() << ", First Name: " << employee.getFirstName() << ", Position: " << employee.getPosition() << endl;
@@ -417,31 +434,38 @@ void UI::run() {
 
                                 cout << "Enter password: ";
                                 string password;
-                                getline(cin, password);
+//                                getline(cin, password);
+                                cin>>password;
 
                                 cout << "Enter nickname: ";
                                 string nickname;
-                                getline(cin, nickname);
+//                                getline(cin, nickname);
+                                cin>>nickname;
 
                                 cout << "Enter last name: ";
                                 string lastName;
-                                getline(cin, lastName);
+//                                getline(cin, lastName);
+                                cin>>lastName;
 
                                 cout << "Enter first name: ";
                                 string firstName;
-                                getline(cin, firstName);
+//                                getline(cin, firstName);
+                                cin>>firstName;
 
                                 cout << "Enter email: ";
                                 string email;
-                                getline(cin, email);
+//                                getline(cin, email);
+                                cin>>email;
 
                                 cout << "Enter position: ";
                                 string position;
-                                getline(cin, position);
+//                                getline(cin, position);
+                                cin>>position;
 
                                 cout << "Enter birthdate: ";
                                 string birthDate;
-                                getline(cin, birthDate);
+//                                getline(cin, birthDate);
+                                cin>>birthDate;
 
                                 cout << "Enter salary: ";
                                 int salary;
@@ -450,7 +474,8 @@ void UI::run() {
 
                                 cout << "Enter remarks: ";
                                 string remarks;
-                                getline(cin, remarks);
+//                                getline(cin, remarks);
+                                cin>>remarks;
 
                                 ctrl->addEmployee(id, password, nickname, lastName, firstName, email, position, birthDate, salary, remarks);
                                 cout << "Employee created successfully." << endl;
@@ -469,19 +494,23 @@ void UI::run() {
 
                                 cout << "Enter new nickname: ";
                                 string nickname;
-                                getline(cin, nickname);
+//                                getline(cin, nickname);
+                                cin>>nickname;
 
                                 cout << "Enter new last name: ";
                                 string lastName;
-                                getline(cin, lastName);
+//                                getline(cin, lastName);
+                                cin>>lastName;
 
                                 cout << "Enter new first name: ";
                                 string firstName;
-                                getline(cin, firstName);
+//                                getline(cin, firstName);
+                                cin>>firstName;
 
                                 cout << "Enter new birthdate: ";
                                 string birthDate;
-                                getline(cin, birthDate);
+//                                getline(cin, birthDate);
+                                cin>>birthDate;
 
                                 cout << "Enter new salary: ";
                                 int salary;
@@ -542,7 +571,8 @@ void UI::run() {
 
                                 cout << "Enter new password: ";
                                 string newPassword;
-                                getline(cin, newPassword);
+//                                getline(cin, newPassword);
+                                cin>>newPassword;
 
                                 Employee emp = ctrl->getEmployeeById(id);
                                 ctrl->updateEmployee(id, newPassword, emp.getNickname(), emp.getLastName(), emp.getFirstName(), emp.getPosition(), emp.getBirthDate(), emp.getSalary(), emp.getRemarks());
@@ -568,7 +598,8 @@ void UI::run() {
                                 cin.ignore();
                                 cout << "Enter new remarks: ";
                                 string newRemarks;
-                                getline(cin, newRemarks);
+//                                getline(cin, newRemarks);
+                                cin>>newRemarks;
                                 ctrl->changeRemarks(employeeId, newRemarks);
                                 cout << "Remarks changed successfully." << endl;
                                 break;
@@ -593,35 +624,43 @@ void UI::run() {
                                 bool gdpr;
                                 vector<int> favorites;
                                 cout << "Enter your First and Last name: ";
-                                getline(cin, first);
-                                getline(cin, last);
+//                                getline(cin, first);
+                                cin>>first>>last;
+//                                getline(cin, last);
                                 cout<<endl;
                                 cout << "Enter email: ";
-                                getline(cin, mailAdd);
+//                                getline(cin, mailAdd);
+                                cin>>mailAdd;
                                 cout<<endl;
                                 cout << "Enter password: ";
-                                getline(cin, mailPass);
+//                                getline(cin, mailPass);
+                                cin>>mailPass;
                                 cout<<endl;
                                 cout << "Country of costumer:";
-                                getline(cin, country);
+//                                getline(cin, country);
+                                cin>>country;
                                 cout<<endl;
                                 cout << "City of costumer:";
-                                getline(cin, city);
+//                                getline(cin, city);
+                                cin>>city;
                                 cout<<endl;
                                 cout << "Street of costumer:";
-                                getline(cin, street);
+//                                getline(cin, street);
+                                cin>>street;
                                 cout<<endl;
                                 cout << "Number of house of costumer:";
                                 cin >> streetNum;
                                 cout<<endl;
                                 cout << "Phone number of costumer:";
-                                getline(cin, phone);
+//                                getline(cin, phone);
+                                cin>>phone;
                                 cout<<endl;
                                 cout << "Note about costumer:";
-                                getline(cin, note);
+//                                getline(cin, note);
+                                cin>>note;
                                 cout<<endl;
 
-//                                ctrl->createCustomer()
+//                                ctrl->createCustomer();
 
                                 //apelare functie create customer
                                 ctrl->createCustomer({first,last}, {mailAdd, mailPass}, {country, city, street, streetNum},phone, note, gdpr, favorites);
@@ -639,32 +678,40 @@ void UI::run() {
                                 bool gdpr;
                                 vector<int> favorites;
                                 cout << "Enter your First and Last name: ";
-                                getline(cin, first);
-                                getline(cin, last);
+//                                getline(cin, first);
+                                cin>>first>>last;
+//                                getline(cin, last);
                                 cout<<endl;
                                 cout << "Enter email: ";
-                                getline(cin, mailAdd);
+//                                getline(cin, mailAdd);
+                                cin>>mailAdd;
                                 cout<<endl;
                                 cout << "Enter password: ";
-                                getline(cin, mailPass);
+//                                getline(cin, mailPass);
+                                cin>>mailPass;
                                 cout<<endl;
                                 cout << "Country of costumer:";
-                                getline(cin, country);
+//                                getline(cin, country);
+                                cin>>country;
                                 cout<<endl;
                                 cout << "City of costumer:";
-                                getline(cin, city);
+//                                getline(cin, city);
+                                cin>>city;
                                 cout<<endl;
                                 cout << "Street of costumer:";
-                                getline(cin, street);
+//                                getline(cin, street);
+                                cin>>street;
                                 cout<<endl;
                                 cout << "Number of house of costumer:";
                                 cin >> streetNum;
                                 cout<<endl;
                                 cout << "Phone number of costumer:";
-                                getline(cin, phone);
+//                                getline(cin, phone);
+                                cin>>phone;
                                 cout<<endl;
                                 cout << "Note about costumer:";
-                                getline(cin, note);
+//                                getline(cin, note);
+                                cin>>note;
                                 cout<<endl;
 //                                ctrl->ChangeCustomer(first, last, mailAdd, mailPass, city, country, street, phone, note)
                                 break;
@@ -673,7 +720,8 @@ void UI::run() {
                                 //aperale functie delete customer
                                 string email;
                                 cout << "Give the email to delete a customer: ";
-                                getline(cin, email);
+//                                getline(cin, email);
+                                cin>>email;
                                 cout << endl;
                                 ctrl->customerDelete(email);
                                 break;
@@ -686,7 +734,8 @@ void UI::run() {
                                 //aperale functie view customers
                                 string option;
                                 cout << "Give a preference whichby to show the customers(first/last): ";
-                                getline(cin, option);
+//                                getline(cin, option);
+                                cin>>option;
                                 cout<<endl;
                                 ctrl->ListAllCostumersSortedByName(option);
                                 break;
@@ -695,10 +744,12 @@ void UI::run() {
                                 //aperale functie search customer by email
                                 string email, password;
                                 cout << "Search by email: ";
-                                getline(cin, email);
+//                                getline(cin, email);
+                                cin>>email;
                                 cout<<endl;
                                 cout << "Give password: ";
-                                getline(cin, password);
+//                                getline(cin, password);
+                                cin>>password;
                                 ctrl->findCustomerByEmailandPassword(email, password);
                                 break;
                             }
@@ -706,7 +757,8 @@ void UI::run() {
                                 //aperale functie search customer by phone
                                 string Phone_nr;
                                 cout << "Give searched phone number: ";
-                                getline(cin, Phone_nr);
+//                                getline(cin, Phone_nr);
+                                cin>>Phone_nr;
                                 cout<<endl;
                                 ctrl->FindCustomerByPhoneNr(Phone_nr);
                                 break;
@@ -715,10 +767,12 @@ void UI::run() {
                                 //aperale functie search customer by name
                                 string first, last;
                                 cout << "Given first name: ";
-                                getline(cin, first);
+//                                getline(cin, first);
+                                cin>>first;
                                 cout<<endl;
                                 cout << "Last name: ";
-                                getline(cin, last);
+//                                getline(cin, last);
+                                cin>>last;
                                 cout << endl;
                                 ctrl->FindCustomerByName({first, last});
                                 break;
@@ -745,14 +799,18 @@ void UI::run() {
                                 string brand, model, licensePlate, fuelType, gearbox, color, remarks;
                                 int registrationYear, mileage, dailyPrice;
                                 cout << "Brand: ";
-                                getline(cin, brand);
+//                                getline(cin, brand);
+                                cin>>brand;
                                 cout << "Model: ";
-                                getline(cin, model);
+//                                getline(cin, model);
+                                cin>>model;
                                 cout << "License plate: ";
-                                getline(cin, licensePlate);
+//                                getline(cin, licensePlate);
+                                cin>>licensePlate;
                                 while (!ctrl->validateLicensePlate(licensePlate)) {
                                     cout << "Invalid license plate! Enter a valid license plate: ";
-                                    getline(cin, licensePlate);
+//                                    getline(cin, licensePlate);
+                                    cin>>licensePlate;
                                 }
                                 licensePlate = ctrl->modifyLicensePlate(licensePlate);
                                 cout << "Registration year: ";
@@ -768,11 +826,14 @@ void UI::run() {
                                     cin >> mileage;
                                 }
                                 cout << "Fuel type: ";
-                                getline(cin, fuelType);
+//                                getline(cin, fuelType);
+                                cin>>fuelType;
                                 cout << "Gearbox: ";
-                                getline(cin, gearbox);
+//                                getline(cin, gearbox);
+                                cin>>gearbox;
                                 cout << "Color: ";
-                                getline(cin, color);
+//                                getline(cin, color);
+                                cin>>color;
                                 cout << "Daily price: ";
                                 cin >> dailyPrice;
                                 while (!ctrl->validateDailyPrice(dailyPrice)) {
@@ -780,7 +841,8 @@ void UI::run() {
                                     cin >> dailyPrice;
                                 }
                                 cout << "Remarks: ";
-                                getline(cin, remarks);
+//                                getline(cin, remarks);
+                                cin>>remarks;
                                 ctrl->addCar(true, licensePlate, model, brand, registrationYear, mileage, dailyPrice,
                                              fuelType, gearbox, color, remarks);
                                 cout << "Car created.";
@@ -796,14 +858,18 @@ void UI::run() {
                                     cin >> id;
                                 }
                                 cout << "Brand: ";
-                                getline(cin, brand);
+//                                getline(cin, brand);
+                                cin>>brand;
                                 cout << "Model: ";
-                                getline(cin, model);
+//                                getline(cin, model);
+                                cin>>model;
                                 cout << "License plate: ";
-                                getline(cin, licensePlate);
+//                                getline(cin, licensePlate);
+                                cin>>licensePlate;
                                 while (!ctrl->validateLicensePlate(licensePlate)) {
                                     cout << "Invalid license plate! Enter a valid license plate: ";
-                                    getline(cin, licensePlate);
+//                                    getline(cin, licensePlate);
+                                    cin>>licensePlate;
                                 }
                                 licensePlate = ctrl->modifyLicensePlate(licensePlate);
                                 cout << "Registration year: ";
@@ -819,11 +885,14 @@ void UI::run() {
                                     cin >> mileage;
                                 }
                                 cout << "Fuel type: ";
-                                getline(cin, fuelType);
+//                                getline(cin, fuelType);
+                                cin>>fuelType;
                                 cout << "Gearbox: ";
-                                getline(cin, gearbox);
+//                                getline(cin, gearbox);
+                                cin>>gearbox;
                                 cout << "Color: ";
-                                getline(cin, color);
+//                                getline(cin, color);
+                                cin>>color;
                                 cout << "Daily price: ";
                                 cin >> dailyPrice;
                                 while (!ctrl->validateDailyPrice(dailyPrice)) {
@@ -831,7 +900,8 @@ void UI::run() {
                                     cin >> dailyPrice;
                                 }
                                 cout << "Remarks: ";
-                                getline(cin, remarks);
+//                                getline(cin, remarks);
+                                cin>>remarks;
                                 ctrl->updateCar(id, true, licensePlate, model, brand, registrationYear, mileage,
                                                 dailyPrice, fuelType, gearbox, color, remarks);
                                 cout << "Car updated.";
@@ -866,9 +936,11 @@ void UI::run() {
                             case 5: {
                                 string begin, end;
                                 cout << "From: ";
-                                getline(cin, begin);
+//                                getline(cin, begin);
+                                cin>>begin;
                                 cout << "To: ";
-                                getline(cin, end);
+//                                getline(cin, end);
+                                cin>>end;
                                 vector<Car> carList = ctrl->notOrderedCars(begin, end);
                                 for (auto &car: carList) {
                                     cout << car.get_brand() << ' ' << car.get_model() << ' ' << car.get_gearbox() << ' '
@@ -879,7 +951,8 @@ void UI::run() {
                             case 6: {
                                 string licensePlate;
                                 cout << "License plate: ";
-                                getline(cin, licensePlate);
+//                                getline(cin, licensePlate);
+                                cin>>licensePlate;
                                 Car searchedCar = ctrl->findCarByLicensePlate(licensePlate);
                                 cout << searchedCar.get_brand() << ' ' << searchedCar.get_model() << ' '
                                      << searchedCar.get_gearbox() << ' ' << searchedCar.get_dailyPrice() << endl;
@@ -926,7 +999,8 @@ void UI::run() {
                                 cout<< "Enter Id of the Order: \n";
                                 cin >> idOrder;
                                 cout<< "\n Enter date of the Order: \n";
-                                getline(cin,dateOrder);
+//                                getline(cin,dateOrder);
+                                cin>>dateOrder;
                                 cout << "\n Enter status order: (Completed/ Reservation/ new): ";
                                 cin >> statusOrder;
                                 cout << "\n Enter begin order: \n";
@@ -934,7 +1008,8 @@ void UI::run() {
                                 cout << "\n Enter end order: \n";
                                 cin >> endOrder;
                                 cout << "\n Enter observations order: \n";
-                                getline(cin,observationsOrder);
+//                                getline(cin,observationsOrder);
+                                cin>>observationsOrder;
                                 cout << "\n Enter bill order: \n";
                                 cin >> billOrder;
 
@@ -1004,7 +1079,8 @@ void UI::run() {
                                 cout<< "Enter Id of the Order: \n";
                                 cin >> idOrder;
                                 cout<< "\n Enter date of the Order: \n";
-                                getline(cin,dateOrder);
+//                                getline(cin,dateOrder);
+                                cin>>dateOrder;
                                 cout << "\n Enter status order: (Completed/ Reservation/ new): ";
                                 cin >> statusOrder;
                                 cout << "\n Enter begin order: \n";
@@ -1012,7 +1088,8 @@ void UI::run() {
                                 cout << "\n Enter end order: \n";
                                 cin >> endOrder;
                                 cout << "\n Enter observations order: \n";
-                                getline(cin,observationsOrder);
+//                                getline(cin,observationsOrder);
+                                cin>>observationsOrder;
                                 cout << "\n Enter bill order: \n";
                                 cin >> billOrder;
 
@@ -1125,14 +1202,16 @@ void UI::run() {
                                 cout<< "Enter Id of the Order: \n";
                                 cin >> idOrder;
                                 cout<< "\n Enter date of the Order: \n";
-                                getline(cin,dateOrder);
+//                                getline(cin,dateOrder);
+                                cin>>dateOrder;
                                 statusOrder = "Reservation";
                                 cout << "\n Enter begin order: \n";
                                 cin >> beginOrder;
                                 cout << "\n Enter end order: \n";
                                 cin >> endOrder;
                                 cout << "\n Enter observations order: \n";
-                                getline(cin,observationsOrder);
+//                                getline(cin,observationsOrder);
+                                cin>>observationsOrder;
                                 cout << "\n Enter bill order: \n";
                                 cin >> billOrder;
 
@@ -1220,7 +1299,8 @@ void UI::run() {
                                 cout<< "Enter Id of the Order: \n";
                                 cin >> idOrder;
                                 cout<< "\n Enter date of the Order: \n";
-                                getline(cin,dateOrder);
+//                                getline(cin,dateOrder);
+                                cin>>dateOrder;
                                 cout << "\n Enter status order: (Completed/ Reservation/ new): ";
                                 cin >> statusOrder;
                                 cout << "\n Enter begin order: \n";
@@ -1228,7 +1308,8 @@ void UI::run() {
                                 cout << "\n Enter end order: \n";
                                 cin >> endOrder;
                                 cout << "\n Enter observations order: \n";
-                                getline(cin,observationsOrder);
+//                                getline(cin,observationsOrder);
+                                cin>>observationsOrder;
                                 cout << "\n Enter bill order: \n";
                                 cin >> billOrder;
 
@@ -1264,9 +1345,11 @@ void UI::run() {
                                 string startDate;
                                 string endDate;
                                 cout<< "\n Enter start date\n";
-                                getline(cin,startDate);
+//                                getline(cin,startDate);
+                                cin>>startDate;
                                 cout<< "\n Enter end date\n";
-                                getline(cin,endDate);
+//                                getline(cin,endDate);
+                                cin>>endDate;
                                 vector<Order> vec_orders = ctrl->getOrdersByDate(startDate,endDate);
                                 for(int i = 0; i<vec_orders.size(); i++){
                                     cout<< vec_orders[i].getIdOrder()<< ' '<< vec_orders[i].getCarOrder().get_model()<< ' '<< vec_orders[i].getCustomerOrder().getCustomerName().firstName<< ' '<<vec_orders[i].getCustomerOrder().getCustomerName().lastName<<'\n';
@@ -1290,7 +1373,8 @@ void UI::run() {
                             case 12: {
                                 string date;
                                 cout<< "\n Enter date\n";
-                                getline(cin,date);
+//                                getline(cin,date);
+                                cin>>date;
                                 cout<< "Total sum: "<< ctrl->getTotalSumOfADate(date)<<'\n';
 
                                 break;

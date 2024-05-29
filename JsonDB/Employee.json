@@ -1,14 +1,14 @@
 [
-  {
-    "id": 0,
-    "password": "abcd",
-    "nickname": "johnny",
-    "lastName": "Doe",
-    "firstName": "John",
-    "email": "john",
-    "position": "Admin",
-    "birthDate": "1990-01-01",
-    "salary": 50000,
-    "remarks": "Good employee"
-  }
+    {
+        "birthDate": "1990-01-01",
+        "email": "john",
+        "firstName": "John",
+        "id": 0,
+        "lastName": "Doe",
+        "nickname": "johnny",
+        "password": "abcd",
+        "position": "Admin",
+        "remarks": "",
+        "salary": 50000
+    }
 ]

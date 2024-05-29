@@ -23,8 +23,6 @@ void orderService::loadFromJson(string &path_car,string &path_customer,string &p
         EmployeeService employeeService(path_employee);
         EmployeeController employeeController(&employeeService);
         for (const auto &item : j) {
-
-
             Order ord(item["_id_Order"], item["_date_Order"], item["_status_Order"], item["_begin_Order"],
                          item["_end_Order"], stof(item["_bill_Order"].dump()), item["_observations_Order"],
                          carController.returnCarbyID(item["_car_Order"]), custController.FindCustomerByID(item["_customer_Order"]),
