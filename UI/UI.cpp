@@ -218,14 +218,10 @@ void UI::run() {
                                 break;
                             }
                             case 2: {
-                                cout << "Enter employee ID: ";
-                                int employeeId;
-                                cin >> employeeId;
-                                cin.ignore();
                                 cout << "Enter new remarks: ";
                                 string newRemarks;
                                 getline(cin, newRemarks);
-                                ctrl->changeRemarks(employeeId, newRemarks);
+                                ctrl->changeRemarks(logedEmpl.getId(), newRemarks);
                                 cout << "Remarks changed successfully." << endl;
                                 break;
                             }
@@ -240,7 +236,7 @@ void UI::run() {
                                 << "Choose option:\n1. View employees\n2. Search employee by nickname\n3. Search employee by e-mail\n4. Search employee by name\n5. Search employee by birthdate\n";
                         if (logedEmpl.getPosition() == "admin")
                             cout
-                                    << "6. Create employee\n7. Change employee\n8. Activate/deactivate employee\n9. Delete employee\n10. Change employee to admin\n11. Change admin to employee\n12. Reset password for employee\n13. View employee salary\n";
+                                    << "6. Create employee\n7. Change employee\n8. Activate/deactivate employee\n9. Delete employee\n10. Change employee to admin\n11. Change admin to employee\n12. Reset password for employee\n13. View employee salary\n14. Change employees remarks\n";
                         cout << "0. Back\nType an option: ";
                         int opt2 = options();
                         switch (opt2) {
@@ -255,7 +251,7 @@ void UI::run() {
                                 break;
                             }
                             case 2: {
-                                // search employees by nickname
+                                // search employee by nickname
                                 cout << "Enter Nickname: ";
                                 string nickname;
                                 getline(cin, nickname);
@@ -293,6 +289,56 @@ void UI::run() {
                                 for (const auto &employee : employeesByBirthdate) {
                                     cout << "ID: " << employee.getId() << ", Last Name: " << employee.getLastName() << ", First Name: " << employee.getFirstName() << ", Position: " << employee.getPosition() << endl;
                                     }
+                                break;
+                            }
+                            case 6:{
+                                //create employee
+                            }
+                            case 7:{
+                                //change emplyee
+
+                            }
+                            case 8:{
+                                //act/deac
+
+                            }
+                            case 9:{
+                                //delete emp
+
+                            }
+                            case 10:{
+                                //change emp to admin
+
+                            }
+                            case 11:{
+                                //change admin to emp
+
+                            }
+                            case 12:{
+                                //reset passw for emp
+
+
+                            }
+                            case 13:{
+                                //view emp salary
+                                cout << "Enter employee ID: ";
+                                int ID;
+                                cin>>ID;
+                                Employee foundEmployee = ctrl->getEmployeeById(ID);
+                                cout << "Employee found with ID: " << foundEmployee.getId() << ", Last Name: " << foundEmployee.getLastName() << ", First Name: " << foundEmployee.getFirstName() << ", Has the salary: " << foundEmployee.getSalary() << endl;
+
+
+                            }
+                            case 14:{
+                                cout << "Enter employee ID: ";
+                                int employeeId;
+                                cin >> employeeId;
+                                cin.ignore();
+                                cout << "Enter new remarks: ";
+                                string newRemarks;
+                                getline(cin, newRemarks);
+                                ctrl->changeRemarks(employeeId, newRemarks);
+                                cout << "Remarks changed successfully." << endl;
                                 break;
                             }
                             default: {
