@@ -1,4 +1,7 @@
 ## CarShop
+
+This repo is cloned from my team project which i have done with a group of my friends!
+
 - Peter, Raul, Andrei M., Stefan - Bestellung
 - ⁠Klara, Bence, Mark - Kunden
 - ⁠Miruna, Alexandra, Tea - Auto
